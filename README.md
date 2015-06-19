@@ -3,9 +3,13 @@
 
 Prototype Url: TBD
 
-##Approach (0 words)
+##Approach (158 words)
 
-TBD
+DSoft Technology uses an Agile methodology (Scrum), an iterative, incremental framework for software project development. Every two week interval is planned by the team using a tracking tool, and projects are kept on track using frequent short meetings to communicate what has been accomplished and what roadblocks are preventing progress. A Scrum Master is assigned who is responsible for removing these roadblocks and with making sure that the project stays on track.
+
+At the beginning of the project, after writing a requirements document we add user stories and tasks to the product backlog for design, testing, and release documentation, with an estimated complexity and priority for each. Both the backlog and the requirements document are continually updated to keep up with changing requirements. Every two weeks, based on priority, we pull user stories from the product backlog and add them to the current sprint.
+
+DSoft employs AgileSprinter™ to manage/track our Scrum process (screenshots provided under /Design/Sprint X Documents).  
 
 ##U.S. Digital Services Playbook Evidence
 
