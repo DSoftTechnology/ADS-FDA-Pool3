@@ -94,11 +94,15 @@ TBD
 
 ###m) Configuration Management
 
-TBD
+* Github (Source Control)
+* TeamCity (Continuous Integration)
+* Azure Web Apps (PaaS)
+
+The deployment is fully automated using TeamCity. Commits pushed to Github trigger TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are commited to the Azure git repository which triggers an automated deployment on the Azure Staging Web App for QA / Integration tests. After success in QA, the automated deployment to Azure Production Web App is manually triggered in TeamCity.
 
 ###n) Continuous Monitoring 
 
-TBD
+Using Azure Web Apps as a PaaS comes with built-in continuous monitoring of CPU, Memory, Bandwith, HTTP errors, Response times, Page Requests. Alerts can be configured as well as automatic scaling of the underlying infrastructure based on the metrics.
 
 ###o) Deployed Software in Container
 
