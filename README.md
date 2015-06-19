@@ -1,17 +1,11 @@
 # ADS-FDA-Pod3
 #README
 
----
-
 Prototype Url: TBD
-
----
 
 ##Approach (0 words)
 
 TBD
-
----
 
 ##U.S. Digital Services Playbook Evidence
 
