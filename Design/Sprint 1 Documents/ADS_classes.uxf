@@ -164,7 +164,8 @@ EnforcementReport</panel_attributes>
 --
 +meta: OpenFDAResponseMeta
 +count: integer
-</panel_attributes>
+--
++GetStateCounts</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -213,5 +214,21 @@ EnforcementReport</panel_attributes>
     <panel_attributes>lt=&lt;-
 m1=1</panel_attributes>
     <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>660</y>
+      <w>260</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>StateNames
+--
++stateNames: SortedDictionary
+--
++GetStateList
+</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
