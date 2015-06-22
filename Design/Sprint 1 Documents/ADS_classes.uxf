@@ -7,12 +7,12 @@
       <x>770</x>
       <y>40</y>
       <w>260</w>
-      <h>340</h>
+      <h>370</h>
     </coordinates>
     <panel_attributes>EnforcementReport
 --
 +id: string
-+event_id: int
++event_id: integer
 +recall_number: string
 +report_date: smalldatetime
 +recall_initiation_date: smalldatetime
@@ -29,7 +29,9 @@
 +product_quantity: string
 +product_description: string
 +code_info: string
-+initial_firm_notification: string</panel_attributes>
++initial_firm_notification: string
+--
++GetStateList</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -47,12 +49,12 @@
 +type: FDAReportType 
 +querySearch: string
 +queryCount: string
-+queryLimit: int
-+querySkip: int
-+count: int
++queryLimit: integer
++querySkip: integer
 +response: OpenFDAResponse
 --
-+runQuery
++RunQuery
+-GetUrl
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -71,7 +73,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>770</x>
-      <y>400</y>
+      <y>430</y>
       <w>260</w>
       <h>80</h>
     </coordinates>
@@ -85,7 +87,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>770</x>
-      <y>500</y>
+      <y>540</y>
       <w>260</w>
       <h>80</h>
     </coordinates>
@@ -101,10 +103,10 @@
       <x>620</x>
       <y>370</y>
       <w>170</w>
-      <h>90</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;150.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;150.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -112,10 +114,10 @@
       <x>620</x>
       <y>390</y>
       <w>170</w>
-      <h>170</h>
+      <h>210</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;150.0;150.0</additional_attributes>
+    <additional_attributes>10.0;10.0;150.0;190.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -161,6 +163,7 @@ EnforcementReport</panel_attributes>
     <panel_attributes>OpenFDAResponse
 --
 +meta: OpenFDAResponseMeta
++count: integer
 </panel_attributes>
     <additional_attributes/>
   </element>
