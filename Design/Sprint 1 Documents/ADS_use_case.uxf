@@ -219,7 +219,8 @@ Report</panel_attributes>
       <w>120</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Export XML</panel_attributes>
+    <panel_attributes>Export 
+Report/Data</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -230,7 +231,8 @@ Report</panel_attributes>
       <w>120</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Export PDF</panel_attributes>
+    <panel_attributes>Email
+Report/Data</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
