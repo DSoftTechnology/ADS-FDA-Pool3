@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace dsoft.ads.web
+namespace dsoft.ads.web.Models
 {
 	public class StateCount
 	{

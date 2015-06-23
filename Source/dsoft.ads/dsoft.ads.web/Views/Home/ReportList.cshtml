@@ -1,43 +1,74 @@
-﻿<div class="row">
+﻿@model PagedList.IPagedList<dsoft.ads.web.Models.EnforcementReport>
+@using PagedList.Mvc;
+
+<div class="row">
 	<div class="col-md-9 col-md-offset-3">
 	  <h2>Your Report Title</h2>
 	  <hr>
 	</div>
 </div>
-<div class="row">
-	@Html.Partial("~/Views/Shared/_FilterList.cshtml")
-  	<div class="col-md-9">
-    <p>
-      Some helpful text here.
-    </p>
-    <table class="table table-hover">
-      <thead>
-        <tr>
-       		<th>Event ID</th>
-          	<th>Reason</th>
-          	<th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>@Html.ActionLink("8675309", "ReportDetails", new {@eventId = "8675309"})</td>
-          <td>Something happened that was not good.</td>
-          <td>Completed</td>
-        </tr>
-      	<tr>
-          <td>@Html.ActionLink("90210", "ReportDetails", new {@eventId = "90210"})</td>
-          <td>During an FDA inspection something didn't happen that was supposed to.</td>
-          <td>Ongoing</td>
-        </tr>
-        <tr>
-          <td>@Html.ActionLink("63159", "ReportDetails", new {@eventId = "63159"})</td>
-          <td>During an FDA inspection, microbiological swabs were collected and the results found that 21 sub samples in zones 1, 2 &amp; 3 are positive for Listeria Monocytogenes (L.M.), Listeria innocua (L.I.) or Listeria seeligeri (L.S.).  The firm is voluntarily recalling all products manufactured from August 20th to September 10th 2012 due to the possible contamination.  All products with sell by dates on or before 11-OCT. No illnesses have been reported.</td>
-          <td>Ongoing</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+<div>@ViewData["ErrorMsg"]</div>
+@using (Html.BeginForm("Index", "Food Exception Reports", FormMethod.Post, new { @id = "FoodExceptionReport" }))
+{
+	<div class="row">
+		@Html.Partial("~/Views/Shared/_FilterList.cshtml")
+	  	<div class="col-md-9">
+	    <p>
+	      Some helpful text here.
+	    </p>
+	    <table class="table table-hover">
+	      <thead>
+	        <tr>
+	            <th>
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.First().event_id).ToHtmlString(), "ReportList", new { sortOrder = ViewBag.EnfRepEventIdSortParm })
+	            </th>
+	            <th>
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.First().recall_number).ToHtmlString(), "ReportList", new { sortOrder = ViewBag.EnfRepRecallNumSortParm })
+	            </th>
+	            <th>
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.First().reason_for_recall).ToHtmlString(), "ReportList", new { sortOrder = ViewBag.EnfRepReasonSortParm })
+	            </th>
+	            <th style="min-width:90px;">
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.First().status).ToHtmlString(), "ReportList", new { sortOrder = ViewBag.EnfRepStatusSortParm })
+	            </th>
+	        </tr>
+	      </thead>
+	      <tbody>
+		    @foreach (var item in Model) {
+		        <tr>
+		            <td>
+		                @Html.ActionLink(item.event_id.ToString(), "ReportDetails", new {@eventid = item.event_id})
+		            </td>
+		            <td>
+		                @Html.DisplayFor(modelItem => item.recall_number)
+		            </td>
+		            <td>
+		                @Html.DisplayFor(modelItem => item.reason_for_recall)
+		            </td>
+		            <td>
+		                @Html.DisplayFor(modelItem => item.status)
+		            </td>
+		        </tr>
+		    }
+	      </tbody>
+	    </table>
+
+	    <br />
+	    <div>
+	        @ViewBag.PubCount Exception Reports, 
+
+	        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+	    
+	        @Html.PagedListPager(Model, page => Url.Action("ReportList", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+	    
+	        Display 
+	        @Html.DropDownList("PageSize", (List<SelectListItem>)ViewBag.PageSizeOptions, new { @id = "PageSizeId", onchange = "PageSizeChange()" })
+	        per page
+	        <br />
+	    </div>
+	  </div>
+	</div>
+}
 
 <script>
     $(document).ready(function () {

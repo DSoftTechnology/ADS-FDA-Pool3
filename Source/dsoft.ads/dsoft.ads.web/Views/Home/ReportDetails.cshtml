@@ -1,15 +1,17 @@
-﻿@{
+﻿@model dsoft.ads.web.Models.EnforcementReport
+
+@{
     ViewBag.Title = String.Format("Event {0}", ViewData["EventID"]);
-    var recallNumberToolTip = "The recall # for the event";
-    var reasonToolTip = "The reason for the recall";
-    var statusToolTip = "The status of the recall. It may be ongoing or complete";
-    var distributionPlanToolTip = "The locations that the recall affects";
-    var productQuantityToolTip = "The number of products being recalled";
-    var recallInitiationDateToolTip = "The date the recall began";
-    var productDescriptionToolTip = "The description of the product being recalled";
-    var mandatedToolTip = "How the recall was mandated";
-    var classificationToolTip = "The classification of the recall. It may be Class I, Class II or Class III";
-    var codeInfoToolTip = "Identifying factors of the affected product";
+    var recallNumberToolTip = ModelMetadata.FromLambdaExpression<dsoft.ads.web.Models.EnforcementReport, string>(x => x.recall_number, ViewData).Description;
+    var reasonToolTip = ModelMetadata.FromLambdaExpression<dsoft.ads.web.Models.EnforcementReport, string>(x => x.reason_for_recall, ViewData).Description;
+    var statusToolTip = ModelMetadata.FromLambdaExpression<dsoft.ads.web.Models.EnforcementReport, string>(x => x.status, ViewData).Description;
+    var distributionPlanToolTip = ModelMetadata.FromLambdaExpression<dsoft.ads.web.Models.EnforcementReport, string>(x => x.distribution_pattern, ViewData).Description;
+    var productQuantityToolTip = ModelMetadata.FromLambdaExpression<dsoft.ads.web.Models.EnforcementReport, string>(x => x.product_quantity, ViewData).Description;
+    var recallInitiationDateToolTip = ModelMetadata.FromLambdaExpression<dsoft.ads.web.Models.EnforcementReport, string>(x => x.recall_initiation_date, ViewData).Description;
+    var productDescriptionToolTip = ModelMetadata.FromLambdaExpression<dsoft.ads.web.Models.EnforcementReport, string>(x => x.product_description, ViewData).Description;
+    var mandatedToolTip = ModelMetadata.FromLambdaExpression<dsoft.ads.web.Models.EnforcementReport, string>(x => x.voluntary_mandated, ViewData).Description;
+    var classificationToolTip = ModelMetadata.FromLambdaExpression<dsoft.ads.web.Models.EnforcementReport, string>(x => x.classification, ViewData).Description;
+    var codeInfoToolTip = ModelMetadata.FromLambdaExpression<dsoft.ads.web.Models.EnforcementReport, string>(x => x.code_info, ViewData).Description;
 }
 
 <h2>@ViewBag.Title</h2>
@@ -17,69 +19,63 @@
 <div class="form-horizontal">
 	<div class="col-md-12">
 		<div class="form-group">
-			<label class="control-label col-md-3">Recall # <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@recallNumberToolTip"></span></label>
+			<label class="control-label col-md-3">@Html.DisplayNameFor(model => model.recall_number) <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@recallNumberToolTip"></span></label>
 			<div class="col-md-9">
-				<p class="form-control-static">F-0623-2013</p>
+				<p class="form-control-static">@Html.DisplayFor(model => model.recall_number)</p>
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="control-label col-md-3">Reason <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@reasonToolTip"></span></label>
+			<label class="control-label col-md-3">@Html.DisplayNameFor(model => model.reason_for_recall) <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@reasonToolTip"></span></label>
 			<div class="col-md-9">
-				<p class="form-control-static">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a congue enim. 
-					Aenean sit amet ligula sapien. Cras viverra ipsum a nisi dignissim rutrum. Cras pellentesque massa neque. 
-					Proin commodo nisl nec dignissim tincidunt. Etiam finibus urna elit, ut porttitor lorem rutrum id. Etiam egestas, 
-					enim viverra consequat lobortis, eros ipsum tincidunt leo, ac semper dolor libero eget urna. Ut malesuada 
-					mollis consequat. Etiam fermentum massa vitae vestibulum bibendum. Aliquam erat volutpat.
-				</p>
+				<p class="form-control-static">@Html.DisplayFor(model => model.reason_for_recall)</p>
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="control-label col-md-3">Status <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@statusToolTip"></span></label>
+			<label class="control-label col-md-3">@Html.DisplayNameFor(model => model.status) <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@statusToolTip"></span></label>
 			<div class="col-md-9">
-				<p class="form-control-static">Ongoing</p>
+				<p class="form-control-static">@Html.DisplayFor(model => model.status)</p>
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="control-label col-md-3">Distribution Plan <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@distributionPlanToolTip"></span></label>
+			<label class="control-label col-md-3">@Html.DisplayNameFor(model => model.distribution_pattern) <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@distributionPlanToolTip"></span></label>
 			<div class="col-md-9">
-				<p class="form-control-static">MI, OH</p>
+				<p class="form-control-static">@Html.DisplayFor(model => model.distribution_pattern)</p>
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="control-label col-md-3">Product Quantity <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@productQuantityToolTip"></span></label>
+			<label class="control-label col-md-3">@Html.DisplayNameFor(model => model.product_quantity) <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@productQuantityToolTip"></span></label>
 			<div class="col-md-9">
-				<p class="form-control-static">520</p>
+				<p class="form-control-static">@Html.DisplayFor(model => model.product_quantity)</p>
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="control-label col-md-3">Recall Initiation Date <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@recallInitiationDateToolTip"></span></label>
+			<label class="control-label col-md-3">@Html.DisplayNameFor(model => model.recall_initiation_date) <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@recallInitiationDateToolTip"></span></label>
 			<div class="col-md-9">
-				<p class="form-control-static">09/10/2012</p>
+				<p class="form-control-static">@Html.DisplayFor(model => model.recall_initiation_date)</p>
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="control-label col-md-3">Product Description <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@productDescriptionToolTip"></span></label>
+			<label class="control-label col-md-3">@Html.DisplayNameFor(model => model.product_description) <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@productDescriptionToolTip"></span></label>
 			<div class="col-md-9">
-				<p class="form-control-static">#011 Zucchini Stir Fry - 0.75 Pounds</p>
+				<p class="form-control-static">@Html.DisplayFor(model => model.product_description)</p>
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="control-label col-md-3">Mandated <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@mandatedToolTip"></span></label>
+			<label class="control-label col-md-3">@Html.DisplayNameFor(model => model.voluntary_mandated) <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@mandatedToolTip"></span></label>
 			<div class="col-md-9">
-				<p class="form-control-static">Voluntary: Firm Initiated</p>
+				<p class="form-control-static">@Html.DisplayFor(model => model.voluntary_mandated)</p>
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="control-label col-md-3">Classification <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@classificationToolTip"></span></label>
+			<label class="control-label col-md-3">@Html.DisplayNameFor(model => model.classification) <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@classificationToolTip"></span></label>
 			<div class="col-md-9">
-				<p class="form-control-static">Class II</p>
+				<p class="form-control-static">@Html.DisplayFor(model => model.classification)</p>
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="control-label col-md-3">Code Info <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@codeInfoToolTip"></span></label>
+			<label class="control-label col-md-3">@Html.DisplayNameFor(model => model.code_info) <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@codeInfoToolTip"></span></label>
 			<div class="col-md-9">
-				<p class="form-control-static">All with sell by dates on or before September 15 with UPC 0-11213-90380</p>
+				<p class="form-control-static">@Html.DisplayFor(model => model.code_info)</p>
 			</div>
 		</div>
 		<div class="form-group">
