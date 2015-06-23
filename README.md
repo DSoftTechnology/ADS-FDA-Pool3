@@ -39,6 +39,8 @@ See folders under /Design/Meetings.
 
 An initial meeting with potential users uninvolved in the design and development process was held on June 18, 2015, and was documented in /Design/Meetings/2015-06-18/MeetingNotes.md. In this meeting, users were assigned personas of a Food Researcher, Financial Analyst and a small Business Owner. An initial idea of what functionality would be useful for these personas was documented, and use cases were created.
 
+The second paper prototype session was performed with customers on Monday, 22 June 2015, with DSoft’s Business Analyst and Visual Designer.  Customers identified changes and added requirements to the forms and resultant reports.  Changes were made to the use cases to capture changes and some requirements were deferred until the next build.
+
 ###d) Human-centered design techniques and tools
 
 * Use Cases 
