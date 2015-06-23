@@ -8,7 +8,7 @@
 	</div>
 </div>
 <div>@ViewData["ErrorMsg"]</div>
-@using (Html.BeginForm("Index", "Food Exception Reports", FormMethod.Post, new { @id = "FoodExceptionReport" }))
+@using (Html.BeginForm("ReportList", "Home", FormMethod.Post, new { @id = "ReportListForm" }))
 {
 	<div class="row">
 		@Html.Partial("~/Views/Shared/_FilterList.cshtml")
@@ -74,4 +74,8 @@
     $(document).ready(function () {
         $('#reportsNav').parent().addClass('active');
     });
+
+    function PageSizeChange() {
+        $('#ReportListForm').submit();
+    }
 </script>
