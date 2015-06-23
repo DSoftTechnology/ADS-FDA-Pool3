@@ -1,7 +1,7 @@
 ﻿@model dsoft.ads.web.Models.EnforcementReport
 
 @{
-    ViewBag.Title = String.Format("Event {0}", ViewData["EventID"]);
+    ViewBag.Title = String.Format("Event {0}", Model.event_id);
     var recallNumberToolTip = ModelMetadata.FromLambdaExpression<dsoft.ads.web.Models.EnforcementReport, string>(x => x.recall_number, ViewData).Description;
     var reasonToolTip = ModelMetadata.FromLambdaExpression<dsoft.ads.web.Models.EnforcementReport, string>(x => x.reason_for_recall, ViewData).Description;
     var statusToolTip = ModelMetadata.FromLambdaExpression<dsoft.ads.web.Models.EnforcementReport, string>(x => x.status, ViewData).Description;
