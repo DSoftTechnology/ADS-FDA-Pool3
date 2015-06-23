@@ -1,0 +1,46 @@
+﻿<div class="row">
+	<div class="col-md-9 col-md-offset-3">
+	  <h2>Your Report Title</h2>
+	  <hr>
+	</div>
+</div>
+<div class="row">
+	@Html.Partial("~/Views/Shared/_FilterList.cshtml")
+  	<div class="col-md-9">
+    <p>
+      Some helpful text here.
+    </p>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+       		<th>Event ID</th>
+          	<th>Reason</th>
+          	<th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>@Html.ActionLink("8675309", "ReportDetails", new {@eventId = "8675309"})</td>
+          <td>Something happened that was not good.</td>
+          <td>Completed</td>
+        </tr>
+      	<tr>
+          <td>@Html.ActionLink("90210", "ReportDetails", new {@eventId = "90210"})</td>
+          <td>During an FDA inspection something didn't happen that was supposed to.</td>
+          <td>Ongoing</td>
+        </tr>
+        <tr>
+          <td>@Html.ActionLink("63159", "ReportDetails", new {@eventId = "63159"})</td>
+          <td>During an FDA inspection, microbiological swabs were collected and the results found that 21 sub samples in zones 1, 2 &amp; 3 are positive for Listeria Monocytogenes (L.M.), Listeria innocua (L.I.) or Listeria seeligeri (L.S.).  The firm is voluntarily recalling all products manufactured from August 20th to September 10th 2012 due to the possible contamination.  All products with sell by dates on or before 11-OCT. No illnesses have been reported.</td>
+          <td>Ongoing</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#reportsNav').parent().addClass('active');
+    });
+</script>

@@ -33,6 +33,38 @@ namespace dsoft.ads.web.Controllers
 
 			return View ();
 		}
+
+		public ActionResult About()
+		{
+			return View ();
+		}
+
+		public ActionResult GeographicReport ()
+		{
+			ViewData ["HideStateFilter"] = true;
+			return View ();
+		}
+
+		public ActionResult BusinessReport () 
+		{
+			return View ();
+		}
+
+		public ActionResult FinancialReport ()
+		{
+			return View ();
+		}
+
+		public ActionResult ReportList ()
+		{
+			return View ();
+		}
+
+		public ActionResult ReportDetails (int eventId)
+		{
+			ViewData ["EventID"] = eventId;
+			return View ();
+		}
 	}
 }
 

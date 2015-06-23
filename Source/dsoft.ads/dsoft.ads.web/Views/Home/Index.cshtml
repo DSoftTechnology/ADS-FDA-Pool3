@@ -1,4 +1,67 @@
-﻿<h2>Welcome to ASP.NET MVC @ViewData["Version"] on @ViewData["Runtime"]!</h2>
+﻿@{
+	ViewBag.Title = "Food Recall Reports";
+}
 
-<br /> 
-@ViewData["RawJson"]
+<h2>@ViewBag.Title</h2>
+<hr />
+<div class="col-md-12">
+	<div class="row">
+		<p>
+			Recalls are almost always voluntary, meaning a company discovers a problem and recalls a product on its own. 
+		    Other times a company recalls a product after FDA raises concerns. Only in rare cases will FDA request or order 
+		    a recall. But in every case, FDA's role is to oversee a company's strategy, classify the recalled products 
+		    according to the level of hazard involved, and assess the adequacy of the recall. Recall information is posted 
+		    in the Enforcement Reports once the products are classified.
+		</p>
+	</div>
+	<div class="row">
+	<div class="col-md-4">
+	    <div class="thumbnail">
+	      <img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=Geographic%20Image&amp;w=350&amp;h=200">
+	      <div class="caption">
+	        <h3>
+	          Geographic Research
+	        </h3>
+	        <p>
+	          Use geographic data to [insert something cool here].
+	        </p>
+	        <p>
+	        	@Html.ActionLink("View Report", "GeographicReport", null, new {@class="btn btn-default pull-right"})
+	        </p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col-md-4">
+	    <div class="thumbnail">
+	      <img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=Business%20Image&amp;w=350&amp;h=200">
+	      <div class="caption">
+	        <h3>
+	          Business Research
+	        </h3>
+	        <p>
+	          Use business data to [insert something cool here].
+	        </p>
+	        <p>
+	          @Html.ActionLink("View Report", "BusinessReport", null, new {@class="btn btn-default pull-right"})
+	        </p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col-md-4">
+	    <div class="thumbnail">
+	      <img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=Financial%20Image&amp;w=350&amp;h=200">
+	      <div class="caption">
+	        <h3>
+	          Financial Research
+	        </h3>
+	        <p>
+	          Use fiancial data to [insert something cool here].
+	        </p>
+	        <p>
+	          @Html.ActionLink("View Report", "FinancialReport", null, new {@class="btn btn-default pull-right"})
+	        </p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>

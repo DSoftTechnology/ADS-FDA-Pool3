@@ -1,0 +1,50 @@
+﻿@{
+	var hideStateFilter = ViewData["HideStateFilter"] != null;
+	var reportTitleToolTip = "You may customize the title of this report";
+	var keywordToolTip = "You may enter use a keyword to filter the results";
+	var startDateToolTip = "You may enter a start date to filter the results";
+	var endDateToolTip = "You may enter an end date to filter the results";
+}
+
+<div class="col-md-3">
+    <h4>Report Title <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@reportTitleToolTip"></span></h4>
+    <input class="form-control" type="text" placeholder="Your Report Title">
+    <hr>
+    <h4>Filters</h4>
+    <ul class="nav nav-stacked">
+      <li>
+        <label class="control-label">Keyword <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@keywordToolTip"></span></label>
+        <input class="form-control" type="text">
+      </li>
+      @if (!hideStateFilter) {
+      	  var stateToolTip = "You may select a state to filter the results";
+	      <li>
+	        <label class="control-label">State <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@stateToolTip"></span></label>
+	        <select class="form-control">
+	          <option value="">Select State</option>
+	          <option value="AZ">Arizona</option>
+	          <option value="CO">Colorado</option>
+	        </select>
+	      </li>
+      }
+      <li>
+        <label class="control-label">Start Date <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@startDateToolTip"></span></label>
+        <input class="form-control" type="text" placeholder="06/20/2014">
+      </li>
+      <li>
+        <label class="control-label">End Date <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@endDateToolTip"></span></label>
+        <input class="form-control" type="text" placeholder="06/20/2015">
+      </li>  
+
+    <li>
+      <hr>
+    	<button class="btn btn-default form-control" type="submit">Filter</button>
+    </li>
+      </ul>
+  </div>
+
+<script>
+  	$(document).ready(function () {
+  		$('[data-toggle="tooltip"]').tooltip()
+	});
+</script>

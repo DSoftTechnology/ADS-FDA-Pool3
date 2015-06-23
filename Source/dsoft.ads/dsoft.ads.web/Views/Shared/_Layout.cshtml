@@ -1,10 +1,21 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap/CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/site/site.css" rel="stylesheet">
+    <script src="~/Scripts/jquery/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
 </head>
 <body>
-	@RenderBody()
+	@Html.Partial("~/Views/Shared/_MainMenu.cshtml")
+	<div class="container">
+		<div class="col-md-12">
+				@RenderBody()
+			</div>
+		</div>
+	</div>
 </body>
+@Html.Partial("~/Views/Shared/_ContactModal.cshtml")
 </html>
-

@@ -1,0 +1,23 @@
+﻿<div class="row">
+	<div class="col-md-9 col-md-offset-3">
+	  <h2>Your Report Title</h2>
+	  <hr>
+	</div>
+</div>
+<div class="row">
+	@Html.Partial("~/Views/Shared/_FilterList.cshtml")
+  	<div class="col-md-9">
+        <p>
+          Some helpful text here.
+        </p>
+        <p>
+          <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=Line%20Graph&amp;w=800&amp;h=600">
+        </p>
+  	</div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#financialNav').parent().addClass('active');
+    });
+</script>

@@ -1,0 +1,28 @@
+﻿<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-target=".navbar-collapse" data-toggle="collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="~/">DSoft Technology</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FDA Enforcement Reports <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          	<li>@Html.ActionLink("Geographic Reports", "GeographicReport", null, new {@id="geographicNav"})</li>	
+            <li>@Html.ActionLink("Business Reports", "BusinessReport", null, new {@id="businessNav"})</li>
+            <li>@Html.ActionLink("Financial Reports", "FinancialReport", null, new {@id="financialNav"})</li>
+            <li role="separator" class="divider"></li>
+            <li>@Html.ActionLink("Report List", "ReportList", null, new {@id="reportsNav"})</li>
+          </ul>
+        </li>
+        <li>@Html.ActionLink("About", "About", null, new {@id="aboutNav"})</li>
+        <li><a href="#" data-toggle="modal" data-target="#contactModal">Contact</a></li>
+      </ul>
+    </div>
+	</div>
+</nav>
