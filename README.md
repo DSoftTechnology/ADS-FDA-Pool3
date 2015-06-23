@@ -1,4 +1,4 @@
-# ADS-FDA-Pod3
+# ADS-FDA-Pool3
 #README
 
 Prototype Url: TBD
@@ -63,6 +63,7 @@ Initial List:
 * TopoJSON (https://github.com/mbostock/topojson)
 * NUnit (http://www.nunit.org/)
 * Postal (https://github.com/andrewdavey/postal)
+* PagedList.Mvc (https://www.nuget.org/packages/PagedList.Mvc)
 
 ###g) Usability Tests
 
@@ -91,6 +92,7 @@ Initial List:
 * TopoJSON (https://github.com/mbostock/topojson)
 * NUnit (http://www.nunit.org/)
 * Postal (https://github.com/andrewdavey/postal)
+* PagedList.Mvc (https://www.nuget.org/packages/PagedList.Mvc)
 
 ###l) Unit Tests
 
