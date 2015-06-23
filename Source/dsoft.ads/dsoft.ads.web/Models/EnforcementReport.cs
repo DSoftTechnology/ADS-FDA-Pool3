@@ -37,7 +37,7 @@ namespace dsoft.ads.web.Models
 		[Display(Name = "Reason", Description = "The reason for the recall")]
 		public string reason_for_recall { get; set; }
 
-		[Display(Name = "Status", Description = "The status of the recall. It may be ongoing or complete")]
+		[Display(Name = "Status", Description = "The status of the recall. It may be ongoing, complete or terminated")]
 		public string status { get; set; }
 
 		[Display(Name = "Recalling Firm", Description = "")]
