@@ -86,6 +86,9 @@
     <Folder Include="Helpers\" />
     <Folder Include="Content\" />
     <Folder Include="Content\images\" />
+    <Folder Include="Content\site\" />
+    <Folder Include="Content\site\fonts\" />
+    <Folder Include="Content\site\css\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
@@ -122,7 +125,6 @@
     <Content Include="Views\Shared\_ContactModal.cshtml" />
     <Content Include="Views\Shared\_FilterList.cshtml" />
     <Content Include="Views\Shared\_MainMenu.cshtml" />
-    <Content Include="Content\site.css" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap\css\bootstrap.css" />
@@ -133,6 +135,17 @@
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Content\site\css\site.css" />
+    <Content Include="Content\site\fonts\OpenSans-Bold.ttf" />
+    <Content Include="Content\site\fonts\OpenSans-BoldItalic.ttf" />
+    <Content Include="Content\site\fonts\OpenSans-ExtraBold.ttf" />
+    <Content Include="Content\site\fonts\OpenSans-ExtraBoldItalic.ttf" />
+    <Content Include="Content\site\fonts\OpenSans-Italic.ttf" />
+    <Content Include="Content\site\fonts\OpenSans-Light.ttf" />
+    <Content Include="Content\site\fonts\OpenSans-LightItalic.ttf" />
+    <Content Include="Content\site\fonts\OpenSans-Regular.ttf" />
+    <Content Include="Content\site\fonts\OpenSans-Semibold.ttf" />
+    <Content Include="Content\site\fonts\OpenSans-SemiboldItalic.ttf" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
