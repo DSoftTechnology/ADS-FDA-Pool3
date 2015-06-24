@@ -33,8 +33,6 @@ On June 17, 2015, M. Coon, T. Weckx, A. Brunner, M. Case, K. Lucas, D. Hollenbac
 
 This was documented in /Design/Meetings/2014-06-17/MeetingNotes.md.
 
-Scrum meetings were held twice daily to provide status reports and roadblocks. A project status review was held on 23 June 2015 to discuss project status with the Product Manager documented in /Design/Meetings/2014-06-23/ProjectStatusReview.md
-
 ###c) Include people in the protype design process
 
 See folders under /Design/Meetings. 
@@ -74,6 +72,8 @@ TBD
 ###h) Interactive Approach
 
 See folders under /Design/Meetings. The first meeting for our iterative approach to the design was held on June 18, 2015.
+
+Scrum meetings were held twice daily to provide status reports and roadblocks. A project status review was held on 23 June 2015 to discuss project status with the Product Manager documented in /Design/Meetings/2014-06-23/ProjectStatusReview.md
 
 ###i) Prototype
 

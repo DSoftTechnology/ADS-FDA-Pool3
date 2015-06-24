@@ -6,7 +6,7 @@
     <ProjectGuid>{467F3586-1A38-4B0A-9067-0A78212D2B29}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>dsoft.ads.web.Tests</RootNamespace>
-    <AssemblyName>dsoft.ads.pod2.web.Tests</AssemblyName>
+    <AssemblyName>dsoft.ads.web.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

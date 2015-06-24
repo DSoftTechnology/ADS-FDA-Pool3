@@ -1,5 +1,12 @@
-﻿@model PagedList.IPagedList<dsoft.ads.web.Models.EnforcementReport>
+﻿@model dsoft.ads.web.ViewModels.ReportListViewModel
+@using dsoft.ads.web.ViewModels;
 @using PagedList.Mvc;
+@using PagedList; 
+@{
+	var recallNumberToolTip = ModelMetadata.FromLambdaExpression<ReportListViewModel, string>(x => x.Reports.First().recall_number, ViewData).Description;
+	var reasonToolTip = ModelMetadata.FromLambdaExpression<ReportListViewModel, string>(x => x.Reports.First().reason_for_recall, ViewData).Description;
+    var statusToolTip = ModelMetadata.FromLambdaExpression<ReportListViewModel, string>(x => x.Reports.First().status, ViewData).Description;
+}
 
 <div class="row">
 	<div class="col-md-3">
@@ -11,9 +18,13 @@
 	  <hr/>
 	</div>
 </div>
-<div>@ViewData["ErrorMsg"]</div>
 @using (Html.BeginForm("ReportList", "Home", FormMethod.Post, new { @id = "ReportListForm" }))
 {
+	if (!String.IsNullOrWhiteSpace(Model.ErrorMsg)) {
+		<div class="form-group">
+			<div class="alert alert-danger" role="alert">@Model.ErrorMsg</div>
+		</div>
+	}
 	<div class="row">
 		@Html.Partial("~/Views/Shared/_FilterList.cshtml")
 	  	<div class="col-md-9">
@@ -24,24 +35,27 @@
 	      <thead>
 	        <tr>
 	            <th>
-	                @Html.ActionLink(Html.DisplayNameFor(model => model.First().event_id).ToHtmlString(), "ReportList", new { sortOrder = ViewBag.EnfRepEventIdSortParm })
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.Reports.First().event_id).ToHtmlString(), "ReportList", new { sortOrder = Model.EventIdSortParm }) 
 	            </th>
 	            <th>
-	                @Html.ActionLink(Html.DisplayNameFor(model => model.First().recall_number).ToHtmlString(), "ReportList", new { sortOrder = ViewBag.EnfRepRecallNumSortParm })
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.Reports.First().recall_number).ToHtmlString(), "ReportList", new { sortOrder = Model.RecallNumSortParm })
+	                <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@recallNumberToolTip"></span>
 	            </th>
 	            <th>
-	                @Html.ActionLink(Html.DisplayNameFor(model => model.First().reason_for_recall).ToHtmlString(), "ReportList", new { sortOrder = ViewBag.EnfRepReasonSortParm })
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.Reports.First().reason_for_recall).ToHtmlString(), "ReportList", new { sortOrder = Model.ReasonSortParm })
+	                <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@reasonToolTip"></span>
 	            </th>
-	            <th style="min-width:90px;">
-	                @Html.ActionLink(Html.DisplayNameFor(model => model.First().status).ToHtmlString(), "ReportList", new { sortOrder = ViewBag.EnfRepStatusSortParm })
+	            <th>
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.Reports.First().status).ToHtmlString(), "ReportList", new { sortOrder = Model.StatusSortParm })
+	                <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@statusToolTip"></span>
 	            </th>
 	        </tr>
 	      </thead>
 	      <tbody>
-		    @foreach (var item in Model) {
+		    @foreach (var item in Model.Reports) {
 		        <tr>
 		            <td>
-		                @Html.ActionLink(item.event_id.ToString(), "ReportDetails", new {@eventid = item.event_id})
+		                @Html.ActionLink(item.event_id.ToString(), "ReportDetails", new {@id = item.id})
 		            </td>
 		            <td>
 		                @Html.DisplayFor(modelItem => item.recall_number)
@@ -59,14 +73,14 @@
 
 	    <br />
 	    <div>
-	        @ViewBag.PubCount Exception Reports, 
+	        Model.Count Exception Reports, 
 
-	        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+	        Page @(Model.Reports.PageCount < Model.Reports.PageNumber ? 0 : Model.Reports.PageNumber) of @Model.Reports.PageCount
 	    
-	        @Html.PagedListPager(Model, page => Url.Action("ReportList", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+	        @Html.PagedListPager(Model.Reports, page => Url.Action("ReportList", new { page, sortOrder = Model.CurrentSort }))
 	    
 	        Display 
-	        @Html.DropDownList("PageSize", (List<SelectListItem>)ViewBag.PageSizeOptions, new { @id = "PageSizeId", onchange = "PageSizeChange()" })
+	        @Html.DropDownList("PageSize", (List<SelectListItem>)Model.PageSizeOptions, new { @id = "PageSizeId", onchange = "PageSizeChange()" })
 	        per page
 	        <br />
 	    </div>
