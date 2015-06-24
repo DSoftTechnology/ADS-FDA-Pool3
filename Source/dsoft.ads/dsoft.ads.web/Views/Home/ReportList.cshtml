@@ -1,6 +1,12 @@
 ﻿@model dsoft.ads.web.ViewModels.ReportListViewModel
+@using dsoft.ads.web.ViewModels;
 @using PagedList.Mvc;
-@using PagedList;
+@using PagedList; 
+@{
+	var recallNumberToolTip = ModelMetadata.FromLambdaExpression<ReportListViewModel, string>(x => x.Results.First().recall_number, ViewData).Description;
+	var reasonToolTip = ModelMetadata.FromLambdaExpression<ReportListViewModel, string>(x => x.Results.First().reason_for_recall, ViewData).Description;
+    var statusToolTip = ModelMetadata.FromLambdaExpression<ReportListViewModel, string>(x => x.Results.First().status, ViewData).Description;
+}
 
 <div class="row">
 	<div class="col-md-3">
@@ -12,9 +18,13 @@
 	  <hr/>
 	</div>
 </div>
-<div>Model.ErrorMsg</div>
 @using (Html.BeginForm("ReportList", "Home", FormMethod.Post, new { @id = "ReportListForm" }))
 {
+	if (!String.IsNullOrWhiteSpace(Model.ErrorMsg)) {
+		<div class="form-group">
+			<div class="alert alert-danger" role="alert">@Model.ErrorMsg</div>
+		</div>
+	}
 	<div class="row">
 		@Html.Partial("~/Views/Shared/_FilterList.cshtml")
 	  	<div class="col-md-9">
@@ -29,12 +39,15 @@
 	            </th>
 	            <th>
 	                @Html.ActionLink(Html.DisplayNameFor(model => model.Results.First().recall_number).ToHtmlString(), "ReportList", new { sortOrder = Model.RecallNumSortParm })
+	                <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@recallNumberToolTip"></span>
 	            </th>
 	            <th>
 	                @Html.ActionLink(Html.DisplayNameFor(model => model.Results.First().reason_for_recall).ToHtmlString(), "ReportList", new { sortOrder = Model.ReasonSortParm })
+	                <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@reasonToolTip"></span>
 	            </th>
 	            <th>
 	                @Html.ActionLink(Html.DisplayNameFor(model => model.Results.First().status).ToHtmlString(), "ReportList", new { sortOrder = Model.StatusSortParm })
+	                <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@statusToolTip"></span>
 	            </th>
 	        </tr>
 	      </thead>

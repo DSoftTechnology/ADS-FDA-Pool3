@@ -1,4 +1,9 @@
-﻿<div class="row">
+﻿@section head
+{
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+}
+
+<div class="row">
 	<div class="col-md-3">
 		<h2>Geographic Report</h2>
 		<hr/>
@@ -12,16 +17,117 @@
 	@Html.Partial("~/Views/Shared/_FilterList.cshtml")
   	<div class="col-md-9">
         <p>
-          Some helpful text here.
+          This map color encodes the number of FDA Food Reports based on the filter criteria with a 7-step quantize scale ranging from 0 to the max number of reports.
         </p>
-        <p>
-          <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=Map&amp;w=800&amp;h=600">
-        </p>
+        <div><button id="redraw">Refresh</button></div>
+        <div id="mapLegend"></div>
+		<div id="mapcontainer">
+		  <svg>
+		    <g id="states"></g>
+		    <g id="border"></g>
+		  </svg>
+		</div>
   	</div>
 </div>
 
 <script>
     $(document).ready(function () {
         $('#geographicNav').parent().addClass('active');
+        $('#filterSubmit').on("click", redrawMap);
     });
+
+    // setup svg elements
+	var width = 800,
+	    height = 500;
+
+    var map = d3.select("#mapcontainer svg")
+		.attr("preserveAspectRatio", "xMinYMin meet")
+		.attr("viewBox", "0 0 800 500");
+
+	var states = d3.select("#mapcontainer svg #states");
+	var border = d3.select("#mapcontainer svg #border");
+	var legend = d3.select("#mapLegend");
+
+	var projection = d3.geo.albersUsa()
+		.scale(1000)
+		.translate([width/2, height/2]);
+
+	var path = d3.geo.path()
+		.projection(projection);
+
+	// queue json requests, calls buildMap when done
+    queue()
+    	.defer(d3.json, "/Content/json/us.json")
+    	//.defer(d3.json, "/Report/GetGeoReport")
+    	.await(buildMap);
+
+    // called when deferred json calls are done
+    function buildMap(error, us, data){
+	  	if (error) return console.error(error);
+
+		//var maxCount = d3.max(data, function(d.count);
+		var maxCount = Math.floor(Math.random() * 240);
+
+		var colors = d3.scale.quantize()
+			.domain([0, maxCount])
+			.range(colorbrewer.Purples[7]);
+
+		// Create states
+	  	states
+	  		.selectAll("path")
+	  		.data(topojson.feature(us, us.objects.states).features)
+	  		.enter().append("path")
+	  			//.attr("fill", function(d) { return colors(data[d.id].count); }) 
+	  			.attr("fill", function(d) { return colors(Math.random() * maxCount); }) 
+	  			.attr("d", path);
+
+	  	// Create state border overlay
+	  	border.append("path")
+	    	.datum(topojson.feature(us, us.objects.states, function(a,b){ return a !==b; }))
+	    	.attr("class", "states")
+	    	.attr("d", path);
+
+	  	// Build legend
+		legend.append("ul")
+			.attr("class", "list-inline");
+
+		var keys = legend.selectAll("li.key")
+			.data(colors.range());
+
+		keys.enter().append("li")
+			.attr("class", "key")
+			.style("display", "inline-block")
+			.style("border-top-color", String)
+			.text(function(d){ return Math.round(colors.invertExtent(d)[0]); });
+	}
+
+	// Redraw the map, triggered by the filter button on the _FilterList partial view
+    function redrawMap() {
+    	// get filter form data
+    	// var formData = JSON.stringify($("#filterForm").serializeForm();
+    	// d3.json("/Report/GetGeoReport").post(formData, function(error, data) {
+
+    	//var maxCount = d3.max(data, function(d.count);
+		var maxCount = Math.floor(Math.random() * 240);
+
+		// redefine color scale
+		var colors = d3.scale.quantize()
+			.domain([0, maxCount])
+			.range(colorbrewer.Purples[7]);
+
+		// recolor states
+    	states.transition()
+    		.selectAll("path")
+    		.duration(500)
+  			.attr("fill", function(d) { return colors(Math.random() * maxCount); });
+
+  		// recalculate legend
+  		legend.selectAll("li.key")
+  			.text(function(d){ return Math.round(colors.invertExtent(d)[0]); });
+  		//}
+
+  		// prevent event from bubbling up
+  		return false;
+  	}
+	//);
 </script>
