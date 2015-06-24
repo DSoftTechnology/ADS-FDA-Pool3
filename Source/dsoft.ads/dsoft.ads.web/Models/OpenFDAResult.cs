@@ -6,14 +6,20 @@ using Newtonsoft.Json;
 
 namespace dsoft.ads.web.Models
 {
-	public class EnforcementReport
+	public class OpenFDAResult
 	{
-		public EnforcementReport ()
+		public OpenFDAResult ()
 		{
 		}
 
 		#region Properties
-
+
+		// Counts
+
+		public string term { get; set; }
+
+		public string count { get; set; }
+		// Enforcement Reports
 		[JsonProperty(PropertyName="@id")]
 		[Display(Name = "ID", Description = "")]
 		public string id { get; set; }
@@ -80,14 +86,8 @@ namespace dsoft.ads.web.Models
 		[Display(Name = "Recall Initiation Date", Description = "The date the recall began")]
 		public DateTime recall_initiation_date_full { get; set; }
 
-		[Display(Name = "States Affected", Description = "")]
-		public List<string> stateList { get; set; }
 		#endregion
 
-		public void SetStateList()
-		{
-			this.stateList = StateNames.GetStateList (this.distribution_pattern);
-		}
 	}
 }
 

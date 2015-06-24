@@ -14,6 +14,8 @@ namespace dsoft.ads.web.Controllers
 	{
 		public ActionResult Index ()
 		{
+			GeoReportViewModel geo = new GeoReportViewModel ();
+
 			return View ();
 		}
 

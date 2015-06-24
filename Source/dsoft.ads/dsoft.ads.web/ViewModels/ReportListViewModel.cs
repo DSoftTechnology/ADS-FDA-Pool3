@@ -22,7 +22,7 @@ namespace dsoft.ads.web.ViewModels
 		public string ErrorMsg {get; set; }
 		public int Count { get; set; }
 		public int PageSize { get; set; }
-		public PagedList.IPagedList<EnforcementReport> Reports { get; set; }
+		public PagedList.IPagedList<OpenFDAResult> Results { get; set; }
 		public List<SelectListItem> PageSizeOptions { get; set; }
 
 		public ReportListViewModel (string sortOrder, int? page, int? pageSize)
@@ -59,48 +59,48 @@ namespace dsoft.ads.web.ViewModels
 			query.type = OpenFDAQuery.FDAReportType.enforcement;
 			query.querySearch = "report_date:[20150101+TO+20150430]";
 			query.queryLimit = 100;
-			bool result = query.RunQuery ();
+			bool success = query.RunQuery ();
 
-			if (result)
+			if (success)
 				this.ErrorMsg = String.Empty;
 			else
 				this.ErrorMsg = "An error occurred executing the query.  Please try again.";
 					
-			var reports = query.response.results.AsQueryable ();
-			this.Count = reports.Count ();
+			var results = query.response.results.AsQueryable ();
+			this.Count = results.Count ();
 
 			// sort
 			switch (sortOrder) {
 			case "eventid":
-				reports = reports.OrderBy (r => r.event_id);
+				results = results.OrderBy (r => r.event_id);
 				break;
 			case "eventid_desc":
-				reports = reports.OrderByDescending (r => r.event_id);
+				results = results.OrderByDescending (r => r.event_id);
 				break;
 			case "recallnum":
-				reports = reports.OrderBy (r => r.recall_number);
+				results = results.OrderBy (r => r.recall_number);
 				break;
 			case "recallnum_desc":
-				reports = reports.OrderByDescending (r => r.recall_number);
+				results = results.OrderByDescending (r => r.recall_number);
 				break;
 			case "reason":
-				reports = reports.OrderBy (r => r.reason_for_recall);
+				results = results.OrderBy (r => r.reason_for_recall);
 				break;
 			case "reason_desc":
-				reports = reports.OrderByDescending (r => r.reason_for_recall);
+				results = results.OrderByDescending (r => r.reason_for_recall);
 				break;
 			case "status":
-				reports = reports.OrderBy (r => r.status);
+				results = results.OrderBy (r => r.status);
 				break;
 			case "status_desc":
-				reports = reports.OrderByDescending (r => r.status);
+				results = results.OrderByDescending (r => r.status);
 				break;
 			}
 
 			if (displayPageSize == -1)
 				displayPageSize = query.response.results.Count();
 
-			this.Reports = reports.ToPagedList (displayPageNumber, displayPageSize);
+			this.Results = results.ToPagedList (displayPageNumber, displayPageSize);
 		}
 	}
 }

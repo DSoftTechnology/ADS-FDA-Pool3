@@ -91,7 +91,6 @@ namespace dsoft.ads.web.Models
 					string json = sr.ReadToEnd();
 					this.responseRaw = json;
 					this.response = JsonConvert.DeserializeObject<OpenFDAResponse> (json);
-					this.response.SetStateLists();
 					return true;
 				}
 			}

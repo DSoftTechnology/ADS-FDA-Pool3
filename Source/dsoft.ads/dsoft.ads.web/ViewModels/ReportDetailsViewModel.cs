@@ -8,11 +8,11 @@ namespace dsoft.ads.web.ViewModels
 {
 	public class ReportDetailsViewModel
 	{
-		public EnforcementReport Report { get; set; }
+		public OpenFDAResult Result { get; set; }
 
 		public ReportDetailsViewModel (string id)
 		{
-			this.Report = null;
+			this.Result = null;
 
 			OpenFDAQuery query = new OpenFDAQuery ();
 			query.source = OpenFDAQuery.FDAReportSource.food;
@@ -21,7 +21,7 @@ namespace dsoft.ads.web.ViewModels
 			query.queryLimit = 100;
 			bool result = query.RunQuery ();
 			if (result) {
-				this.Report = query.response.results.Where (r => r.id.Equals(id)).FirstOrDefault ();
+				this.Result = query.response.results.Where (r => r.id.Equals(id)).FirstOrDefault ();
 			}
 		}
 	}

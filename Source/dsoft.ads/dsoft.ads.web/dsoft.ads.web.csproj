@@ -96,7 +96,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\EnforcementReport.cs" />
     <Compile Include="Models\OpenFDAQuery.cs" />
     <Compile Include="Models\OpenFDAResponse.cs" />
     <Compile Include="Models\OpenFDAResponseMeta.cs" />
@@ -106,6 +105,9 @@
     <Compile Include="Helpers\SessionHelper.cs" />
     <Compile Include="ViewModels\ReportListViewModel.cs" />
     <Compile Include="ViewModels\ReportDetailsViewModel.cs" />
+    <Compile Include="ViewModels\GeoReportViewModel.cs" />
+    <Compile Include="Models\OpenFDAResult.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />

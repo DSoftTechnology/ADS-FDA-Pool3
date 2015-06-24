@@ -25,21 +25,21 @@
 	      <thead>
 	        <tr>
 	            <th>
-	                @Html.ActionLink(Html.DisplayNameFor(model => model.Reports.First().event_id).ToHtmlString(), "ReportList", new { sortOrder = Model.EventIdSortParm })
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.Results.First().event_id).ToHtmlString(), "ReportList", new { sortOrder = Model.EventIdSortParm })
 	            </th>
 	            <th>
-	                @Html.ActionLink(Html.DisplayNameFor(model => model.Reports.First().recall_number).ToHtmlString(), "ReportList", new { sortOrder = Model.RecallNumSortParm })
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.Results.First().recall_number).ToHtmlString(), "ReportList", new { sortOrder = Model.RecallNumSortParm })
 	            </th>
 	            <th>
-	                @Html.ActionLink(Html.DisplayNameFor(model => model.Reports.First().reason_for_recall).ToHtmlString(), "ReportList", new { sortOrder = Model.ReasonSortParm })
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.Results.First().reason_for_recall).ToHtmlString(), "ReportList", new { sortOrder = Model.ReasonSortParm })
 	            </th>
 	            <th>
-	                @Html.ActionLink(Html.DisplayNameFor(model => model.Reports.First().status).ToHtmlString(), "ReportList", new { sortOrder = Model.StatusSortParm })
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.Results.First().status).ToHtmlString(), "ReportList", new { sortOrder = Model.StatusSortParm })
 	            </th>
 	        </tr>
 	      </thead>
 	      <tbody>
-		    @foreach (var item in Model.Reports) {
+		    @foreach (var item in Model.Results) {
 		        <tr>
 		            <td>
 		                @Html.ActionLink(item.event_id.ToString(), "ReportDetails", new {@id = item.id})
@@ -62,9 +62,9 @@
 	    <div>
 	        Model.Count Exception Reports, 
 
-	        Page @(Model.Reports.PageCount < Model.Reports.PageNumber ? 0 : Model.Reports.PageNumber) of @Model.Reports.PageCount
+	        Page @(Model.Results.PageCount < Model.Results.PageNumber ? 0 : Model.Results.PageNumber) of @Model.Results.PageCount
 	    
-	        @Html.PagedListPager(Model.Reports, page => Url.Action("ReportList", new { page, sortOrder = Model.CurrentSort }))
+	        @Html.PagedListPager(Model.Results, page => Url.Action("ReportList", new { page, sortOrder = Model.CurrentSort }))
 	    
 	        Display 
 	        @Html.DropDownList("PageSize", (List<SelectListItem>)Model.PageSizeOptions, new { @id = "PageSizeId", onchange = "PageSizeChange()" })

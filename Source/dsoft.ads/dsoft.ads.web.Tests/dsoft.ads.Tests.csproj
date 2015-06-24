@@ -80,6 +80,7 @@
     <Compile Include="Helpers\TestWebRequestCreate.cs" />
     <Compile Include="Helpers\TestWebResponse.cs" />
     <Compile Include="Models\OpenFDAQueryTest.cs" />
+    <Compile Include="Controllers\ReportControllerTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

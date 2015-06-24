@@ -112,7 +112,7 @@ namespace dsoft.ads.web.Tests
 		[Test]
 		public void ResultsParseTest()
 		{
-			EnforcementReport response = JsonConvert.DeserializeObject<EnforcementReport> (json_result);
+			OpenFDAResult response = JsonConvert.DeserializeObject<OpenFDAResult> (json_result);
 			Assert.AreEqual ("F-0283-2013", response.recall_number);
 			Assert.AreEqual ("MI", response.state);
 		}
