@@ -18,9 +18,13 @@
 	  <hr/>
 	</div>
 </div>
-<div>Model.ErrorMsg</div>
 @using (Html.BeginForm("ReportList", "Home", FormMethod.Post, new { @id = "ReportListForm" }))
 {
+	if (!String.IsNullOrWhiteSpace(Model.ErrorMsg)) {
+		<div class="form-group">
+			<div class="alert alert-danger" role="alert">@Model.ErrorMsg</div>
+		</div>
+	}
 	<div class="row">
 		@Html.Partial("~/Views/Shared/_FilterList.cshtml")
 	  	<div class="col-md-9">
