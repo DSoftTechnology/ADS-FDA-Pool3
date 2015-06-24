@@ -54,7 +54,7 @@ namespace dsoft.ads.web.ViewModels
 					{
 						int c = 0;
 						Int32.TryParse(result.count, out c);
-						statecount.count += c;
+						statecount.Count += c;
 					}
 				}
 			}

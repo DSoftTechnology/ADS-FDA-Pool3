@@ -31,9 +31,27 @@ namespace dsoft.ads.web.Tests
 			}
 
 			Assert.NotNull (geo);
+			Assert.AreEqual (String.Empty, geo.ErrorMsg);
 			Assert.AreEqual (50, geo.data.Count);
 		}
 
+		[Test]
+		public void FinancialReport()
+		{
+			var controller = new ReportController ();
+			var result = (JsonResult)controller.FinancialReport ();
+
+			FinancialReportViewModel fin = null;
+			try {
+				fin = JsonConvert.DeserializeObject<FinancialReportViewModel> (result.Data.ToString ());
+			} catch (Exception ex) {
+				throw new Exception ("FinancialReportViewModel failed to parse: " + ex.Message);
+			}
+
+			Assert.NotNull (fin);
+			Assert.AreEqual (String.Empty, fin.ErrorMsg);
+			Assert.AreEqual (10, fin.data.Count);
+		}
 	}
 }
 

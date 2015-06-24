@@ -15,12 +15,20 @@ namespace dsoft.ads.web.Controllers
             return View ();
         }
 
-		public ActionResult GeoReport()
+		public JsonResult GeoReport()
 		{
 			GeoReportViewModel geo = new GeoReportViewModel ();
 			geo.GetGeoReport ();
 
-			return Json(JsonConvert.SerializeObject (geo), JsonRequestBehavior.AllowGet);
+			return Json(geo, JsonRequestBehavior.AllowGet);
+		}
+
+		public JsonResult FinancialReport()
+		{
+			FinancialReportViewModel fin = new FinancialReportViewModel ();
+			fin.GetFinancialReport ();
+
+			return Json(fin.data, JsonRequestBehavior.AllowGet);
 		}
     }
 }

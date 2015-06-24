@@ -19,6 +19,14 @@ namespace dsoft.ads.web.Models
 		public string term { get; set; }
 
 		public string count { get; set; }
+
+		public int countNumeric {
+			get {
+				int ret = 0;
+				Int32.TryParse (this.count, out ret);
+				return ret;
+			}
+		}
 		// Enforcement Reports
 		[JsonProperty(PropertyName="@id")]
 		[Display(Name = "ID", Description = "")]
