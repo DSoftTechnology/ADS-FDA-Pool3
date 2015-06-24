@@ -49,9 +49,9 @@ The facilitator will provide an introductory presentation followed by a short re
 
 | User Group            | Recruitment Method                          |
 | --------------------- |---------------------------------------------|
-| Geographic researcher | Landing page (5 minutes) Recall Locations (5 minutes) Recall Frequency (5 minutes) |
-| Business researcher | Landing page (5 minutes) Recall Frequency (5 minutes) Enforcement Report List (5 minutes) |
-| Public Health Researcher | Landing page (5 minutes) Public and Company Cost (5 minutes) Recall Locations (5 minutes) Recall Frequency (5 minutes) |
+| Geographic researcher | Landing page, Recall Geographic Report  |
+| Business Owner | Landing page, Recall Frequency Report  |
+| Financial Analyst | Landing Page, Company Recall Trending |
 
 ##Procedures
 
@@ -61,9 +61,7 @@ The participant’s interactions with the web site will be monitored by the faci
 
 The facilitator will distribute a consent that acknowledges the participation as voluntary and that the session will be videotaped with participant’s identification safeguarded. After collecting participants’ signed consent, the facilitator will ask the participants if they have any questions.
 
-After a brief questions/answer session, participants will complete a demographic and background information questionnaire.  Each test task will start with a participant reading a test task description out loud from the printed copy followed by the test implementation. Time measurement begins when the participant starts the task.  
-
-The facilitator will instruct the participant to ‘think aloud’ so that a verbal record exists of their interaction with the web site. During the test, the facilitator and note taker(s) will observe participant’s behavior and manually record it using pencil and paper. 
+After a brief questions/answer session, participants will complete a demographic and background information questionnaire.  Each test task will start with a participant reading a test task description out loud from the printed copy followed by the test implementation. Time measurement begins when the participant starts the task.  The facilitator will instruct the participant to ‘think aloud’ so that a verbal record exists of their interaction with the web site. During the test, the facilitator and note taker(s) will observe participant’s behavior and manually record it. 
 
 The facilitator will instruct the participant to ‘think aloud’ so that a verbal record exists of their interaction with the Web site/Web application. The facilitator will observe and enter user behavior, user comments, and system actions in the data logging application.
 
@@ -73,17 +71,15 @@ After each task, the participant will complete the post-task questionnaire and e
 
 The following roles will be included in ADS Food Recall Reports web site usability testing.  An individual may possess multiple roles. Usability tasks may not require all roles. 
 
-###Trainer
+###Facilitator/Trainer (E. Lucas)
 *	Provide training overview prior to usability testing.
-
-###Facilitator
 *	Givers a brief overview of the web site.
 *	Defines usability and purpose of usability testing to participants
 *	Gives a brief overview of the usability test procedures to participants
 *	Assists in conduct of participant and observer debriefing sessions
 *	Assists participant during the tests as needed
 
-###Note Taker/Data Logger
+###Note Taker/Data Logger (K. Reece)
 *	Silent observer
 *	Records participant's actions and comments
 *	Assists in identifying procedural errors and participant’s behavior
@@ -107,7 +103,7 @@ The test tasks below are required to be reviewed by the development team consist
 Task Description: Use dsoft-ads-staging.azurewebsites.net web site to locate all peanut butter products recalls in the state of Colorado. You must complete this task in 5 minutes.  
 
 Objectives:  
-*	User finds Recall Locations report in one click.  
+*	User finds Geographical report in one click.  
 * Users uses the state and keyword filters to retrieve specific data.
 *	User understands the meaning of the data being represented on the graph.
 
@@ -116,11 +112,11 @@ Task Description: Use dsoft-ads-staging.azurewebsites.net web site to locate all
 
 Objectives: 
 
-*	User finds Recall Locations report in one click. 
+*	User finds Geographical report in one click. 
 *	User uses the state, keyword and date range filters to retrieve specific data.
 *	User understands the meaning of the data being represented on the graph.
 
-###Task Scenarios for Business Researcher
+###Task Scenarios for Business Owner
 ####Task 1 – 5 minutes:
 Task Description: Use dsoft-ads-staging.azurewebsites.net web site to see how frequently peanut butter products are recalled in the state of Colorado. You must complete this task in 5 minutes.
 
@@ -135,17 +131,17 @@ Task Description: Use dsoft-ads-staging.azurewebsites.net web site to see why pe
 
 Objectives:
 
-*	User finds Enforcement Report List report in one click.
+*	User finds Recall Frequncy Report List report in one click.
 *	User uses the state, keyword and date range filters to retrieve specific data.
 *	User understands the meaning of the data being represented on the graph.
 
-###Task Scenarios for Public Health Researcher
+###Task Scenarios for Financial Analyst
 ####Task 1 – 5 minutes: 
 Task Description: Use dsoft-ads-staging.azurewebsites.net web site to see top 10 companies with most recalls.  You must complete this task in 5 minutes.
 
 Objectives:
 
-*	User finds Report List report in one click.
+*	User finds Company Recall Trending report in one click.
 *	User understands the meaning of the data being represented on the graph (user recognizes that decreasing size of circles over the 10 year span means that the company is improving and increasing size of circles over the 10 year span means the company is not improving).
 
 ####Task 2 – 5 minutes:
@@ -153,7 +149,7 @@ Task Description: Use dsoft-ads-staging.azurewebsites.net web site to see top 10
 
 Objectives:
 
-•	User finds Report List report in one click.
+•	User finds Company Recall Trending report in one click.
 •	User uses the state filter to retrieve the specific data.
 •	User understands the meaning of the data being represented on the graph (user recognizes that decreasing size of circles over the 10 year span means that the company is improving and increasing size of circles over the 10 year span means the company is not improving).
 
@@ -232,7 +228,9 @@ The identified severity for each problem implies a general reward for resolving 
 ###Reporting Test Results
 The usability test report will be provided after all participants complete testing on 26 June 2015. The test results will be provided in the hard-copy format. The report will contain usability metrics defined in this document compared to the usability goals defined in this document. Completion Rate during testing will be compared to the completion rate goal of 70%.  Also, the TOT during testing will be compared to set time for each task.
 
-In addition, the report will identify usability problems and recommended solutions.  Each recommended solution will be evaluated by development team during the usability testing review meeting to establish an implementation plan with estimated completion time. 
+The test result report will include a section on the evaluating the site against other sites providing similar services. This will be done to ensure ADS Food Recalls site has competitive edge.
+
+In addition, the report will identify usability problems and recommended solutions.  Each recommended solution will be evaluated by development team during the Usability Testing Review meeting to establish an implementation plan with estimated completion time, schedule for  26 June 2015, 0900 hours.
 
 
 
