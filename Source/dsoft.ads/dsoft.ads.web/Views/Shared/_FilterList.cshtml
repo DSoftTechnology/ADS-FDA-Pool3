@@ -7,10 +7,11 @@
 }
 
 <div class="col-md-3">
-    <h4>Report Title <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@reportTitleToolTip"></span></h4>
-    <input class="form-control" type="text" placeholder="Your Report Title">
-    <hr>
-    <h4>Filters</h4>
+  <h4>Report Title <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@reportTitleToolTip"></span></h4>
+  <input class="form-control" type="text" placeholder="Your Report Title">
+  <hr>
+  <h4>Filters</h4>
+  <form id="filterForm">
     <ul class="nav nav-stacked">
       <li>
         <label class="control-label">Keyword <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@keywordToolTip"></span></label>
@@ -35,13 +36,13 @@
         <label class="control-label">End Date <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@endDateToolTip"></span></label>
         <input class="form-control" type="text" placeholder="06/20/2015">
       </li>  
-
-    <li>
-      <hr>
-    	<button class="btn btn-primary form-control" type="submit">Filter</button>
-    </li>
-      </ul>
-  </div>
+      <li>
+        <hr>
+    	<button class="btn btn-primary form-control" id="filterSubmit" type="submit">Filter</button>
+      </li>
+    </ul>
+  </form>
+</div>
 
 <script>
   	$(document).ready(function () {

@@ -3,19 +3,20 @@
 <head>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ViewBag.Title</title>
-    <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="~/Content/site/css/site.css" rel="stylesheet">
-    <script src="~/Scripts/jquery/jquery-2.1.4.min.js"></script>
-    <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
+    @Styles.Render("~/stylebundles/bootstrap", "~/stylebundles/site")
+    @Scripts.Render("~/scriptbundles/bootstrap", "~/scriptbundles/d3", "~/scriptbundles/site")
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    @RenderSection("head", required: false)
 </head>
 <body>
 	@Html.Partial("~/Views/Shared/_MainMenu.cshtml")
 	<div class="container">
 		<div class="col-md-12">
 				@RenderBody()
-			</div>
 		</div>
 	</div>
 	@Html.Partial("~/Views/Shared/_ContactModal.cshtml")
+	@RenderSection("bodybottom", required: false)
 </body>
 </html>
