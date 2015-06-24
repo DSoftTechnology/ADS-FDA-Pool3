@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using dsoft.ads.web.Helpers;
+using Newtonsoft.Json;
 
 namespace dsoft.ads.web.Models
 {
@@ -12,7 +13,8 @@ namespace dsoft.ads.web.Models
 		}
 
 		#region Properties
-
+
+		[JsonProperty(PropertyName="@id")]
 		[Display(Name = "ID", Description = "")]
 		public string id { get; set; }
 

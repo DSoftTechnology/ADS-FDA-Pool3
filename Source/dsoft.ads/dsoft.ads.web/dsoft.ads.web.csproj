@@ -8,7 +8,7 @@
     <ProjectGuid>{B535EEA5-94AB-49E6-8BA2-CF8724F60E02}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>dsoft.ads.web</RootNamespace>
-    <AssemblyName>dsoft.ads.pod2.web</AssemblyName>
+    <AssemblyName>dsoft.ads.web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -86,6 +86,7 @@
     <Folder Include="Helpers\" />
     <Folder Include="Content\" />
     <Folder Include="Content\images\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
@@ -100,6 +101,8 @@
     <Compile Include="Helpers\StateNames.cs" />
     <Compile Include="Models\StateCount.cs" />
     <Compile Include="Helpers\SessionHelper.cs" />
+    <Compile Include="ViewModels\ReportListViewModel.cs" />
+    <Compile Include="ViewModels\ReportDetailsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
