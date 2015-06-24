@@ -1,6 +1,12 @@
 ﻿@model dsoft.ads.web.ViewModels.ReportListViewModel
+@using dsoft.ads.web.ViewModels;
 @using PagedList.Mvc;
-@using PagedList;
+@using PagedList; 
+@{
+	var recallNumberToolTip = ModelMetadata.FromLambdaExpression<ReportListViewModel, string>(x => x.Reports.First().recall_number, ViewData).Description;
+	var reasonToolTip = ModelMetadata.FromLambdaExpression<ReportListViewModel, string>(x => x.Reports.First().reason_for_recall, ViewData).Description;
+    var statusToolTip = ModelMetadata.FromLambdaExpression<ReportListViewModel, string>(x => x.Reports.First().status, ViewData).Description;
+}
 
 <div class="row">
 	<div class="col-md-3">
@@ -25,16 +31,19 @@
 	      <thead>
 	        <tr>
 	            <th>
-	                @Html.ActionLink(Html.DisplayNameFor(model => model.Reports.First().event_id).ToHtmlString(), "ReportList", new { sortOrder = Model.EventIdSortParm })
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.Reports.First().event_id).ToHtmlString(), "ReportList", new { sortOrder = Model.EventIdSortParm }) 
 	            </th>
 	            <th>
 	                @Html.ActionLink(Html.DisplayNameFor(model => model.Reports.First().recall_number).ToHtmlString(), "ReportList", new { sortOrder = Model.RecallNumSortParm })
+	                <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@recallNumberToolTip"></span>
 	            </th>
 	            <th>
 	                @Html.ActionLink(Html.DisplayNameFor(model => model.Reports.First().reason_for_recall).ToHtmlString(), "ReportList", new { sortOrder = Model.ReasonSortParm })
+	                <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@reasonToolTip"></span>
 	            </th>
 	            <th>
 	                @Html.ActionLink(Html.DisplayNameFor(model => model.Reports.First().status).ToHtmlString(), "ReportList", new { sortOrder = Model.StatusSortParm })
+	                <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@statusToolTip"></span>
 	            </th>
 	        </tr>
 	      </thead>
