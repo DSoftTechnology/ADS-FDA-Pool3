@@ -12,10 +12,15 @@
 <body>
 	@Html.Partial("~/Views/Shared/_MainMenu.cshtml")
 	<div class="container">
-		<div class="col-md-12">
+		<div class="col-sm-12">
 				@RenderBody()
 		</div>
+		<div class="col-sm-12">
+			<hr />
+			<p class="text-muted">&copy; DSoft Technology Company 2000-@DateTime.Now.Year. All Rights Reserved.</p>
+		</div>
 	</div>
+
 	@Html.Partial("~/Views/Shared/_ContactModal.cshtml")
 	@RenderSection("bodybottom", required: false)
 </body>
