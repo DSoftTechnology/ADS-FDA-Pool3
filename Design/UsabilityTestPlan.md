@@ -17,32 +17,11 @@ Colorado Springs, CO 80920
 ### Table of Contents
 [Document Overview](UsabilityTestPlan.md#Document-Overview)<br/>
 [Methodology](UsabilityTestPlan.md#Methodology)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Participants](UsabilityTestPlan.md#participants)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Training](UsabilityTestPlan.md#Training)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Procedures](UsabilityTestPlan.md#Procedures)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Roles](UsabilityTestPlan.md#Roles)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Ethics](UsabilityTestPlan.md#Ethics)<br/>
 [Usability Tasks] (UsabilityTestPlan.md#Usability-Tasks)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Tasks for Geographic Researcher](UsabilityTestPlan.md#Tasks-for-Geographic-Researcher)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Task Scenarios for Business Owner](UsabilityTestPlan.md#Task-Scenarios-for-Business-Owner)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Task Scenarios for Financial Analyst](UsabilityTestPlan.md#Task-Scenarios-for-Financial-Analyst)<br/>
+[Analyst](UsabilityTestPlan.md#Task-Scenarios-for-Financial-Analyst)<br/>
 [Usability Metrics] (UsabilityTestPlan.md#Usability-Metrics)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Scenario Completion](UsabilityTestPlan.md#Scenario-Completion)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Critical Errors](UsabilityTestPlan.md#Critical-Errors)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Non-critical Errors](UsabilityTestPlan.md#non-critical-errors)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Error-Free Rate](UsabilityTestPlan.md#Error-Free-Rate)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Subjective Evaluations](UsabilityTestPlan.md#Subjective-Evaluations)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Scenario Completion Time](UsabilityTestPlan.md#Scenario-Completion-Time)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Likes, Dislikes and Recommendations](UsabilityTestPlan.md#likes-dislikes-and-recommendations)<br/>
 [Usability Goals] (UsabilityTestPlan.md#Usability-Goals)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Completion Rate](UsabilityTestPlan.md#Completion-Rate)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Error-free rate](UsabilityTestPlan.md#Error-free-rate)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Time on Task (TOT)](UsabilityTestPlan.md#Time-on-Task-(TOT))<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Subjective Measures](UsabilityTestPlan.md#Subjective-Measures)<br/>
 [Problem Severity] (UsabilityTestPlan.md#Problem-Severity)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Impact](UsabilityTestPlan.md#Impact)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Frequency](UsabilityTestPlan.md#Frequency)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Problem Severity Classification](UsabilityTestPlan.md#Problem-Severity-Classification)<br/>
 [Reporting Test Results](UsabilityTestPlan.md#Reporting-Test-Results)<br/>
 [Appendix A – Questionnaires] (UsabilityTestPlan.md#appendix-a--questionnaires)<br/>
 ##Document Overview
