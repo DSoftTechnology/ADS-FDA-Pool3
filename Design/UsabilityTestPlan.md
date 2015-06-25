@@ -2,8 +2,9 @@
 #Version 1.0
 #Usability Test Plan
 
-June 24, 2015
+June 25, 2015
 
+![](Images/DsoftLogo.png?raw=true)
 
 DSoft Technology Company
 
