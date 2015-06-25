@@ -13,15 +13,20 @@
 <script>
     $(document).ready(function () {
         $('#trendingNav').parent().addClass('active');
+<<<<<<< HEAD
         $("filterSubmit").on("click", refreshGraph);
         SetSubtitle('@defaultSubtitle');
+=======
+        $("#filterSubmit").on("click", refreshGraph);
+>>>>>>> e3296667fd34b8d6bac60fc811d670022f8a9b7a
     });
 
     // initialize svg elements
 	var rowHeight = 25,
+		columnWidth = 40,
 		width = 600,
 		height = 250,
-		margin = {top: 20, right: 20, bottom: 0, left:300};
+		margin = {top: 30, right: 20, bottom: 0, left:300};
 			
 	var c = d3.scale.category10();
 
@@ -36,24 +41,26 @@
 
 	var svg = d3.select("#matrixContainer").append("svg")
 		.attr("preserveAspectRatio", "xMinYMin meet")
-		.attr("viewBox", "0 0 920 290")
+		.attr("viewBox", "0 0 920 280")
 		.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-//	refreshGraph();
-
-	queue()
-		.defer(d3.json, "/Content/json/financialreport.json")
-		.await(buildGraph);
+	refreshGraph();
 
 	function refreshGraph() {
 		// get filter form data
 		var formData = JSON.stringify($("#filterForm").serializeForm());
 
+		svg.selectAll("g").remove();
+		svg.append("g").append("text")
+			.text("Querying open.fda.gov...");
+
 		// post to get json data
 		d3.json("/Report/FinancialReport")
 			.header("Content-type", "application/json")
 			.post(formData, buildGraph);
+
+		return false;
 	}
 
 	// Callback function for the refreshGraph ajax post
@@ -64,21 +71,29 @@
 		var start_year = d3.min(fin.data, function(d) { return d3.min(d3.keys(d.YearlyCounts)); });
 		var end_year = d3.max(fin.data, function(d) { return d3.max(d3.keys(d.YearlyCounts)); });
 		var maxCount = d3.max(fin.data, function(d) { return d3.max(d3.values(d.YearlyCounts)); });
+		var years = d3.keys(fin.data[0].YearlyCounts).sort(d3.ascending);
 
 		xScale.domain([start_year, end_year]);
+		xAxis.tickValues(d3.range(start_year, end_year + 1, 1));
 
 		var rScale = d3.scale.log()
 			.domain([1, maxCount])
-			.range([2, 9]);
+			.range([2, 10]);
 
 		svg.selectAll("g").remove();
-		svg.append("g")
-			.attr("class", "x axis")
-			.call(xAxis);
+		svg.append("g").selectAll("text")
+			.data(years)
+			.enter()
+			.append("text")
+				.attr("x", function (d, i) { return i * columnWidth })
+				.attr("text-anchor", "middle")
+				.text(String);
+			//.attr("class", "x axis")
+			//.call(xAxis);
 
 		for (var j = 0; j < fin.data.length; j++) {
 			var companyData = fin.data[j];
-			var years = d3.keys(companyData.YearlyCounts);
+			var years = d3.keys(companyData.YearlyCounts).sort(d3.ascending);
 
 			var g = svg.append("g");
 
@@ -86,7 +101,7 @@
 				.data(years)
 				.enter()
 				.append("circle")
-					.attr("cx", function(d, i){ return xScale(d); })
+					.attr("cx", function(d, i){ return i * columnWidth; }) //return xScale(d); })
 					.attr("cy", j * rowHeight + 20)
 					.attr("r", function(d){ return rScale(companyData.YearlyCounts[d]); })
 					.style("fill", function(d){ return c(j); });
@@ -96,7 +111,7 @@
 				.enter()
 				.append("text")
 					.attr("y", j * rowHeight + 25)
-					.attr("x", function(d, i){ return xScale(d); })
+					.attr("x", function(d, i){ return i * columnWidth; }) //return xScale(d); })
 					.attr("class", "value")
 					.attr("text-anchor", "middle")
 					.style("font-size", "large")
