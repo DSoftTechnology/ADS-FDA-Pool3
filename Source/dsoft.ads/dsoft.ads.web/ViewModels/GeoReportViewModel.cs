@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Web;
 
 using dsoft.ads.web.Helpers;
 using dsoft.ads.web.Models;
@@ -45,8 +46,10 @@ namespace dsoft.ads.web.ViewModels
 			query.queryCount = "distribution_pattern";
 
 			var searchQuery = new List<string>();
+
 			if (!string.IsNullOrWhiteSpace (keyword))
-				searchQuery.Add (keyword);
+				searchQuery.Add ( HttpUtility.UrlEncode(keyword));
+			
 			if (start != null && end != null)
 				searchQuery.Add (string.Format ("recall_initiation_date:[{0:yyyyMMdd}+TO+{1:yyyyMMdd}]", start.Value, end.Value));
 

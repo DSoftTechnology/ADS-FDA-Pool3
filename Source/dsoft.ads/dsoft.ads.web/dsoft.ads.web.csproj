@@ -104,9 +104,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="Models\OpenFDAQuery.cs" />
     <Compile Include="Models\OpenFDAResponse.cs" />
     <Compile Include="Models\OpenFDAResponseMeta.cs" />
@@ -121,6 +118,9 @@
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="ViewModels\FinancialReportViewModel.cs" />
     <Compile Include="Models\CompanyCount.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -143,8 +143,6 @@
     <Content Include="Views\Shared\_ContactModal.cshtml" />
     <Content Include="Views\Shared\_FilterList.cshtml" />
     <Content Include="Views\Shared\_MainMenu.cshtml" />
-    <Content Include="Content\bootstrap\css\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap\css\bootstrap.css" />
     <Content Include="Content\bootstrap\css\bootstrap.min.css" />
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.eot" />
@@ -188,7 +186,6 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
-    <None Include="Content\bootstrap\css\bootstrap-theme.css.map" />
     <None Include="Content\bootstrap\css\bootstrap.css.map" />
     <None Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Content\json\usa.json" />
