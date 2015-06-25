@@ -12,8 +12,9 @@
 <body>
 	@Html.Partial("~/Views/Shared/_MainMenu.cshtml")
 	<div class="container">
+		@Html.Partial("~/Views/Shared/_BetaWarning.cshtml")
 		<div class="col-sm-12">
-				@RenderBody()
+		@RenderBody()
 		</div>
 		<div class="col-sm-12">
 			<hr />

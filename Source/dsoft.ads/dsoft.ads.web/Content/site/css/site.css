@@ -13,6 +13,13 @@ body {
 	font-size: 14px;
 }
 
+/* Warning Alert */
+.alert-warning {
+  color: #fff;
+  background-color: #cab879;
+  border-color: #cab879;
+}
+
 /* Filter List */
 @media (max-width: 992px) {
     .affix {

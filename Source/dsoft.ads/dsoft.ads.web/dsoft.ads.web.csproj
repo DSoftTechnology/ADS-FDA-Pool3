@@ -172,6 +172,7 @@
     <Content Include="Content\bootstrap\css\bootstrap-datepicker3.standalone.min.css" />
     <Content Include="Content\images\geopreview.png" />
     <Content Include="Views\Shared\_ReportLayout.cshtml" />
+    <Content Include="Views\Shared\_BetaWarning.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
