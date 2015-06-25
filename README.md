@@ -7,19 +7,19 @@ Prototype Url: TBD
 
 DSoft Technology uses an Agile methodology (Scrum), an iterative, incremental framework for software project development. Every two week interval is planned by the team using a tracking tool, and projects are kept on track using frequent short meetings to communicate what has been accomplished and what roadblocks are preventing progress. A Scrum Master is assigned who is responsible for removing these roadblocks and with making sure that the project stays on track.
 
-At the beginning of the project, after writing a requirements document we add user stories and tasks to the product backlog for design, testing, and release documentation, with an estimated complexity and priority for each. Both the backlog and the requirements document are continually updated to keep up with changing requirements. Every two weeks, based on priority, we pull user stories from the product backlog and add them to the current sprint.
+At the beginning of the project, after writing a brief requirements document we add user stories and tasks to the product backlog for design, testing, and release documentation, with an estimated complexity and priority for each. Both the backlog and the requirements document are continually updated to keep up with changing user requirements. Every two weeks, based on priority, we pull user stories from the product backlog and add them to the current sprint.
 
-DSoft employs AgileSprinter™ to manage/track our Scrum process (screenshots provided under /Design/Sprint X Documents).  
+DSoft employs our internally-developed AgileSprinter™ to manage/track our Scrum process (screenshots provided under /Design/Sprint X Documents).  
 
 ##U.S. Digital Services Playbook Evidence
 
 ###a) Assigned one leader and gave that person authority and responsibility
 
-On June 17, 2015, Kathie Reece, Category 1 Product Manager, was assigned as the team leader, responsible and accountable for the prototype delivery.
+On June 17, 2015, K. Reece, Category 1 Product Manager, was assigned as the team leader, responsible and accountable for the prototype delivery.  Ms. Reece has the skillset (long time IT project manager and certified Scrum Master) to perform this role.
 
 ###b) Assembled a multidisciplinary and collaborative team
 
-On June 17, 2015, M. Coon, T. Weckx, A. Brunner, M. Case, K. Lucas, D. Hollenbach, and K. Reece were assigned to team under the following categories:
+On June 17, 2015, M. Coon, T. Weckx, A. Brunner, M. Case, K. Lucas, D. Hollenbach, and K. Reece were assigned to team under the following ADS labor categories:
 
 | Name       | Category      |
 | ---------- | ------------- |
@@ -31,7 +31,7 @@ On June 17, 2015, M. Coon, T. Weckx, A. Brunner, M. Case, K. Lucas, D. Hollenbac
 | D. Hollenbach | Cat 12: Business Analyst    |
 | K. Reece   | Cat 1: Product Manager     |
 
-This was documented in /Design/Meetings/2014-06-17/MeetingNotes.md.
+This assignment was documented in /Design/Meetings/2014-06-17/MeetingNotes.md.
 
 ###c) Include people in the protype design process
 
@@ -39,7 +39,7 @@ See folders under /Design/Meetings.
 
 An initial meeting with potential users uninvolved in the design and development process was held on June 18, 2015, and was documented in /Design/Meetings/2015-06-18/MeetingNotes.md. In this meeting, users were assigned personas of a Food Researcher, Financial Analyst and a small Business Owner. An initial idea of what functionality would be useful for these personas was documented, and use cases were created.
 
-The second paper prototype session was performed with customers on Monday, 22 June 2015, with DSoft’s Business Analyst and Visual Designer.  Customers identified changes and added requirements to the forms and resultant reports.  Changes were made to the use cases to capture changes and some requirements were deferred until the next build.
+The second paper prototype session was performed with customers on Monday, 22 June 2015, with DSoft’s Business Analyst and Visual Designer.  Customers/Personas identified changes and added requirements to the web forms and resultant reports (generated from open.FDA.gov).  Changes were made to the use cases to capture changes, separate variants of the use case. Some requirements were deferred until the next build.
 
 ###d) Human-centered design techniques and tools
 
@@ -98,7 +98,9 @@ Initial List:
 
 ###l) Unit Tests
 
-TBD
+Created automated tests to verify all user-facing functionality
+Test Plan finalized on TBD 2015
+Testing team session planned for Friday, 26 June 2015 using multiple mobile devices and various operating systems with users unfamiliar with system and development.
 
 ###m) Configuration Management
 
@@ -110,7 +112,7 @@ The deployment is fully automated using TeamCity. Commits pushed to Github trigg
 
 ###n) Continuous Monitoring 
 
-Using Azure Web Apps as a PaaS comes with built-in continuous monitoring of CPU, Memory, Bandwith, HTTP errors, Response times, Page Requests. Alerts can be configured as well as automatic scaling of the underlying infrastructure based on the metrics.
+Using Azure Web Apps as a Platform as a Service (PaaS) comes with built-in continuous monitoring of CPU, Memory, Bandwith, HTTP errors, Response times, Page Requests. Alerts can be configured as well as automatic scaling of the underlying infrastructure based on the metrics.  Reference Web Apps Dashboard here: https://azure.microsoft.com/en-us/documentation/articles/web-sites-monitor/
 
 ###o) Deployed Software in Container
 
