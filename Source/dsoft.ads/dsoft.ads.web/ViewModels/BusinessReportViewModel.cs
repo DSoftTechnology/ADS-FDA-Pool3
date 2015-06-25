@@ -6,10 +6,8 @@ using dsoft.ads.web.Models;
 
 namespace dsoft.ads.web.ViewModels
 {
-    public class BusinessReportViewModel
+    public class BusinessReportViewModel : BaseViewModel
     {
-        public string ErrorMsg { get; set; }
-        public string Subtitle { get; set; }
         public List<RecallCount> data { get; set; }
 
         public BusinessReportViewModel()
@@ -19,7 +17,7 @@ namespace dsoft.ads.web.ViewModels
         public void GetFinancialReport(string keyword, string state)
         {
             this.data = new List<RecallCount>();
-            this.Subtitle = ReportHelper.GetReportSubtitle(keyword, state, null, null);
+            this.SetFilters(keyword, state, null, null);
             this.ErrorMsg = String.Empty;
 
             int loopStart = 2008;

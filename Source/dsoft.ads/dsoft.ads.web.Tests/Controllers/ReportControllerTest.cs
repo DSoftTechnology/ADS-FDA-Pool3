@@ -27,8 +27,7 @@ namespace dsoft.ads.web.Tests
 			GeoReportViewModel geo = null;
 			try 
             {
-				var json = JsonConvert.SerializeObject(result.Data);
-				geo = JsonConvert.DeserializeObject<GeoReportViewModel> (json);
+                geo = (GeoReportViewModel)result.Data;
 			} 
             catch (Exception ex) 
             {
@@ -49,8 +48,7 @@ namespace dsoft.ads.web.Tests
 			FinancialReportViewModel fin = null;
 			try 
             {
-				var json = JsonConvert.SerializeObject(result.Data);
-				fin = JsonConvert.DeserializeObject<FinancialReportViewModel> (json);
+                fin = (FinancialReportViewModel)result.Data;
 			} 
             catch (Exception ex) 
             {
@@ -71,8 +69,7 @@ namespace dsoft.ads.web.Tests
             BusinessReportViewModel bus = null;
             try 
             {
-                var json = JsonConvert.SerializeObject(result.Data);
-                bus = JsonConvert.DeserializeObject<BusinessReportViewModel> (json);
+                bus = (BusinessReportViewModel)result.Data;
             } 
             catch (Exception ex) 
             {

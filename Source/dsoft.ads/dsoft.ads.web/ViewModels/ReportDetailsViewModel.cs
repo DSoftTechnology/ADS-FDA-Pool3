@@ -7,7 +7,7 @@ using dsoft.ads.web.Models;
 
 namespace dsoft.ads.web.ViewModels
 {
-	public class ReportDetailsViewModel
+    public class ReportDetailsViewModel
 	{
 		public OpenFDAResult Result { get; set; }
 

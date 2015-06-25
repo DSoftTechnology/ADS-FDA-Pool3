@@ -121,9 +121,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\ReportHelper.cs" />
     <Compile Include="ViewModels\BusinessReportViewModel.cs" />
     <Compile Include="Models\RecallCount.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />

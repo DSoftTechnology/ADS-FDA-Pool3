@@ -14,8 +14,6 @@ namespace dsoft.ads.web.Controllers
 	{
 		public ActionResult Index ()
 		{
-			GeoReportViewModel geo = new GeoReportViewModel ();
-
 			return View ();
 		}
 
@@ -24,33 +22,25 @@ namespace dsoft.ads.web.Controllers
 			return View ();
 		}
 
-		public ActionResult GeographicReport ()
+        public ActionResult GeographicReport ()
 		{
 			ViewData ["HideStateFilter"] = true;
-			return View ();
+
+            return View(new BaseViewModel());
 		}
 
-		public ActionResult BusinessReport () 
+        public ActionResult BusinessReport () 
 		{
-			return View ();
+            return View (new BaseViewModel());
 		}
 
-		public ActionResult FinancialReport ()
+        public ActionResult FinancialReport ()
 		{
-			return View ();
+            return View (new BaseViewModel());
 		}
 
         public ActionResult ReportList (string sortOrder, int? page, int? pageSize, string keyword = null, string state = null, DateTime? startDate = null, DateTime? endDate = null)
 		{
-            if (!String.IsNullOrWhiteSpace(keyword))
-                ViewBag.keyword = keyword;
-            if (!String.IsNullOrWhiteSpace(state))
-                ViewBag.state = state;
-            if (startDate != null)
-                ViewBag.startDate = ((DateTime)startDate).ToShortDateString();
-            if (endDate != null)
-                ViewBag.endDate = ((DateTime)endDate).ToShortDateString();
-
             return View(new ReportListViewModel(sortOrder, page, pageSize, keyword, state, startDate, endDate));
 		}
 

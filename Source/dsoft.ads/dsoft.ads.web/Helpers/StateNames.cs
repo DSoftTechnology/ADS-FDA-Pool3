@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Web.Mvc;
 
 namespace dsoft.ads.web.Helpers
 {
@@ -77,6 +81,24 @@ namespace dsoft.ads.web.Helpers
 			return statelist;
 		}
 
+
+        public static SelectList GetStateDropdown()
+        {
+            var states = stateNames
+                .Select(x =>
+                    new SelectListItem
+                    {
+                        Value = x.Key,
+                        Text = x.Value
+                    });
+
+            List<SelectListItem> statelist = new List<SelectListItem>();
+            statelist.AddRange(new SelectList(states, "Text", "Value"));
+            statelist.Insert(0, new SelectListItem{Text = "", Value = ""});
+
+            return new SelectList(statelist, "Value", "Text");
+        }
 	}
 }
 
+               

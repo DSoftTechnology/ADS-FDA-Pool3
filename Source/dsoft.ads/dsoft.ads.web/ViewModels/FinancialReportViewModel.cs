@@ -7,10 +7,8 @@ using dsoft.ads.web.Models;
 
 namespace dsoft.ads.web.ViewModels
 {
-	public class FinancialReportViewModel
+    public class FinancialReportViewModel : BaseViewModel
 	{
-		public string ErrorMsg { get; set; }
-        public string Subtitle { get; set; }
 		public List<CompanyCount> data { get; set; }
 
 		public FinancialReportViewModel ()
@@ -20,7 +18,7 @@ namespace dsoft.ads.web.ViewModels
         public void GetFinancialReport(string keyword, string state, DateTime? start, DateTime? end)
 		{
 			this.data = new List<CompanyCount> ();
-            this.Subtitle = ReportHelper.GetReportSubtitle(keyword, state, start, end);
+            this.SetFilters(keyword, state, start, end);
 
 			OpenFDAQuery query = new OpenFDAQuery ();
 			query.source = OpenFDAQuery.FDAReportSource.food;
@@ -70,7 +68,6 @@ namespace dsoft.ads.web.ViewModels
 
 						if (name.Contains(","))
 							name = name.Substring(0, name.IndexOf(","));
-						name = HttpUtility.UrlEncode(name);
 
 						int totalcount = 0;
 						Int32.TryParse(result.count, out totalcount);
@@ -92,7 +89,7 @@ namespace dsoft.ads.web.ViewModels
 							subquery.source = OpenFDAQuery.FDAReportSource.food;
 							subquery.type = OpenFDAQuery.FDAReportType.enforcement;
 							subquery.queryCount = "recalling_firm.exact";
-							subquery.querySearch = String.Format("recall_initiation_date:[{0}0101+TO+{1}0101]+AND+recalling_firm:\"{2}\"", yr, yr + 1, name);
+                            subquery.querySearch = String.Format("recall_initiation_date:[{0}0101+TO+{1}0101]+AND+recalling_firm:\"{2}\"", yr, yr + 1, HttpUtility.UrlEncode(name));
 							success = subquery.RunQuery();						
 
 							int yrcount = 0;

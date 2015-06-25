@@ -12,15 +12,13 @@ using PagedList;
 
 namespace dsoft.ads.web.ViewModels
 {
-	public class ReportListViewModel
+    public class ReportListViewModel : BaseViewModel
 	{
 		public string CurrentSort { get; set; }	
 		public string EventIdSortParm { get; set; }
 		public string RecallNumSortParm { get; set; }
 		public string ReasonSortParm { get; set; }
 		public string StatusSortParm { get; set; }
-		public string ErrorMsg {get; set; }
-        public string Subtitle { get; set; }
 		public int Count { get; set; }
 		public int PageSize { get; set; }
 		public PagedList.IPagedList<OpenFDAResult> Results { get; set; }
@@ -28,7 +26,7 @@ namespace dsoft.ads.web.ViewModels
 
         public ReportListViewModel (string sortOrder, int? page, int? pageSize, string keyword, string state, DateTime? start, DateTime? end)
 		{
-            this.Subtitle = ReportHelper.GetReportSubtitle(keyword, state, start, end);
+            this.SetFilters(keyword, state, start, end);
 
 			this.CurrentSort = sortOrder;	
 			this.EventIdSortParm = (sortOrder == "eventid" ? "eventid_desc" : "eventid");
