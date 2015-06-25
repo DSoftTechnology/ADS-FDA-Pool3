@@ -149,9 +149,9 @@ Task Description: Use staging-dsoft-ads.azurewebsites.net web site to see top 10
 
 Objectives:
 
-•	User finds Company Recall Trending report in one click.
-•	User uses the state filter to retrieve the specific data.
-•	User understands the meaning of the data being represented on the graph (user recognizes that decreasing size of circles over the 10 year span means that the company is improving and increasing size of circles over the 10 year span means the company is not improving).
+*	User finds Company Recall Trending report in one click.
+*	User uses the state filter to retrieve the specific data.
+*	User understands the meaning of the data being represented on the graph (user recognizes that decreasing size of circles over the 10 year span means that the company is improving and increasing size of circles over the 10 year span means the company is not improving).
 
 
 ##Usability Metrics
