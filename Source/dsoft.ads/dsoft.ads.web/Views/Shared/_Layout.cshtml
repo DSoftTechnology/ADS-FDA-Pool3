@@ -14,12 +14,9 @@
 	<div class="container">
 		@Html.Partial("~/Views/Shared/_BetaWarning.cshtml")
 		<div class="col-sm-12">
-		@RenderBody()
+			@RenderBody()
 		</div>
-		<div class="col-sm-12">
-			<hr />
-			<p class="text-muted">&copy; DSoft Technology Company 2000-@DateTime.Now.Year. All Rights Reserved.</p>
-		</div>
+		@Html.Partial("~/Views/Shared/_Footer.cshtml")
 	</div>
 
 	@Html.Partial("~/Views/Shared/_ContactModal.cshtml")
