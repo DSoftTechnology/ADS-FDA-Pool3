@@ -12,6 +12,7 @@ namespace dsoft.ads.web.ViewModels
 	public class GeoReportViewModel
 	{
 		public string ErrorMsg { get; set; }
+        public string Subtitle { get; set; }
 		public List<StateCount> data { get; set; }
 
 		public GeoReportViewModel ()
@@ -20,6 +21,8 @@ namespace dsoft.ads.web.ViewModels
 
 		public void GetGeoReport(string keyword, DateTime? start, DateTime? end)
 		{
+            this.Subtitle = ReportHelper.GetReportSubtitle(keyword, String.Empty, start, end);
+
 			/*
 			 * Note:  the OpenFDA API has a bug/limitation that it will not support a count on distribution_pattern.exact 
 			 * which would return complete distribution_pattern strings and allow more accurate parsing.  Just counting

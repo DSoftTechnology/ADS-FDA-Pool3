@@ -23,10 +23,10 @@ namespace dsoft.ads.web.Controllers
 			return Json(geo, JsonRequestBehavior.AllowGet);
 		}
 
-		public JsonResult FinancialReport()
+        public JsonResult FinancialReport(string keyword = null, string state = null, DateTime? startDate = null, DateTime? endDate = null)
 		{
 			FinancialReportViewModel fin = new FinancialReportViewModel ();
-			fin.GetFinancialReport ();
+            fin.GetFinancialReport (keyword, state, startDate, endDate);
 
 			return Json(fin, JsonRequestBehavior.AllowGet);
 		}
