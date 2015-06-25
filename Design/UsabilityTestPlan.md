@@ -39,7 +39,7 @@ The following are the usability test objectives:
 </p>
 
 ##Methodology
-Usability testing will be conducted inside DSoft Technology office in Colorado Springs, Colorado. Participants will be escorted to DSoft Technology’s conference room where 8 personal computers / laptops are configured with Windows 7, Internet Explorer (IE) v11 and the latest version of Firefox/Chrome. The conference room also has a laptop with Windows 7, IE, v11 installed connected to a projector to display the video output on a large screen. The facilitator will provide an introductory presentation followed by a short review/mission of the ADS Food Recall Reports web site and instruct the participants that they are evaluating the web site, rather than the facilitator evaluating the participant and that the following measures will be collected.
+Usability testing will be conducted inside DSoft Technology office in Colorado Springs, Colorado. Participants will be escorted to DSoft Technology’s conference room where 8 personal computers / laptops are configured with Windows 7, Internet Explorer (IE) v11 and the latest version of Firefox/Chrome. Participants have been asked to bring thier mobile devices (iPhone, IPads, Android phones) with them to test the site using a variety of browsers (Safari, Opera, etc.).  The conference room also has a laptop with Windows 7, IE, v11 installed connected to a projector to display the video output on a large screen. The facilitator will provide an introductory presentation followed by a short review/mission of the ADS Food Recall Reports web site and instruct the participants that they are evaluating the web site, rather than the facilitator evaluating the participant and that the following measures will be collected.
 *	Demographic information
 *	Satisfaction assessment
 *	Improvement suggestions
@@ -72,7 +72,7 @@ The facilitator will provide an introductory presentation followed by a short re
 
 ##Procedures
 
-Participants will be provided with a personal computer / laptop to conduct their usability tests.  The personal computers /laptops are configured with Windows 7, Internet Explorer v10 and the latest version of Firefox/Chrome.   Participants will be able to select their browser of choice either Internet Explorer v10 or the latest version of Chrome/, Firefox) to conduct the tests. 
+Participants will be provided with a personal computer / laptop to conduct their usability tests.  The personal computers /laptops are configured with Windows 7, Internet Explorer v10 and the latest version of Firefox/Chrome.   Participants will be able to select their browser of choice either Internet Explorer v10 or the latest version of Chrome/, Firefox) to conduct the tests.   Participants have been asked to bring thier mobile devices (iPhone, IPads, Android phones) with them to test the site using a variety of browsers (Safari, Opera, etc.). 
 
 The participant’s interactions with the web site will be monitored by the facilitator and note taker(s) seated in the conference room will capture feedback and comments.  Each test session will be videotaped.  The facilitator will conduct a brief review explaining that the amount of time taken to complete the test task will be measured and the site exploration should not occur until after the task completed. 
 
@@ -96,7 +96,7 @@ The following roles will be included in ADS Food Recall Reports web site usabili
 *	Assists in conduct of participant and observer debriefing sessions
 *	Assists participant during the tests as needed
 
-###Note Taker/Data Logger (K. Reece)
+###Note Taker/Data Logger (A. Brunner)
 *	Silent observer
 *	Records participant's actions and comments
 *	Assists in identifying procedural errors and participant’s behavior
@@ -117,19 +117,19 @@ The test tasks below are required to be reviewed by the development team consist
 
 ###Tasks for Geographic Researcher
 ####Task 1 – 5 minutes:
-Task Description: Use staging-dsoft-ads.azurewebsites.net web site to locate all peanut butter products recalls in the state of Colorado. You must complete this task in 5 minutes.  
+Task Description: Use staging-dsoft-ads.azurewebsites.net web site to locate all peanut butter products recalls in the last 6 months. You must complete this task in 5 minutes.  
 
 Objectives:  
 *	User finds Geographical report in one click.  
-* Users uses the state and keyword filters to retrieve specific data.
-*	User understands the meaning of the data being represented on the graph.
+*  Users uses the date and keyword filters to retrieve specific data.
+*  User understands the meaning of the data being represented on the graph.
 
 ####Task 2 – 5 minutes:
-Task Description: Use staging-dsoft-ads.azurewebsites.net web site to locate all milk products recalls in the state of Colorado during the last year.  You must complete this task in 5 minutes.
+Task Description: Use staging-dsoft-ads.azurewebsites.net web site to list all cheese products recalls in the state of Colorado in the last 3 years using the Report List.  You must complete this task in 5 minutes.
 
 Objectives: 
 
-*	User finds Geographical report in one click. 
+*	User finds Report List report in one click. 
 *	User uses the state, keyword and date range filters to retrieve specific data.
 *	User understands the meaning of the data being represented on the graph.
 
@@ -139,16 +139,16 @@ Task Description: Use staging-dsoft-ads.azurewebsites.net web site to see how fr
 
 Objectives:
 
-*	User finds Recall Frequency report in one click.
+*	User finds Business report in one click.
 *	User uses the keyword and state filters to retrieve the specific data.
 *	User understands the meaning of the data being represented on the graph.
 
 ####Task 2 – 5 minutes:
-Task Description: Use staging-dsoft-ads.azurewebsites.net web site to see why peanut butter products were recalled in the state of Colorado in the course of last year. You must complete this task in 5 minutes.
+Task Description: Use staging-dsoft-ads.azurewebsites.net web site to see all wheat products were recalled in the state of Colorado in the year 2000. You must complete this task in 5 minutes.
 
 Objectives:
 
-*	User finds Recall Frequncy Report List report in one click.
+*	User finds Report List report in one click.
 *	User uses the state, keyword and date range filters to retrieve specific data.
 *	User understands the meaning of the data being represented on the graph.
 
@@ -297,7 +297,10 @@ The following questionnaires will be used to conduct participant’s feedback.
 ☐ Between 5 and 10 years <br/>
 ☐ Between 1 and 5 years <br/>
 
-###Post-task Questionnaire
+###Post-task Questionnaire  
+
+Device Testing on:
+Browser Tested on:
 
 1.	Rate how easy was it to find the report. Circle one
 
