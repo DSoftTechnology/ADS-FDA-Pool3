@@ -38,9 +38,9 @@ ADS FDA Food Recall Reports web site will be tested by the following user groups
 
 | User Group            | Recruitment Method                          | Eligibility Characteristics  | Expected Skills/Knowledge | Number of Participants | Session Length | Test Date |
 | --------------------- |---------------------------------------------| ---------------------------- | ---- | ---- | ---- | ---- |
-| Geographic researcher | Hallway testing – friends/family/co-workers | No prior experience with Food Recalls Reports 4 females, 4 males | Used Internet Explorer or Firefox/Chorme browser for at least 1 year | 8 | 1 hour | 25 June 2015 |
-| Business researcher   | Hallway testing – friends/family/co-workers      |  No prior experience with Food Recalls Reports Owns a food-related business. 4 females, 1 males | Used Internet Explorer  or Firefox/Chome browser for at least 1 year | 8 | 1 hour |  25 June 2015 |
-| Public Health Researcher   | Hallway testing – friends/family/co-workers      |  No prior experience with Food Recalls Reports Owns a food-related business. 4 females, 4 males | Used Internet Explorer or Firefox/chrome browser for at least 1 year. | 8 | 1 hour | 25 June 2015 |
+| Geographic Researcher | Hallway testing – friends/family/co-workers | No prior experience with Food Recalls Reports 4 females, 4 males | Used Internet Explorer or Firefox/Chorme browser for at least 1 year | 8 | 1 hour | 25 June 2015 |
+| Business Owner   | Hallway testing – friends/family/co-workers      |  No prior experience with Food Recalls Reports.  4 females, 1 males | Used Internet Explorer  or Firefox/Chome browser for at least 1 year | 8 | 1 hour |  25 June 2015 |
+| Financial Analyst | Hallway testing – friends/family/co-workers      |  No prior experience with Food Recalls Reports. 4 females, 4 males | Used Internet Explorer or Firefox/chrome browser for at least 1 year. | 8 | 1 hour | 25 June 2015 |
 
 The participants' responsibilities will be to attempt to complete a set of representative task scenarios presented to them in as efficient and timely a manner as possible, and to provide feedback regarding the usability and acceptability of the user interface.  The participants will be directed to provide honest opinions regarding the usability of the application, and to participate in post-session subjective questionnaires and debriefing.
 

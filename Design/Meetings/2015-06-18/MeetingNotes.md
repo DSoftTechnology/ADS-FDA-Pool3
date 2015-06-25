@@ -36,7 +36,7 @@ Specifically,
 - The Business Owner is interested in doing business with the FDA and preparing a business proposal.  She wants to know what type of data is collected, frequencies of recalls in order to provide concrete examples of how her business can assist the FDA to recall a product.
 
 
-- The Government Accounting Office Financial Analyst is interested in the costs of food recalls to both the public and the companies responsible for the recalls.  She is looking for trends to determine if the FDA’s new policies are effective in reducing food recalls over time.
+- The Government Accounting Office Financial Analyst is interested in the costs of food recalls to both the public and the companies responsible for the recalls.  She is looking for trends to determine if the FDA’s new policies are effective in reducing food recalls over time.  Additionally she is interested in which companies have the most product recalls and that the trend over time is the number of recalls continues to diminish.
 
 
 
