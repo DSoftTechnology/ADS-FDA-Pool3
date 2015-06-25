@@ -168,7 +168,7 @@ body {
   	stroke-linejoin: round;
 }
 
-#mapcontainer{
+.graphContainer{
 	width:100%;
 	margin: 0 auto;
 
@@ -177,23 +177,44 @@ body {
 	position:relative;
 }
 
-#mapcontainer svg {
+.graphContainer svg {
 	position:absolute;
 	top:0;
 	left:0;
 }
 
+.graphHelp {
+	font-size:small;
+	font-style:italic;
+}
+
 #mapLegend {
-    padding: 1.5em 0 0 1.5em;
+    padding: 2% 0 2% 10%;
 }
 
 #mapLegend li.key {
     border-top-width: 15px;
     border-top-style: solid;
-    font-size: .75em;
-    width: 5%;
+    font-size: x-small;
+    width: 10%;
     padding-left: 0;
     padding-right: 0;
+}
+
+#matrixContainer {
+ 	padding-top: 35%;
+ 	margin-top: 20px;
+}
+
+.axis path,
+.axis line {
+	fill: none;
+  	stroke: white;
+  	shape-rendering: crispEdges;
+}
+
+.axis text {
+	font-size:large;
 }
 
 /* Glyphicons */
