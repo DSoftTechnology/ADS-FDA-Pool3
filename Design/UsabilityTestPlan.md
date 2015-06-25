@@ -33,7 +33,7 @@ Colorado Springs, CO 80920
 &nbsp;&nbsp;&nbsp;&nbsp;[Error-Free Rate](UsabilityTestPlan.md#Error-Free-Rate)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Subjective Evaluations](UsabilityTestPlan.md#Subjective-Evaluations)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Scenario Completion Time](UsabilityTestPlan.md#Scenario-Completion-Time)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Likes, Dislikes and Recommendations](UsabilityTestPlan.md#Likes,-Dislikes-and-Recommendations)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Likes, Dislikes and Recommendations](UsabilityTestPlan.md#likes-dislikes-and-recommendations)<br/>
 [Usability Goals] (UsabilityTestPlan.md#Usability-Goals)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Completion Rate](UsabilityTestPlan.md#Completion-Rate)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Error-free rate](UsabilityTestPlan.md#Error-free-rate)<br/>
