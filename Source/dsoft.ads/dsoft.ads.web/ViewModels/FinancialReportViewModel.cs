@@ -10,22 +10,40 @@ namespace dsoft.ads.web.ViewModels
 	public class FinancialReportViewModel
 	{
 		public string ErrorMsg { get; set; }
+        public string Subtitle { get; set; }
 		public List<CompanyCount> data { get; set; }
 
 		public FinancialReportViewModel ()
 		{
 		}
 
-		public void GetFinancialReport()
+        public void GetFinancialReport(string keyword, string state, DateTime? start, DateTime? end)
 		{
 			this.data = new List<CompanyCount> ();
+            this.Subtitle = ReportHelper.GetReportSubtitle(keyword, state, start, end);
 
 			OpenFDAQuery query = new OpenFDAQuery ();
 			query.source = OpenFDAQuery.FDAReportSource.food;
 			query.type = OpenFDAQuery.FDAReportType.enforcement;
 			query.queryCount = "recalling_firm.exact";
-			query.querySearch = String.Format ("recall_initiation_date:[20080101+TO+{0}0101]", DateTime.Today.Year+1);
-			bool success = query.RunQuery ();
+
+            var searchQuery = new List<string>();
+
+            if (!String.IsNullOrWhiteSpace (keyword))
+                searchQuery.Add ( HttpUtility.UrlEncode(keyword));
+
+            if (!String.IsNullOrWhiteSpace(state))
+                searchQuery.Add(String.Format("state:{0}", HttpUtility.UrlEncode(state)));
+
+            if ((start != null) && (end != null))
+                searchQuery.Add (String.Format ("recall_initiation_date:[{0:yyyyMMdd}+TO+{1:yyyyMMdd}]", start.Value, end.Value));
+            else 
+                searchQuery.Add (String.Format ("recall_initiation_date:[20080101+TO+{0}0101]", DateTime.Today.Year+1));
+			
+            if (searchQuery.Count > 0)
+                query.querySearch = string.Join ("+AND+", searchQuery);
+
+            bool success = query.RunQuery ();
 
 			if (!success)
 				this.ErrorMsg = "An error occurred executing the query.  Please try again.";
@@ -59,7 +77,15 @@ namespace dsoft.ads.web.ViewModels
 						CompanyCount companyCount = new CompanyCount(name, totalcount);
 
 						int countNonZero = 0;
-						for (int yr = 2008; yr <= DateTime.Today.Year; yr++)
+                        int loopStart = 2008;
+                        int loopEnd = DateTime.Today.Year;
+                        if ((start != null) && (end != null))
+                        {
+                            loopStart = ((DateTime)start).Year;
+                            loopEnd = ((DateTime)end).Year;
+                        }
+
+                        for (int yr = loopStart; yr <= loopEnd; yr++)
 						{
 							OpenFDAQuery subquery = new OpenFDAQuery();
 							subquery.source = OpenFDAQuery.FDAReportSource.food;
