@@ -26,17 +26,19 @@ namespace dsoft.ads.web.Controllers
 		{
 			ViewData ["HideStateFilter"] = true;
 
-            return View(new BaseViewModel());
+            return View(new BaseViewModel(true));
 		}
 
         public ActionResult BusinessReport () 
 		{
-            return View (new BaseViewModel());
+            return View (new BaseViewModel(true));
 		}
 
         public ActionResult FinancialReport ()
 		{
-            return View (new BaseViewModel());
+            ViewData ["HideDateFilter"] = true;
+
+            return View (new BaseViewModel(true));
 		}
 
         public ActionResult ReportList (string sortOrder, int? page, int? pageSize, string keyword = null, string state = null, DateTime? startDate = null, DateTime? endDate = null)

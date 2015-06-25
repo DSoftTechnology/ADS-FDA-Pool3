@@ -10,14 +10,14 @@ namespace dsoft.ads.web.ViewModels
     {
         public List<RecallCount> data { get; set; }
 
-        public BusinessReportViewModel()
-        {
-        }
+        public BusinessReportViewModel() {}
 
-        public void GetFinancialReport(string keyword, string state)
+        public BusinessReportViewModel (bool setStates) : base(setStates) {}
+
+        public void GetFinancialReport(bool isAjax, string keyword, string state)
         {
             this.data = new List<RecallCount>();
-            this.SetFilters(keyword, state, null, null);
+            this.SetFilters(isAjax, keyword, state, null, null);
             this.ErrorMsg = String.Empty;
 
             int loopStart = 2008;

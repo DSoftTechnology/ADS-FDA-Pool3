@@ -17,24 +17,24 @@ namespace dsoft.ads.web.Controllers
 
 		public JsonResult GeoReport(string keyword = null, DateTime? startDate = null, DateTime? endDate = null)
 		{
-			GeoReportViewModel geo = new GeoReportViewModel ();
-			geo.GetGeoReport (keyword, startDate, endDate);
+			GeoReportViewModel geo = new GeoReportViewModel (false);
+			geo.GetGeoReport (true, keyword, startDate, endDate);
 
 			return Json(geo, JsonRequestBehavior.AllowGet);
 		}
 
         public JsonResult FinancialReport(string keyword = null, string state = null, DateTime? startDate = null, DateTime? endDate = null)
 		{
-			FinancialReportViewModel fin = new FinancialReportViewModel ();
-            fin.GetFinancialReport (keyword, state, startDate, endDate);
+			FinancialReportViewModel fin = new FinancialReportViewModel (false);
+            fin.GetFinancialReport (true, keyword, state, startDate, endDate);
 
 			return Json(fin, JsonRequestBehavior.AllowGet);
 		}
 
         public JsonResult BusinessReport(string keyword = null, string state = null)
         {
-            BusinessReportViewModel bus = new BusinessReportViewModel();
-            bus.GetFinancialReport(keyword, state);
+            BusinessReportViewModel bus = new BusinessReportViewModel(false);
+            bus.GetFinancialReport(true, keyword, state);
 
             return Json(bus, JsonRequestBehavior.AllowGet);
         }

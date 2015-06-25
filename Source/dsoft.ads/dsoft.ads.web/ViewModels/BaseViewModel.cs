@@ -9,6 +9,7 @@ namespace dsoft.ads.web.ViewModels
 {
     public class BaseViewModel
     {
+        public bool isAjax;
         public string ErrorMsg {get; set; }
         public string Subtitle { get; set; }
         public SelectList StateList { get; set; }
@@ -17,13 +18,19 @@ namespace dsoft.ads.web.ViewModels
         public string FilterStartDate { get; set; }
         public string FilterEndDate { get; set; }
 
-        public BaseViewModel()
+        public BaseViewModel() {}
+
+        public BaseViewModel(bool setStates)
         {
-            this.StateList = StateNames.GetStateDropdown();
+            if (setStates)
+                this.StateList = StateNames.GetStateDropdown();
         }
 
-        protected void SetFilters(string keyword = null, string state = null, DateTime? startDate = null, DateTime? endDate = null)
+        protected void SetFilters(bool isAjax, string keyword = null, string state = null, DateTime? startDate = null, DateTime? endDate = null)
         {
+            if (!isAjax)
+                this.StateList = StateNames.GetStateDropdown();
+
             this.FilterKeyword = keyword;
             this.FilterState = state;
             this.FilterStartDate = (startDate != null) ? ((DateTime)startDate).ToShortDateString() : String.Empty;

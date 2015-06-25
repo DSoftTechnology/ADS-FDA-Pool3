@@ -98,6 +98,7 @@ namespace dsoft.ads.web.Models
 			catch (Exception ex)
 			{
 				// TODO: log
+                Console.WriteLine(ex.Message);
 			}
 
 			return false;

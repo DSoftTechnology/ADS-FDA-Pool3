@@ -24,9 +24,13 @@ namespace dsoft.ads.web.ViewModels
 		public PagedList.IPagedList<OpenFDAResult> Results { get; set; }
 		public List<SelectListItem> PageSizeOptions { get; set; }
 
+        public ReportListViewModel () {}
+
+        public ReportListViewModel (bool setStates) : base(setStates) {}
+
         public ReportListViewModel (string sortOrder, int? page, int? pageSize, string keyword, string state, DateTime? start, DateTime? end)
 		{
-            this.SetFilters(keyword, state, start, end);
+            this.SetFilters(false, keyword, state, start, end);
 
 			this.CurrentSort = sortOrder;	
 			this.EventIdSortParm = (sortOrder == "eventid" ? "eventid_desc" : "eventid");

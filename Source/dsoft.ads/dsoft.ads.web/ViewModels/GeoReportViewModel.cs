@@ -13,13 +13,13 @@ namespace dsoft.ads.web.ViewModels
 	{
 		public List<StateCount> data { get; set; }
 
-		public GeoReportViewModel ()
-		{
-		}
+        public GeoReportViewModel () {}
 
-		public void GetGeoReport(string keyword, DateTime? start, DateTime? end)
+        public GeoReportViewModel (bool setStates) : base(setStates) {}
+
+        public void GetGeoReport(bool isAjax, string keyword, DateTime? start, DateTime? end)
 		{
-            this.SetFilters(keyword, String.Empty, start, end);
+            this.SetFilters(isAjax, keyword, String.Empty, start, end);
 
 			/*
 			 * Note:  the OpenFDA API has a bug/limitation that it will not support a count on distribution_pattern.exact 

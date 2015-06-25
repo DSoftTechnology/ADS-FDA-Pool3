@@ -11,14 +11,14 @@ namespace dsoft.ads.web.ViewModels
 	{
 		public List<CompanyCount> data { get; set; }
 
-		public FinancialReportViewModel ()
-		{
-		}
+        public FinancialReportViewModel () {}
 
-        public void GetFinancialReport(string keyword, string state, DateTime? start, DateTime? end)
+        public FinancialReportViewModel (bool setStates) : base(setStates) {}
+
+        public void GetFinancialReport(bool isAjax, string keyword, string state, DateTime? start, DateTime? end)
 		{
 			this.data = new List<CompanyCount> ();
-            this.SetFilters(keyword, state, start, end);
+            this.SetFilters(isAjax, keyword, state, start, end);
 
 			OpenFDAQuery query = new OpenFDAQuery ();
 			query.source = OpenFDAQuery.FDAReportSource.food;
@@ -49,68 +49,78 @@ namespace dsoft.ads.web.ViewModels
             {
 				this.ErrorMsg = String.Empty;
 
-				int resultLimit = 0;
-				foreach (OpenFDAResult result in query.response.results) {
+				// build top company list
+                int resultLimit = 0;
+                foreach (OpenFDAResult result in query.response.results)
+                {
 
-					string name = result.term;
+                    string name = result.term;
 
-					/*
+                    /*
 					 * TODO:  FDA API contains a bug which does not permit string text search queries containing single-quote
 					 * whether or not it is URL-encoded properly.  For demonstration purposes, names with single-quote/apostrophes
 					 * will be excluded from the top-ten list.
 					 * 
 					 */
-					if (!name.Contains("'"))
-					{
-						resultLimit++;
-						if (resultLimit > 10)
-							break;
+                    if (!name.Contains("'"))
+                    {
+                        resultLimit++;
+                        if (resultLimit > 10)
+                            break;
 
-						if (name.Contains(","))
-							name = name.Substring(0, name.IndexOf(","));
+                        this.data.Add(new CompanyCount(name, 0));
+                    }
+                }
 
-						int totalcount = 0;
-						Int32.TryParse(result.count, out totalcount);
+                // build company counts per year
+                int loopStart = 2008;
+                int loopEnd = DateTime.Today.Year;
+                if ((start != null) && (end != null))
+                {
+                    loopStart = ((DateTime)start).Year;
+                    loopEnd = ((DateTime)end).Year;
+                }
 
-						CompanyCount companyCount = new CompanyCount(name, totalcount);
+                bool yearHasHadData = false;        // don't drop year columns after first year with data is found
+                for (int yr = loopStart; yr <= loopEnd; yr++)
+                {
+                    bool yearHasData = false;
+                    OpenFDAQuery subquery = new OpenFDAQuery();
+                    subquery.source = OpenFDAQuery.FDAReportSource.food;
+                    subquery.type = OpenFDAQuery.FDAReportType.enforcement;
+                    subquery.queryCount = "recalling_firm.exact";
+                    subquery.querySearch = String.Format("recall_initiation_date:[{0}0101+TO+{1}0101]", yr, yr + 1);
+                    subquery.queryLimit = 1000;
+                    success = subquery.RunQuery();                      
 
-						int countNonZero = 0;
-                        int loopStart = 2008;
-                        int loopEnd = DateTime.Today.Year;
-                        if ((start != null) && (end != null))
+                    if ((success) && (subquery.response != null) && (subquery.response.results.Count > 0))
+                    {
+                        foreach (CompanyCount company in this.data)
                         {
-                            loopStart = ((DateTime)start).Year;
-                            loopEnd = ((DateTime)end).Year;
+                            int cnt = 0;
+                            var result = subquery.response.results.Where(r => r.term.Equals(company.Name)).FirstOrDefault();
+                            if (result != null)
+                            {
+                                cnt = result.countNumeric;
+                                yearHasData = true;
+                                yearHasHadData = true;
+                            }
+                                
+                            company.YearlyCounts.Add(yr.ToString(), cnt);
                         }
+                    }
 
-                        for (int yr = loopStart; yr <= loopEnd; yr++)
-						{
-							OpenFDAQuery subquery = new OpenFDAQuery();
-							subquery.source = OpenFDAQuery.FDAReportSource.food;
-							subquery.type = OpenFDAQuery.FDAReportType.enforcement;
-							subquery.queryCount = "recalling_firm.exact";
-                            subquery.querySearch = String.Format("recall_initiation_date:[{0}0101+TO+{1}0101]+AND+recalling_firm:\"{2}\"", yr, yr + 1, HttpUtility.UrlEncode(name));
-							success = subquery.RunQuery();						
+                    if (!yearHasData && !yearHasHadData)
+                    {
+                        // remove year from all company dictionaries
+                        foreach (CompanyCount company in this.data)
+                        {
+                            company.YearlyCounts.Remove(yr.ToString());
+                        }
+                    }
+                }
 
-							int yrcount = 0;
-							if ((success) && (subquery.response != null) && (subquery.response.results.Count > 0))
-							{
-								foreach (var yrresult in subquery.response.results)
-								{
-									yrcount += yrresult.countNumeric;
-								}
-							}
-							companyCount.YearlyCounts.Add(yr.ToString(), yrcount);
-
-							if (yrcount > 0)
-								countNonZero++;
-						}
-
-						companyCount.CountNonZero = countNonZero;
-						this.data.Add(companyCount);
-					}
-				}
-			}
+            }
 		}
 
 	}
