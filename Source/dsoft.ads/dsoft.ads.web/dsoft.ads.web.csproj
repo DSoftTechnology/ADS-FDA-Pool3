@@ -119,6 +119,8 @@
     <Compile Include="ViewModels\GeoReportViewModel.cs" />
     <Compile Include="Models\OpenFDAResult.cs" />
     <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="ViewModels\FinancialReportViewModel.cs" />
+    <Compile Include="Models\CompanyCount.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
