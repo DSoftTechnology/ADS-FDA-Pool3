@@ -90,4 +90,7 @@
     <Folder Include="Helpers\" />
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.config" />
+  </ItemGroup>
 </Project>

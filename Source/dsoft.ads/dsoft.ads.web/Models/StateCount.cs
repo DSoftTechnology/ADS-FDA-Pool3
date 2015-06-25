@@ -6,17 +6,17 @@ namespace dsoft.ads.web.Models
 	{
 		public StateCount (int idx, string name, string abbr)
 		{
-			this.index = idx;
+			this.Index = idx;
 			this.StateName = name;
 			this.StateAbbr = abbr;
-			this.count = 0;
+			this.Count = 0;
 		}
 
 		#region Properties
-		public int index { get; set; }
+		public int Index { get; set; }
 		public string StateName { get; set; }
 		public string StateAbbr { get; set; }
-		public int count { get; set; }
+		public int Count { get; set; }
 		#endregion
 	}
 }
