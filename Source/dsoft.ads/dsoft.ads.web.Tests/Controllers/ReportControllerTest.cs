@@ -53,7 +53,7 @@ namespace dsoft.ads.web.Tests
 
 			Assert.NotNull (fin);
 			Assert.AreEqual (String.Empty, fin.ErrorMsg);
-			Assert.AreEqual (20, fin.data.Count);
+			Assert.AreEqual (10, fin.data.Count);
 		}
 	}
 }

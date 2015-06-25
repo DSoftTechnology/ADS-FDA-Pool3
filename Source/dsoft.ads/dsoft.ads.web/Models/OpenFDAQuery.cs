@@ -75,7 +75,8 @@ namespace dsoft.ads.web.Models
 				string url = GetUrl ();
 				if (String.IsNullOrEmpty(url))
 					throw new Exception("No URL specified.");
-				
+
+				Console.WriteLine(url);
 				WebRequest request = WebRequest.Create(url) as WebRequest;
 				using (WebResponse response = request.GetResponse() as WebResponse)
 				{
