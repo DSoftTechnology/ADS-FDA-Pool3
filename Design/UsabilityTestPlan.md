@@ -254,7 +254,7 @@ The usability test report will be provided after all participants complete testi
 
 The test result report will include a section on the evaluating the site against other sites providing similar services. This will be done to ensure ADS Food Recalls site has competitive edge.
 
-In addition, the report will identify usability problems and recommended solutions.  Each recommended solution will be evaluated by development team during the Usability Testing Review meeting to establish an implementation plan with estimated completion time, schedule for  26 June 2015, 0900 hours.
+In addition, the report will identify usability problems and recommended solutions.  Each recommended solution will be evaluated by development team during the Usability Testing Review meeting to establish an implementation plan with estimated completion time, schedule for 26 June 2015, 1500 hours.
 
 <p align="center">
 <a href="#table-of-contents">Table of Contents</a>
