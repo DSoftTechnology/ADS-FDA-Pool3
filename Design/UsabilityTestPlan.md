@@ -49,15 +49,15 @@ Usability testing will be conducted inside DSoft Technology office in Colorado S
 </p>
 
 ##Participants
-DSoft Technology chose to use Hallway Testing initially as we wanted participants that were unfamiliar with the website and wanted to uncover the most obvious problems. These users, who don’t necessarily have an interest in the web site, will be happy to give their opinion but may miss issues actual users will encounter. Therefore, relying on this one method of testing is not recommended as we would want to have users with specialize skills and target the specific user groups. The design of the reports was made with three user groups in mind (three different reports) however our initial usability testing does not differ in the recruitment method, eligibility characteristics or expected skills and knowledge. All potential participants however will be asked if they use the internet to verify the web browser experience. Candidates with less than 1 year of internet experience will not be consider appropriate participants.
+DSoft Technology chose to use Hallway Testing initially as we wanted participants that were unfamiliar with the website and wanted to uncover the most obvious problems. These users, who don’t necessarily have an interest in the web site, will be happy to give their opinion but may miss issues actual users will encounter. Therefore, relying on this one method of testing is not recommended as we would want to have users with specialize skills and target the specific user groups. The design of the reports was made with three user groups in mind (four different reports) however our initial usability testing does not differ in the recruitment method, eligibility characteristics or expected skills and knowledge. All potential participants however will be asked if they use the internet to verify the web browser experience. Candidates with less than 1 year of internet experience will not be consider appropriate participants.
 
 ADS FDA Food Recall Reports web site will be tested by the following user groups:
 
 | User Group            | Recruitment Method                          | Eligibility Characteristics  | Expected Skills/Knowledge | Number of Participants | Session Length | Test Date |
 | --------------------- |---------------------------------------------| ---------------------------- | ---- | ---- | ---- | ---- |
-| Geographic Researcher | Hallway testing – friends/family/co-workers | No prior experience with Food Recalls Reports 4 females, 4 males | Used Internet Explorer or Firefox/Chorme browser for at least 1 year | 8 | 1 hour | 25 June 2015 |
-| Business Owner   | Hallway testing – friends/family/co-workers      |  No prior experience with Food Recalls Reports.  4 females, 4 males | Used Internet Explorer  or Firefox/Chome browser for at least 1 year | 8 | 1 hour |  25 June 2015 |
-| Financial Analyst | Hallway testing – friends/family/co-workers      |  No prior experience with Food Recalls Reports. 4 females, 4 males | Used Internet Explorer or Firefox/chrome browser for at least 1 year. | 8 | 1 hour | 25 June 2015 |
+| Geographic Researcher | Hallway testing – friends/family/co-workers | No prior experience with Food Recalls Reports 4 females, 4 males | Used Internet Explorer, Firefox/Chorme/ Safari, or Opera browser for at least 1 year | 8 | 1 hour | 26 June 2015, 0900 |
+| Business Owner   | Hallway testing – friends/family/co-workers      |  No prior experience with Food Recalls Reports.  4 females, 4 males | Used Internet Explorer, Firefox/Chorme/ Safari, or Opera browser for at least 1 year | 8 | 1 hour |  25 June 2015, 0900 |
+| Financial Analyst | Hallway testing – friends/family/co-workers      |  No prior experience with Food Recalls Reports. 4 females, 4 males | Used Internet Explorer, Firefox/Chorme/ Safari, or Opera browser for at least 1 year | 8 | 1 hour | 25 June 2015, 0900 |
 
 The participants' responsibilities will be to attempt to complete a set of representative task scenarios presented to them in as efficient and timely a manner as possible, and to provide feedback regarding the usability and acceptability of the user interface.  The participants will be directed to provide honest opinions regarding the usability of the application, and to participate in post-session subjective questionnaires and debriefing.
 
@@ -250,11 +250,13 @@ The identified severity for each problem implies a general reward for resolving 
 </p>
 
 ###Reporting Test Results
-The usability test report will be provided after all participants complete testing on 26 June 2015. The test results will be provided in the hard-copy format. The report will contain usability metrics defined in this document compared to the usability goals defined in this document. Completion Rate during testing will be compared to the completion rate goal of 70%.  Also, the TOT during testing will be compared to set time for each task.
+The test results will be provided in the hard-copy format to the development team during the Usability Testing Review meeting. The report will contain usability metrics defined in this document compared to the usability goals defined in this document. Completion Rate during testing will be compared to the completion rate goal of 70%.  Also, the TOT during testing will be compared to set time for each task.
 
 The test result report will include a section on the evaluating the site against other sites providing similar services. This will be done to ensure ADS Food Recalls site has competitive edge.
 
-In addition, the report will identify usability problems and recommended solutions.  Each recommended solution will be evaluated by development team during the Usability Testing Review meeting to establish an implementation plan with estimated completion time, schedule for 26 June 2015, 1500 hours.
+In addition, the report will identify usability problems and recommended solutions.  Each recommended solution will be evaluated by development team during the Usability Testing Review meeting to establish an implementation plan with estimated completion time.
+
+The Usability Testing Review meeting is tentatively scheduled for 26 June 2015, 1500 hours.
 
 <p align="center">
 <a href="#table-of-contents">Table of Contents</a>
@@ -299,8 +301,11 @@ The following questionnaires will be used to conduct participant’s feedback.
 
 ###Post-task Questionnaire  
 
-Device Testing on:
-Browser Tested on:
+Group:<br/>
+Task #: <br/>
+
+Device Used:<br/>
+Browser Used:<br/>
 
 1.	Rate how easy was it to find the report. Circle one
 
@@ -323,7 +328,7 @@ Browser Tested on:
 
    Yes<br/>
    No<br/>
-5.	Provide any recommendations to improve the page.
+5.	Provide any recommendations to improve the page or any issue that you experienced.
 
 ###Satisfaction Questionnaire
 
