@@ -1,6 +1,7 @@
 ﻿@{
 	Layout = "~/Views/Shared/_ReportLayout.cshtml";
     ViewBag.Title = ViewBag.ReportType = "Business Report";
+    var defaultSubtitle = "Report Title";
 }
 
 <p>
@@ -11,7 +12,21 @@
 </p>
 
 <script>
-    $(document).ready(function () {
-        $('#businessNav').parent().addClass('active');
-    });
+$(document).ready(function () {
+    $('#businessNav').parent().addClass('active');
+    SetSubtitle('@defaultSubtitle');
+});
+
+$('#reportSubtitleInput').on('input', function() {
+	if ($(this).val() != ''){
+		SetSubtitle($('#reportSubtitleInput').val());
+	}
+	else {
+		SetSubtitle('@defaultSubtitle');
+	}
+});
+
+function SetSubtitle(subtitle) {
+	$('#reportSubtitle').text(subtitle);
+}
 </script>

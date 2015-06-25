@@ -8,6 +8,7 @@
 	var recallNumberToolTip = ModelMetadata.FromLambdaExpression<ReportListViewModel, string>(x => x.Results.First().recall_number, ViewData).Description;
 	var reasonToolTip = ModelMetadata.FromLambdaExpression<ReportListViewModel, string>(x => x.Results.First().reason_for_recall, ViewData).Description;
     var statusToolTip = ModelMetadata.FromLambdaExpression<ReportListViewModel, string>(x => x.Results.First().status, ViewData).Description;
+    var defaultSubtitle = String.IsNullOrWhiteSpace(Model.Subtitle) ? "All Reports" : Model.Subtitle;
 }
 
 @using (Html.BeginForm("ReportList", "Home", FormMethod.Post, new { @id = "ReportListForm" }))
@@ -83,7 +84,21 @@ if (!String.IsNullOrWhiteSpace(Model.ErrorMsg)) {
 <script>
     $(document).ready(function () {
         $('#reportsNav').parent().addClass('active');
+        SetSubtitle('@defaultSubtitle');
     });
+
+    $('#reportSubtitleInput').on('input', function() {
+		if ($(this).val() != ''){
+			SetSubtitle($('#reportSubtitleInput').val());
+		}
+		else {
+			SetSubtitle('@defaultSubtitle');
+		}
+	});
+
+	function SetSubtitle(subtitle) {
+		$('#reportSubtitle').text(subtitle);
+	}
 
     function PageSizeChange() {
         $('#ReportListForm').submit();
