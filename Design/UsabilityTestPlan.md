@@ -18,7 +18,6 @@ Colorado Springs, CO 80920
 [Document Overview](UsabilityTestPlan.md#Document-Overview)<br/>
 [Methodology](UsabilityTestPlan.md#Methodology)<br/>
 [Usability Tasks] (UsabilityTestPlan.md#Usability-Tasks)<br/>
-[Analyst](UsabilityTestPlan.md#Task-Scenarios-for-Financial-Analyst)<br/>
 [Usability Metrics] (UsabilityTestPlan.md#Usability-Metrics)<br/>
 [Usability Goals] (UsabilityTestPlan.md#Usability-Goals)<br/>
 [Problem Severity] (UsabilityTestPlan.md#Problem-Severity)<br/>
