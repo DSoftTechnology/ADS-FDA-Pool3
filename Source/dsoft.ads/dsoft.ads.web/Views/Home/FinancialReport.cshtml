@@ -1,25 +1,15 @@
-﻿<div class="row">
-	<div class="col-sm-3">
-		<h2>Company Recall Trending Report</h2>
-		<hr/>
-	</div>
-	<div class="col-sm-9">
-	  <h2>Your Report Title</h2>
-	  <hr/>
-	</div>
-</div>
-<div class="row">
-	@Html.Partial("~/Views/Shared/_FilterList.cshtml")
-  	<div class="col-sm-9">
-        <p>
-          Some helpful text here.
-        </p>
-        <p>
-          <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=Bubble%20Graph&amp;w=800&amp;h=600">
-        </p>
-  	</div>
-</div>
+﻿@{
+	Layout = "~/Views/Shared/_ReportLayout.cshtml";
+    ViewBag.ReportType = "Company Trending Report";
+}
 
+<p>
+  Some helpful text here.
+</p>
+<p>
+  <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=Bubble%20Graph&amp;w=800&amp;h=600">
+</p>
+  	
 <script>
     $(document).ready(function () {
         $('#trendingNav').parent().addClass('active');

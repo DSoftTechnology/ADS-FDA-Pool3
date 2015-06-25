@@ -1,32 +1,22 @@
-﻿@section head
+﻿@{
+	Layout = "~/Views/Shared/_ReportLayout.cshtml";
+    ViewBag.ReportType = "Geographic Report";
+}
+
+@section head
 {
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
 }
 
-<div class="row">
-	<div class="col-sm-3">
-		<h2>Geographic Report</h2>
-		<hr/>
-	</div>
-	<div class="col-sm-9">
-	  <h2>Your Report Title</h2>
-	  <hr/>
-	</div>
-</div>
-<div class="row">
-	@Html.Partial("~/Views/Shared/_FilterList.cshtml")
-  	<div class="col-sm-9">
-        <p>
-          This map color encodes the number of FDA Food Reports based on the filter criteria with a 7-step quantize scale ranging from 0 to the max number of reports.
-        </p>
-        <div id="mapLegend"></div>
-		<div id="mapcontainer">
-		  <svg>
-		    <g id="states"></g>
-		    <g id="border"></g>
-		  </svg>
-		</div>
-  	</div>
+<p>
+  This map color encodes the number of FDA Food Reports based on the filter criteria with a 7-step quantize scale ranging from 0 to the max number of reports.
+</p>
+<div id="mapLegend"></div>
+<div id="mapcontainer">
+  <svg>
+    <g id="states"></g>
+    <g id="border"></g>
+  </svg>
 </div>
 
 <script>
