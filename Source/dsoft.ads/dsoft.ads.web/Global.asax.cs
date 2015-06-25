@@ -41,11 +41,11 @@ namespace dsoft.ads.web
 			// javascript
 			bundles.Add (new ScriptBundle ("~/scriptbundles/bootstrap").Include (
 				"~/Scripts/jquery/jquery-2.1.4.min.js",
-				"~/Scripts/bootstrap/bootstrap.min.js"));
+				"~/Scripts/bootstrap/*.min.js"));
 			bundles.Add (new ScriptBundle ("~/scriptbundles/site").Include ("~/Scripts/site/*.js"));
 
 			// css
-			bundles.Add (new StyleBundle("~/stylebundles/bootstrap").Include("~/Content/bootstrap/css/bootstrap.min.css"));
+			bundles.Add (new StyleBundle("~/stylebundles/bootstrap").Include("~/Content/bootstrap/css/*.min.css"));
 			bundles.Add (new StyleBundle ("~/stylebundles/site").Include ("~/Content/site/css/*.css"));
 
 			#if Release // Enable bundling / minification for release versions only

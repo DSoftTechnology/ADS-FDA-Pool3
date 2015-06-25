@@ -34,6 +34,17 @@ body {
 	background-color: #cab879;
 }
 
+.focus.btn-primary, .btn-primary:focus {
+	background-color: #2c2768;
+	color: #ffffff;
+}
+
+/* Datepicker */
+.datepicker table tr td.active:hover,.datepicker table tr td.active:hover:hover,.datepicker table tr td.active.disabled:hover,.datepicker table tr td.active.disabled:hover:hover,.datepicker table tr td.active:focus,.datepicker table tr td.active:hover:focus,.datepicker table tr td.active.disabled:focus,.datepicker table tr td.active.disabled:hover:focus,.datepicker table tr td.active:active,.datepicker table tr td.active:hover:active,.datepicker table tr td.active.disabled:active,.datepicker table tr td.active.disabled:hover:active,.datepicker table tr td.active.active,.datepicker table tr td.active:hover.active,.datepicker table tr td.active.disabled.active,.datepicker table tr td.active.disabled:hover.active,.open .dropdown-toggle.datepicker table tr td.active,.open .dropdown-toggle.datepicker table tr td.active:hover,.open .dropdown-toggle.datepicker table tr td.active.disabled,.open .dropdown-toggle.datepicker table tr td.active.disabled:hover{
+	border-color: #2c2768;
+	background-color: #565ab5;
+}
+
 /* Navbar */
 .navbar-brand,
 .navbar-nav li a {
@@ -44,6 +55,7 @@ body {
 .navbar-default { 
 	background-color: #3e3e3e;
 	border-color: #3e3e3e;
+	background-image:none;
 }
 .navbar-default .navbar-brand {
 	color: #ffffff;

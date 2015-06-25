@@ -15,10 +15,10 @@ namespace dsoft.ads.web.Controllers
             return View ();
         }
 
-		public JsonResult GeoReport()
+		public JsonResult GeoReport(string keyword = null, DateTime? startDate = null, DateTime? endDate = null)
 		{
 			GeoReportViewModel geo = new GeoReportViewModel ();
-			geo.GetGeoReport ();
+			geo.GetGeoReport (keyword, startDate, endDate);
 
 			return Json(geo, JsonRequestBehavior.AllowGet);
 		}
@@ -28,7 +28,7 @@ namespace dsoft.ads.web.Controllers
 			FinancialReportViewModel fin = new FinancialReportViewModel ();
 			fin.GetFinancialReport ();
 
-			return Json(fin.data, JsonRequestBehavior.AllowGet);
+			return Json(fin, JsonRequestBehavior.AllowGet);
 		}
     }
 }

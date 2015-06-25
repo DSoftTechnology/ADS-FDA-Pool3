@@ -38,9 +38,9 @@ ADS FDA Food Recall Reports web site will be tested by the following user groups
 
 | User Group            | Recruitment Method                          | Eligibility Characteristics  | Expected Skills/Knowledge | Number of Participants | Session Length | Test Date |
 | --------------------- |---------------------------------------------| ---------------------------- | ---- | ---- | ---- | ---- |
-| Geographic researcher | Hallway testing – friends/family/co-workers | No prior experience with Food Recalls Reports 4 females, 4 males | Used Internet Explorer or Firefox/Chorme browser for at least 1 year | 8 | 1 hour | 25 June 2015 |
-| Business researcher   | Hallway testing – friends/family/co-workers      |  No prior experience with Food Recalls Reports Owns a food-related business. 4 females, 1 males | Used Internet Explorer  or Firefox/Chome browser for at least 1 year | 8 | 1 hour |  25 June 2015 |
-| Public Health Researcher   | Hallway testing – friends/family/co-workers      |  No prior experience with Food Recalls Reports Owns a food-related business. 4 females, 4 males | Used Internet Explorer or Firefox/chrome browser for at least 1 year. | 8 | 1 hour | 25 June 2015 |
+| Geographic Researcher | Hallway testing – friends/family/co-workers | No prior experience with Food Recalls Reports 4 females, 4 males | Used Internet Explorer or Firefox/Chorme browser for at least 1 year | 8 | 1 hour | 25 June 2015 |
+| Business Owner   | Hallway testing – friends/family/co-workers      |  No prior experience with Food Recalls Reports.  4 females, 4 males | Used Internet Explorer  or Firefox/Chome browser for at least 1 year | 8 | 1 hour |  25 June 2015 |
+| Financial Analyst | Hallway testing – friends/family/co-workers      |  No prior experience with Food Recalls Reports. 4 females, 4 males | Used Internet Explorer or Firefox/chrome browser for at least 1 year. | 8 | 1 hour | 25 June 2015 |
 
 The participants' responsibilities will be to attempt to complete a set of representative task scenarios presented to them in as efficient and timely a manner as possible, and to provide feedback regarding the usability and acceptability of the user interface.  The participants will be directed to provide honest opinions regarding the usability of the application, and to participate in post-session subjective questionnaires and debriefing.
 
@@ -49,9 +49,9 @@ The facilitator will provide an introductory presentation followed by a short re
 
 | User Group            | Recruitment Method                          |
 | --------------------- |---------------------------------------------|
-| Geographic researcher | Landing page (5 minutes) Recall Locations (5 minutes) Recall Frequency (5 minutes) |
-| Business researcher | Landing page (5 minutes) Recall Frequency (5 minutes) Enforcement Report List (5 minutes) |
-| Public Health Researcher | Landing page (5 minutes) Public and Company Cost (5 minutes) Recall Locations (5 minutes) Recall Frequency (5 minutes) |
+| Geographic researcher | Landing page, Recall Geographic Report  |
+| Business Owner | Landing page, Recall Frequency Report  |
+| Financial Analyst | Landing Page, Company Recall Trending |
 
 ##Procedures
 
@@ -61,9 +61,7 @@ The participant’s interactions with the web site will be monitored by the faci
 
 The facilitator will distribute a consent that acknowledges the participation as voluntary and that the session will be videotaped with participant’s identification safeguarded. After collecting participants’ signed consent, the facilitator will ask the participants if they have any questions.
 
-After a brief questions/answer session, participants will complete a demographic and background information questionnaire.  Each test task will start with a participant reading a test task description out loud from the printed copy followed by the test implementation. Time measurement begins when the participant starts the task.  
-
-The facilitator will instruct the participant to ‘think aloud’ so that a verbal record exists of their interaction with the web site. During the test, the facilitator and note taker(s) will observe participant’s behavior and manually record it using pencil and paper. 
+After a brief questions/answer session, participants will complete a demographic and background information questionnaire.  Each test task will start with a participant reading a test task description out loud from the printed copy followed by the test implementation. Time measurement begins when the participant starts the task.  The facilitator will instruct the participant to ‘think aloud’ so that a verbal record exists of their interaction with the web site. During the test, the facilitator and note taker(s) will observe participant’s behavior and manually record it. 
 
 The facilitator will instruct the participant to ‘think aloud’ so that a verbal record exists of their interaction with the Web site/Web application. The facilitator will observe and enter user behavior, user comments, and system actions in the data logging application.
 
@@ -73,17 +71,15 @@ After each task, the participant will complete the post-task questionnaire and e
 
 The following roles will be included in ADS Food Recall Reports web site usability testing.  An individual may possess multiple roles. Usability tasks may not require all roles. 
 
-###Trainer
+###Facilitator/Trainer (E. Lucas)
 *	Provide training overview prior to usability testing.
-
-###Facilitator
 *	Givers a brief overview of the web site.
 *	Defines usability and purpose of usability testing to participants
 *	Gives a brief overview of the usability test procedures to participants
 *	Assists in conduct of participant and observer debriefing sessions
 *	Assists participant during the tests as needed
 
-###Note Taker/Data Logger
+###Note Taker/Data Logger (K. Reece)
 *	Silent observer
 *	Records participant's actions and comments
 *	Assists in identifying procedural errors and participant’s behavior
@@ -104,25 +100,25 @@ The test tasks below are required to be reviewed by the development team consist
 
 ###Tasks for Geographic Researcher
 ####Task 1 – 5 minutes:
-Task Description: Use dsoft-ads-staging.azurewebsites.net web site to locate all peanut butter products recalls in the state of Colorado. You must complete this task in 5 minutes.  
+Task Description: Use staging-dsoft-ads.azurewebsites.net web site to locate all peanut butter products recalls in the state of Colorado. You must complete this task in 5 minutes.  
 
 Objectives:  
-*	User finds Recall Locations report in one click.  
+*	User finds Geographical report in one click.  
 * Users uses the state and keyword filters to retrieve specific data.
 *	User understands the meaning of the data being represented on the graph.
 
 ####Task 2 – 5 minutes:
-Task Description: Use dsoft-ads-staging.azurewebsites.net web site to locate all milk products recalls in the state of Colorado during the last year.  You must complete this task in 5 minutes.
+Task Description: Use staging-dsoft-ads.azurewebsites.net web site to locate all milk products recalls in the state of Colorado during the last year.  You must complete this task in 5 minutes.
 
 Objectives: 
 
-*	User finds Recall Locations report in one click. 
+*	User finds Geographical report in one click. 
 *	User uses the state, keyword and date range filters to retrieve specific data.
 *	User understands the meaning of the data being represented on the graph.
 
-###Task Scenarios for Business Researcher
+###Task Scenarios for Business Owner
 ####Task 1 – 5 minutes:
-Task Description: Use dsoft-ads-staging.azurewebsites.net web site to see how frequently peanut butter products are recalled in the state of Colorado. You must complete this task in 5 minutes.
+Task Description: Use staging-dsoft-ads.azurewebsites.net web site to see how frequently peanut butter products are recalled in the state of Colorado. You must complete this task in 5 minutes.
 
 Objectives:
 
@@ -131,31 +127,31 @@ Objectives:
 *	User understands the meaning of the data being represented on the graph.
 
 ####Task 2 – 5 minutes:
-Task Description: Use dsoft-ads-staging.azurewebsites.net web site to see why peanut butter products were recalled in the state of Colorado in the course of last year. You must complete this task in 5 minutes.
+Task Description: Use staging-dsoft-ads.azurewebsites.net web site to see why peanut butter products were recalled in the state of Colorado in the course of last year. You must complete this task in 5 minutes.
 
 Objectives:
 
-*	User finds Enforcement Report List report in one click.
+*	User finds Recall Frequncy Report List report in one click.
 *	User uses the state, keyword and date range filters to retrieve specific data.
 *	User understands the meaning of the data being represented on the graph.
 
-###Task Scenarios for Public Health Researcher
+###Task Scenarios for Financial Analyst
 ####Task 1 – 5 minutes: 
-Task Description: Use dsoft-ads-staging.azurewebsites.net web site to see top 10 companies with most recalls.  You must complete this task in 5 minutes.
+Task Description: Use staging-dsoft-ads.azurewebsites.net web site to see top 10 companies with most recalls.  You must complete this task in 5 minutes.
 
 Objectives:
 
-*	User finds Report List report in one click.
+*	User finds Company Recall Trending report in one click.
 *	User understands the meaning of the data being represented on the graph (user recognizes that decreasing size of circles over the 10 year span means that the company is improving and increasing size of circles over the 10 year span means the company is not improving).
 
 ####Task 2 – 5 minutes:
-Task Description: Use dsoft-ads-staging.azurewebsites.net web site to see top 10 companies for the state of Colorado with the most recalls.  You must complete this task in 5 minutes.
+Task Description: Use staging-dsoft-ads.azurewebsites.net web site to see top 10 companies for the state of Colorado with the most recalls.  You must complete this task in 5 minutes.
 
 Objectives:
 
-•	User finds Report List report in one click.
-•	User uses the state filter to retrieve the specific data.
-•	User understands the meaning of the data being represented on the graph (user recognizes that decreasing size of circles over the 10 year span means that the company is improving and increasing size of circles over the 10 year span means the company is not improving).
+*	User finds Company Recall Trending report in one click.
+*	User uses the state filter to retrieve the specific data.
+*	User understands the meaning of the data being represented on the graph (user recognizes that decreasing size of circles over the 10 year span means that the company is improving and increasing size of circles over the 10 year span means the company is not improving).
 
 
 ##Usability Metrics
@@ -232,8 +228,101 @@ The identified severity for each problem implies a general reward for resolving 
 ###Reporting Test Results
 The usability test report will be provided after all participants complete testing on 26 June 2015. The test results will be provided in the hard-copy format. The report will contain usability metrics defined in this document compared to the usability goals defined in this document. Completion Rate during testing will be compared to the completion rate goal of 70%.  Also, the TOT during testing will be compared to set time for each task.
 
-In addition, the report will identify usability problems and recommended solutions.  Each recommended solution will be evaluated by development team during the usability testing review meeting to establish an implementation plan with estimated completion time. 
+The test result report will include a section on the evaluating the site against other sites providing similar services. This will be done to ensure ADS Food Recalls site has competitive edge.
+
+In addition, the report will identify usability problems and recommended solutions.  Each recommended solution will be evaluated by development team during the Usability Testing Review meeting to establish an implementation plan with estimated completion time, schedule for  26 June 2015, 0900 hours.
 
 
+##Appendix A – Questionnaires 
 
+The following questionnaires will be used to conduct participant’s feedback.
+
+###Demographic and Background Information Questionnaire
+1. Age: What is your age?
+
+☐ 18-29 years old  <br/>
+☐ 30-45 years old   <br/>
+☐ 46-59 years old   <br/>
+☐ 60 years old or older  <br/><br/>
+2. Ethnicity origin: Specify your ethnicity.
+
+☐ White <br/>
+☐ Hispanic or Latino <br/>
+☐ Black or African American <br/>
+☐ Native American or American Indian <br/>
+☐ Asian / Pacific Islander <br/>
+☐ Other <br/><br/>
+3.	Education: What is the highest degree or level of school you have completed? If currently enrolled, highest degree received.
+
+☐ No schooling completed <br/>
+☐ Some high school, no diploma <br/>
+☐ High school graduate, diploma or the equivalent (for example: GED) <br/>
+☐ Some college credit, no degree <br/>
+☐ Trade/technical/vocational training <br/>
+☐ Associate degree <br/>
+☐ Bachelor’s degree <br/>
+☐ Master’s degree <br/>
+☐ Professional degree <br/>
+☐ Doctorate degree <br/><br/>
+4.	Web Browser Experience:  Number of years you have been using the Internet <br/>
+
+☐ More than 10 years <br/>
+☐ Between 5 and 10 years <br/>
+☐ Between 1 and 5 years <br/>
+
+###Post-task Questionnaire
+
+1.	Rate how easy was it to find the report. Circle one
+
+   Very difficult<br/>
+   Difficult<br/>
+   Somewhat difficult<br/>
+   Somewhat easy<br/>
+   Very easy<br/>
+2.	How easy was it to interpret report data on the screen? Circle one
+
+   Easy<br/>
+   Not so easy<br/>
+   Difficult<br/>
+   Very difficult<br/>
+3.	Did you have any difficulty finding filters? Circle one
+
+   Yes <br/>
+   No<br/>
+4.	Did you have any difficulty finding where you need to go? Circle one
+
+   Yes<br/>
+   No<br/>
+5.	Provide any recommendations to improve the page.
+
+###Satisfaction Questionnaire
+
+1.	If you would give a grade to the site from A being exemplary and F failing, what grade would you give? Circle one.
+
+   A<br/>
+   B<br/>
+   C<br/>
+   D<br/>
+   E<br/>
+   F<br/>
+2.	How quickly most people would learn to use the site? Circle one
+
+   30 minutes<br/>
+   1 hour<br/>
+   1 day<br/>
+   1 week<br/>
+3.	How well was the site organized? Circle one.
+
+   Poorly organized<br/>
+   Well organized<br/>
+   Very well organized<br/>
+4.	Would you use the site in the feature? Circle one
+
+   Yes<br/>
+   No<br/>
+5.	Describe what you liked the most about the site.
+   <br/>
+6.	Describe what you like the least about the site.
+   <br/>
+7.	Describe any recommendations for improvements.
 
