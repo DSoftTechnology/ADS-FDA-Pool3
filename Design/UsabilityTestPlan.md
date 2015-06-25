@@ -45,6 +45,10 @@ Usability testing will be conducted inside DSoft Technology office in Colorado S
 *	Satisfaction assessment
 *	Improvement suggestions
 
+<p align="center">
+<a href="#table-of-contents">Table of Contents</a>
+</p>
+
 ##Participants
 DSoft Technology chose to use Hallway Testing initially as we wanted participants that were unfamiliar with the website and wanted to uncover the most obvious problems. These users, who don’t necessarily have an interest in the web site, will be happy to give their opinion but may miss issues actual users will encounter. Therefore, relying on this one method of testing is not recommended as we would want to have users with specialize skills and target the specific user groups. The design of the reports was made with three user groups in mind (three different reports) however our initial usability testing does not differ in the recruitment method, eligibility characteristics or expected skills and knowledge. All potential participants however will be asked if they use the internet to verify the web browser experience. Candidates with less than 1 year of internet experience will not be consider appropriate participants.
 
@@ -167,6 +171,9 @@ Objectives:
 *	User uses the state filter to retrieve the specific data.
 *	User understands the meaning of the data being represented on the graph (user recognizes that decreasing size of circles over the 10 year span means that the company is improving and increasing size of circles over the 10 year span means the company is not improving).
 
+<p align="center">
+<a href="#table-of-contents">Table of Contents</a>
+</p>
 
 ##Usability Metrics
 Usability metrics refer to user performance measured to satisfy usability requirements. The following usability metrics will be used to measure user performance.
@@ -239,6 +246,10 @@ The identified severity for each problem implies a general reward for resolving 
   <b>Severity 4</b> - Low impact problems faced by few participants; there is low risk to not resolving these problems.      Reward for resolution is typically exhibited in increased user satisfaction.
 
 
+<p align="center">
+<a href="#table-of-contents">Table of Contents</a>
+</p>
+
 ###Reporting Test Results
 The usability test report will be provided after all participants complete testing on 26 June 2015. The test results will be provided in the hard-copy format. The report will contain usability metrics defined in this document compared to the usability goals defined in this document. Completion Rate during testing will be compared to the completion rate goal of 70%.  Also, the TOT during testing will be compared to set time for each task.
 
@@ -246,6 +257,9 @@ The test result report will include a section on the evaluating the site against
 
 In addition, the report will identify usability problems and recommended solutions.  Each recommended solution will be evaluated by development team during the Usability Testing Review meeting to establish an implementation plan with estimated completion time, schedule for  26 June 2015, 0900 hours.
 
+<p align="center">
+<a href="#table-of-contents">Table of Contents</a>
+</p>
 
 ##Appendix A – Questionnaires 
 
@@ -340,3 +354,6 @@ The following questionnaires will be used to conduct participant’s feedback.
    <br/>
 7.	Describe any recommendations for improvements.
 
+<p align="center">
+<a href="#table-of-contents">Table of Contents</a>
+</p>
