@@ -1,6 +1,7 @@
 ﻿@{
 	Layout = "~/Views/Shared/_ReportLayout.cshtml";
     ViewBag.Title = ViewBag.ReportType = "Geographic Report";
+    var defaultSubtitle = "US Reports";
 }
 
 @section head
@@ -23,6 +24,7 @@
     $(document).ready(function () {
         $('#geographicNav').parent().addClass('active');
         $('#filterSubmit').on("click", colorMap);
+        SetSubtitle('@defaultSubtitle');
     });
 
     // initialize svg elements
@@ -102,6 +104,11 @@
 			.domain([0, maxCount])
 			.range(colorRange);
 
+		// set subtitle
+		if (data.Subtitle != '') {
+			SetSubtitle(data.Subtitle);
+		}
+
 		// color states
     	states.transition()
     		.selectAll("path")
@@ -129,4 +136,17 @@
 
 		return colors(stateCount); 
 	}
+
+$('#reportSubtitleInput').on('input', function() {
+	if ($(this).val() != ''){
+		SetSubtitle($('#reportSubtitleInput').val());
+	}
+	else {
+		SetSubtitle('@defaultSubtitle');
+	}
+});
+
+function SetSubtitle(subtitle) {
+	$('#reportSubtitle').text(subtitle);
+}
 </script>
