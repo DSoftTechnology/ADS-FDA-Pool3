@@ -25,12 +25,7 @@
 				@RenderBody()
 			</div>
 		</div>
-		<div class="form-group">
-			<div class="col-sm-12">
-				<hr />
-				<p class="text-muted">&copy; DSoft Technology Company 2000-@DateTime.Now.Year. All Rights Reserved.</p>
-			</div>
-		</div>
+		@Html.Partial("~/Views/Shared/_Footer.cshtml")
 	</div>
 	@Html.Partial("~/Views/Shared/_ContactModal.cshtml")
 	@RenderSection("bodybottom", required: false)

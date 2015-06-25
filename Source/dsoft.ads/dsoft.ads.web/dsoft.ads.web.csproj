@@ -175,6 +175,11 @@
     <Content Include="Content\images\geopreview.png" />
     <Content Include="Views\Shared\_ReportLayout.cshtml" />
     <Content Include="Views\Shared\_BetaWarning.cshtml" />
+    <Content Include="Content\images\facebook_32.png" />
+    <Content Include="Content\images\google-plus-icon-32.png" />
+    <Content Include="Content\images\linkedin_32.png" />
+    <Content Include="Content\images\twitter_32.png" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
