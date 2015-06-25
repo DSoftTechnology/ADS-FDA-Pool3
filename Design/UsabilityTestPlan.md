@@ -39,7 +39,7 @@ ADS FDA Food Recall Reports web site will be tested by the following user groups
 | User Group            | Recruitment Method                          | Eligibility Characteristics  | Expected Skills/Knowledge | Number of Participants | Session Length | Test Date |
 | --------------------- |---------------------------------------------| ---------------------------- | ---- | ---- | ---- | ---- |
 | Geographic Researcher | Hallway testing – friends/family/co-workers | No prior experience with Food Recalls Reports 4 females, 4 males | Used Internet Explorer or Firefox/Chorme browser for at least 1 year | 8 | 1 hour | 25 June 2015 |
-| Business Owner   | Hallway testing – friends/family/co-workers      |  No prior experience with Food Recalls Reports.  4 females, 1 males | Used Internet Explorer  or Firefox/Chome browser for at least 1 year | 8 | 1 hour |  25 June 2015 |
+| Business Owner   | Hallway testing – friends/family/co-workers      |  No prior experience with Food Recalls Reports.  4 females, 4 males | Used Internet Explorer  or Firefox/Chome browser for at least 1 year | 8 | 1 hour |  25 June 2015 |
 | Financial Analyst | Hallway testing – friends/family/co-workers      |  No prior experience with Food Recalls Reports. 4 females, 4 males | Used Internet Explorer or Firefox/chrome browser for at least 1 year. | 8 | 1 hour | 25 June 2015 |
 
 The participants' responsibilities will be to attempt to complete a set of representative task scenarios presented to them in as efficient and timely a manner as possible, and to provide feedback regarding the usability and acceptability of the user interface.  The participants will be directed to provide honest opinions regarding the usability of the application, and to participate in post-session subjective questionnaires and debriefing.
@@ -100,7 +100,7 @@ The test tasks below are required to be reviewed by the development team consist
 
 ###Tasks for Geographic Researcher
 ####Task 1 – 5 minutes:
-Task Description: Use dsoft-ads-staging.azurewebsites.net web site to locate all peanut butter products recalls in the state of Colorado. You must complete this task in 5 minutes.  
+Task Description: Use staging-dsoft-ads.azurewebsites.net web site to locate all peanut butter products recalls in the state of Colorado. You must complete this task in 5 minutes.  
 
 Objectives:  
 *	User finds Geographical report in one click.  
@@ -108,7 +108,7 @@ Objectives:
 *	User understands the meaning of the data being represented on the graph.
 
 ####Task 2 – 5 minutes:
-Task Description: Use dsoft-ads-staging.azurewebsites.net web site to locate all milk products recalls in the state of Colorado during the last year.  You must complete this task in 5 minutes.
+Task Description: Use staging-dsoft-ads.azurewebsites.net web site to locate all milk products recalls in the state of Colorado during the last year.  You must complete this task in 5 minutes.
 
 Objectives: 
 
@@ -118,7 +118,7 @@ Objectives:
 
 ###Task Scenarios for Business Owner
 ####Task 1 – 5 minutes:
-Task Description: Use dsoft-ads-staging.azurewebsites.net web site to see how frequently peanut butter products are recalled in the state of Colorado. You must complete this task in 5 minutes.
+Task Description: Use staging-dsoft-ads.azurewebsites.net web site to see how frequently peanut butter products are recalled in the state of Colorado. You must complete this task in 5 minutes.
 
 Objectives:
 
@@ -127,7 +127,7 @@ Objectives:
 *	User understands the meaning of the data being represented on the graph.
 
 ####Task 2 – 5 minutes:
-Task Description: Use dsoft-ads-staging.azurewebsites.net web site to see why peanut butter products were recalled in the state of Colorado in the course of last year. You must complete this task in 5 minutes.
+Task Description: Use staging-dsoft-ads.azurewebsites.net web site to see why peanut butter products were recalled in the state of Colorado in the course of last year. You must complete this task in 5 minutes.
 
 Objectives:
 
@@ -137,7 +137,7 @@ Objectives:
 
 ###Task Scenarios for Financial Analyst
 ####Task 1 – 5 minutes: 
-Task Description: Use dsoft-ads-staging.azurewebsites.net web site to see top 10 companies with most recalls.  You must complete this task in 5 minutes.
+Task Description: Use staging-dsoft-ads.azurewebsites.net web site to see top 10 companies with most recalls.  You must complete this task in 5 minutes.
 
 Objectives:
 
@@ -145,7 +145,7 @@ Objectives:
 *	User understands the meaning of the data being represented on the graph (user recognizes that decreasing size of circles over the 10 year span means that the company is improving and increasing size of circles over the 10 year span means the company is not improving).
 
 ####Task 2 – 5 minutes:
-Task Description: Use dsoft-ads-staging.azurewebsites.net web site to see top 10 companies for the state of Colorado with the most recalls.  You must complete this task in 5 minutes.
+Task Description: Use staging-dsoft-ads.azurewebsites.net web site to see top 10 companies for the state of Colorado with the most recalls.  You must complete this task in 5 minutes.
 
 Objectives:
 
@@ -233,5 +233,96 @@ The test result report will include a section on the evaluating the site against
 In addition, the report will identify usability problems and recommended solutions.  Each recommended solution will be evaluated by development team during the Usability Testing Review meeting to establish an implementation plan with estimated completion time, schedule for  26 June 2015, 0900 hours.
 
 
+##Appendix A – Questionnaires 
 
+The following questionnaires will be used to conduct participant’s feedback.
+
+###Demographic and Background Information Questionnaire
+1. Age: What is your age?
+
+☐ 18-29 years old  <br/>
+☐ 30-45 years old   <br/>
+☐ 46-59 years old   <br/>
+☐ 60 years old or older  <br/><br/>
+2. Ethnicity origin: Specify your ethnicity.
+
+☐ White <br/>
+☐ Hispanic or Latino <br/>
+☐ Black or African American <br/>
+☐ Native American or American Indian <br/>
+☐ Asian / Pacific Islander <br/>
+☐ Other <br/><br/>
+3.	Education: What is the highest degree or level of school you have completed? If currently enrolled, highest degree received.
+
+☐ No schooling completed <br/>
+☐ Some high school, no diploma <br/>
+☐ High school graduate, diploma or the equivalent (for example: GED) <br/>
+☐ Some college credit, no degree <br/>
+☐ Trade/technical/vocational training <br/>
+☐ Associate degree <br/>
+☐ Bachelor’s degree <br/>
+☐ Master’s degree <br/>
+☐ Professional degree <br/>
+☐ Doctorate degree <br/><br/>
+4.	Web Browser Experience:  Number of years you have been using the Internet <br/>
+
+☐ More than 10 years <br/>
+☐ Between 5 and 10 years <br/>
+☐ Between 1 and 5 years <br/>
+
+###Post-task Questionnaire
+
+1.	Rate how easy was it to find the report. Circle one
+
+   Very difficult<br/>
+   Difficult<br/>
+   Somewhat difficult<br/>
+   Somewhat easy<br/>
+   Very easy<br/>
+2.	How easy was it to interpret report data on the screen? Circle one
+
+   Easy<br/>
+   Not so easy<br/>
+   Difficult<br/>
+   Very difficult<br/>
+3.	Did you have any difficulty finding filters? Circle one
+
+   Yes <br/>
+   No<br/>
+4.	Did you have any difficulty finding where you need to go? Circle one
+
+   Yes<br/>
+   No<br/>
+5.	Provide any recommendations to improve the page.
+
+###Satisfaction Questionnaire
+
+1.	If you would give a grade to the site from A being exemplary and F failing, what grade would you give? Circle one.
+
+   A<br/>
+   B<br/>
+   C<br/>
+   D<br/>
+   E<br/>
+   F<br/>
+2.	How quickly most people would learn to use the site? Circle one
+
+   30 minutes<br/>
+   1 hour<br/>
+   1 day<br/>
+   1 week<br/>
+3.	How well was the site organized? Circle one.
+
+   Poorly organized<br/>
+   Well organized<br/>
+   Very well organized<br/>
+4.	Would you use the site in the feature? Circle one
+
+   Yes<br/>
+   No<br/>
+5.	Describe what you liked the most about the site.
+   <br/>
+6.	Describe what you like the least about the site.
+   <br/>
+7.	Describe any recommendations for improvements.
 
