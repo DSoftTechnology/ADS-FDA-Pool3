@@ -21,7 +21,7 @@ Colorado Springs, CO 80920
 [Usability Metrics] (UsabilityTestPlan.md#Usability-Metrics)<br/>
 [Usability Goals] (UsabilityTestPlan.md#Usability-Goals)<br/>
 [Problem Severity] (UsabilityTestPlan.md#Problem-Severity)<br/>
-[Appendix A – Questionnaires] (UsabilityTestPlan.md#Appendix-A-–-Questionnaires )<br/>
+[Appendix A – Questionnaires] (UsabilityTestPlan.md#appendix-a--questionnaires)<br/>
 ##Document Overview
 This document defines a test plan for conducting a usability test during the development of Agile Delivery Services (ADS) Food and Drug Administration (FDA) Enforcement Reports web site, Version 1.0. The purpose of this test plan is to establish and validate user performance metrics and to identify potential design issues to improve end-user satisfaction and to improve efficiency and productivity.
 The following are the usability test objectives:
