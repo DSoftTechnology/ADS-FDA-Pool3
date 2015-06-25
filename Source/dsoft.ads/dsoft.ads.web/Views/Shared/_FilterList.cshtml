@@ -16,13 +16,13 @@
       <ul class="nav nav-stacked">
         <li>
           <label class="control-label">Keyword <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@keywordToolTip"></span></label>
-          <input class="form-control" type="text">
+          <input name="keyword" class="form-control" type="text">
         </li>
         @if (!hideStateFilter) {
             var stateToolTip = "You may select a state to filter the results";
             <li>
               <label class="control-label">State <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@stateToolTip"></span></label>
-              <select class="form-control">
+              <select name="state" class="form-control">
                 <option value="">Select State</option>
                 <option value="AZ">Arizona</option>
                 <option value="CO">Colorado</option>
@@ -31,11 +31,11 @@
         }
         <li>
           <label class="control-label">Start Date <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@startDateToolTip"></span></label>
-          <input class="form-control" type="text" placeholder="06/20/2014">
+          <input name="startDate" class="form-control" type="text" placeholder="06/20/2014" data-provide="datepicker">
         </li>
         <li>
           <label class="control-label">End Date <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@endDateToolTip"></span></label>
-          <input class="form-control" type="text" placeholder="06/20/2015">
+          <input name="endDate" class="form-control" type="text" placeholder="06/20/2015" data-provide="datepicker">
         </li> 
         <li>
           <hr>
@@ -52,6 +52,7 @@
 
 <script>
   	$(document).ready(function () {
-  		$('[data-toggle="tooltip"]').tooltip()
+  		$('[data-toggle="tooltip"]').tooltip();
+  		//$('#datepicker .input-daterange').datepicker({});
 	});
 </script>

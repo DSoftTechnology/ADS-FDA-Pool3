@@ -15,12 +15,12 @@ namespace dsoft.ads.web.Controllers
             return View ();
         }
 
-		public ActionResult GeoReport()
+		public ActionResult GeoReport(string keyword = null, DateTime? startDate = null, DateTime? endDate = null)
 		{
 			GeoReportViewModel geo = new GeoReportViewModel ();
-			geo.GetGeoReport ();
+			geo.GetGeoReport (keyword, startDate, endDate);
 
-			return Json(JsonConvert.SerializeObject (geo), JsonRequestBehavior.AllowGet);
+			return Json(geo, JsonRequestBehavior.AllowGet);
 		}
     }
 }

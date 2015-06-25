@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+
 using dsoft.ads.web.Helpers;
 using dsoft.ads.web.Models;
 
@@ -15,7 +17,7 @@ namespace dsoft.ads.web.ViewModels
 		{
 		}
 
-		public void GetGeoReport()
+		public void GetGeoReport(string keyword, DateTime? start, DateTime? end)
 		{
 			/*
 			 * Note:  the OpenFDA API has a bug/limitation that it will not support a count on distribution_pattern.exact 
@@ -41,6 +43,16 @@ namespace dsoft.ads.web.ViewModels
 			query.source = OpenFDAQuery.FDAReportSource.food;
 			query.type = OpenFDAQuery.FDAReportType.enforcement;
 			query.queryCount = "distribution_pattern";
+
+			var searchQuery = new List<string>();
+			if (!string.IsNullOrWhiteSpace (keyword))
+				searchQuery.Add (keyword);
+			if (start != null && end != null)
+				searchQuery.Add (string.Format ("recall_initiation_date:[{0:yyyyMMdd}+TO+{1:yyyyMMdd}]", start.Value, end.Value));
+
+			if (searchQuery.Count > 0)
+				query.querySearch = string.Join ("+AND+", searchQuery);
+
 			bool success = query.RunQuery ();
 
 			if (!success)
