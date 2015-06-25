@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace dsoft.ads.web
+namespace dsoft.ads.web.Models
 {
 	public class CompanyCount
 	{
