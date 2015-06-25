@@ -16,7 +16,7 @@ Colorado Springs, CO 80920
 
 ### Table of Contents
 [Document Overview](UsabilityTestPlan##Document-Overview)<br/>
-[Methodology](/UsabilityTestPlan.md##Methodology)<br/>
+[Methodology](UsabilityTestPlan##Methodology)<br/>
 [Usability Tasks] (UsabilityTestPlan##Usability-Tasks)<br/>
 [Usability Metrics] (UsabilityTestPlan##Usability-Metrics)<br/>
 [Usability Goals] (UsabilityTestPlan##Usability-Goals)<br/>
