@@ -30,5 +30,14 @@ namespace dsoft.ads.web.Controllers
 
 			return Json(fin, JsonRequestBehavior.AllowGet);
 		}
+
+        public JsonResult BusinessReport(string keyword = null, string state = null)
+        {
+            BusinessReportViewModel bus = new BusinessReportViewModel();
+            bus.GetFinancialReport(keyword, state);
+
+            return Json(bus, JsonRequestBehavior.AllowGet);
+        }
+    
     }
 }

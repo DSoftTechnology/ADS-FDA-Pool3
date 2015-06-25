@@ -123,6 +123,7 @@
     </Compile>
     <Compile Include="Helpers\ReportHelper.cs" />
     <Compile Include="ViewModels\BusinessReportViewModel.cs" />
+    <Compile Include="Models\RecallCount.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />

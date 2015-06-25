@@ -25,10 +25,13 @@ namespace dsoft.ads.web.Tests
 			var result = (JsonResult)controller.GeoReport ();
 
 			GeoReportViewModel geo = null;
-			try {
+			try 
+            {
 				var json = JsonConvert.SerializeObject(result.Data);
 				geo = JsonConvert.DeserializeObject<GeoReportViewModel> (json);
-			} catch (Exception ex) {
+			} 
+            catch (Exception ex) 
+            {
 				throw new Exception ("GeoReportViewModel failed to parse: " + ex.Message);
 			}
 
@@ -44,10 +47,13 @@ namespace dsoft.ads.web.Tests
 			var result = (JsonResult)controller.FinancialReport ();
 
 			FinancialReportViewModel fin = null;
-			try {
+			try 
+            {
 				var json = JsonConvert.SerializeObject(result.Data);
 				fin = JsonConvert.DeserializeObject<FinancialReportViewModel> (json);
-			} catch (Exception ex) {
+			} 
+            catch (Exception ex) 
+            {
 				throw new Exception ("FinancialReportViewModel failed to parse: " + ex.Message);
 			}
 
@@ -55,6 +61,31 @@ namespace dsoft.ads.web.Tests
 			Assert.AreEqual (String.Empty, fin.ErrorMsg);
 			Assert.AreEqual (10, fin.data.Count);
 		}
-	}
+
+        [Test]
+        public void BusinessReport()
+        {
+            var controller = new ReportController ();
+            var result = (JsonResult)controller.BusinessReport ();
+
+            BusinessReportViewModel bus = null;
+            try 
+            {
+                var json = JsonConvert.SerializeObject(result.Data);
+                bus = JsonConvert.DeserializeObject<BusinessReportViewModel> (json);
+            } 
+            catch (Exception ex) 
+            {
+                throw new Exception ("BusinessReportViewModel failed to parse: " + ex.Message);
+            }
+
+            Assert.NotNull (bus);
+            Assert.AreEqual (String.Empty, bus.ErrorMsg);
+
+            int span = DateTime.Today.Year - 2008 + 1;
+            Assert.AreEqual (span, bus.data.Count);
+        }
+    
+    }
 }
 

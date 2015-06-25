@@ -63,10 +63,12 @@ namespace dsoft.ads.web.ViewModels
 
 			if (!success)
 				this.ErrorMsg = "An error occurred executing the query.  Please try again.";
-			else {
+			else 
+            {
 				this.ErrorMsg = String.Empty;
 
-				foreach (OpenFDAResult result in query.response.results) {
+				foreach (OpenFDAResult result in query.response.results) 
+                {
 					var statecount = this.data.Where (s => s.StateAbbr.ToLower().Equals (result.term) || s.StateName.ToLower().Equals (result.term)).FirstOrDefault ();
 					if (statecount != null)
 					{

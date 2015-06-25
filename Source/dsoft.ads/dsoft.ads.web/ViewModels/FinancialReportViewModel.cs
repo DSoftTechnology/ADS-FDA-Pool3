@@ -47,7 +47,8 @@ namespace dsoft.ads.web.ViewModels
 
 			if (!success)
 				this.ErrorMsg = "An error occurred executing the query.  Please try again.";
-			else {
+			else 
+            {
 				this.ErrorMsg = String.Empty;
 
 				int resultLimit = 0;
