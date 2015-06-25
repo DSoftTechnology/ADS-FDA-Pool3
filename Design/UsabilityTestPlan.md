@@ -340,7 +340,7 @@ Browser Used:<br/>
    D<br/>
    E<br/>
    F<br/>
-2.	How quickly most people would learn to use the site? Circle one
+2. In your opinion, how quickly would most people learn to use the site? Circle one
 
    30 minutes<br/>
    1 hour<br/>
