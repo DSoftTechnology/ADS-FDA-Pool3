@@ -23,10 +23,10 @@ namespace dsoft.ads.web.Tests
 		{
 			var controller = new ReportController ();
 			var result = (JsonResult)controller.GeoReport ();
-			var json = new JavaScriptSerializer ().Serialize (result.Data);
 
 			GeoReportViewModel geo = null;
 			try {
+				var json = JsonConvert.SerializeObject(result.Data);
 				geo = JsonConvert.DeserializeObject<GeoReportViewModel> (json);
 			} catch (Exception ex) {
 				throw new Exception ("GeoReportViewModel failed to parse: " + ex.Message);
@@ -42,10 +42,10 @@ namespace dsoft.ads.web.Tests
 		{
 			var controller = new ReportController ();
 			var result = (JsonResult)controller.FinancialReport ();
-			var json = new JavaScriptSerializer ().Serialize (result.Data);
 
 			FinancialReportViewModel fin = null;
 			try {
+				var json = JsonConvert.SerializeObject(result.Data);
 				fin = JsonConvert.DeserializeObject<FinancialReportViewModel> (json);
 			} catch (Exception ex) {
 				throw new Exception ("FinancialReportViewModel failed to parse: " + ex.Message);
