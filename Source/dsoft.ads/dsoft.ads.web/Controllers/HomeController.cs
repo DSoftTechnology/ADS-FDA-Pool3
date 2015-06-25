@@ -40,14 +40,23 @@ namespace dsoft.ads.web.Controllers
 			return View ();
 		}
 
-		public ActionResult ReportList (string sortOrder, int? page, int? pageSize)
+        public ActionResult ReportList (string sortOrder, int? page, int? pageSize, string keyword = null, string state = null, DateTime? startDate = null, DateTime? endDate = null)
 		{
-			return View(new ReportListViewModel(sortOrder, page, pageSize));
+            if (!String.IsNullOrWhiteSpace(keyword))
+                ViewBag.keyword = keyword;
+            if (!String.IsNullOrWhiteSpace(state))
+                ViewBag.state = state;
+            if (startDate != null)
+                ViewBag.startDate = ((DateTime)startDate).ToShortDateString();
+            if (endDate != null)
+                ViewBag.endDate = ((DateTime)endDate).ToShortDateString();
+
+            return View(new ReportListViewModel(sortOrder, page, pageSize, keyword, state, startDate, endDate));
 		}
 
-		public ActionResult ReportDetails (string id)
+        public ActionResult ReportDetails (string id, string eventid)
 		{
-			return View (new ReportDetailsViewModel(id));
+            return View (new ReportDetailsViewModel(id, eventid));
 		}
 	}
 }

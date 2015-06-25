@@ -20,13 +20,16 @@ namespace dsoft.ads.web.ViewModels
 		public string ReasonSortParm { get; set; }
 		public string StatusSortParm { get; set; }
 		public string ErrorMsg {get; set; }
+        public string Subtitle { get; set; }
 		public int Count { get; set; }
 		public int PageSize { get; set; }
 		public PagedList.IPagedList<OpenFDAResult> Results { get; set; }
 		public List<SelectListItem> PageSizeOptions { get; set; }
 
-		public ReportListViewModel (string sortOrder, int? page, int? pageSize)
+        public ReportListViewModel (string sortOrder, int? page, int? pageSize, string keyword, string state, DateTime? start, DateTime? end)
 		{
+            this.Subtitle = ReportHelper.GetReportSubtitle(keyword, state, start, end);
+
 			this.CurrentSort = sortOrder;	
 			this.EventIdSortParm = (sortOrder == "eventid" ? "eventid_desc" : "eventid");
 			this.RecallNumSortParm = (sortOrder == "recallnum" ? "recallnum_desc" : "recallnum");
@@ -57,50 +60,74 @@ namespace dsoft.ads.web.ViewModels
 			OpenFDAQuery query = new OpenFDAQuery ();
 			query.source = OpenFDAQuery.FDAReportSource.food;
 			query.type = OpenFDAQuery.FDAReportType.enforcement;
-			query.querySearch = "report_date:[20150101+TO+20150430]";
-			query.queryLimit = 100;
+            query.queryLimit = 100;         // TODO: FDA API does not permit limit>100, would need to do a skip/take to get full dataset
+
+            var searchQuery = new List<string>();
+
+            if (!String.IsNullOrWhiteSpace (keyword))
+                searchQuery.Add ( HttpUtility.UrlEncode(keyword));
+
+            if (!String.IsNullOrWhiteSpace(state))
+                searchQuery.Add(String.Format("state:{0}", HttpUtility.UrlEncode(state)));
+
+            if ((start != null) && (end != null))
+                searchQuery.Add (String.Format ("recall_initiation_date:[{0:yyyyMMdd}+TO+{1:yyyyMMdd}]", start.Value, end.Value));
+
+            if (searchQuery.Count > 0)
+                query.querySearch = string.Join ("+AND+", searchQuery);
+
 			bool success = query.RunQuery ();
 
 			if (success)
 				this.ErrorMsg = String.Empty;
 			else
 				this.ErrorMsg = "An error occurred executing the query.  Please try again.";
-					
-			var results = query.response.results.AsQueryable ();
-			this.Count = results.Count ();
 
-			// sort
-			switch (sortOrder) {
-			case "eventid":
-				results = results.OrderBy (r => r.event_id);
-				break;
-			case "eventid_desc":
-				results = results.OrderByDescending (r => r.event_id);
-				break;
-			case "recallnum":
-				results = results.OrderBy (r => r.recall_number);
-				break;
-			case "recallnum_desc":
-				results = results.OrderByDescending (r => r.recall_number);
-				break;
-			case "reason":
-				results = results.OrderBy (r => r.reason_for_recall);
-				break;
-			case "reason_desc":
-				results = results.OrderByDescending (r => r.reason_for_recall);
-				break;
-			case "status":
-				results = results.OrderBy (r => r.status);
-				break;
-			case "status_desc":
-				results = results.OrderByDescending (r => r.status);
-				break;
-			}
+            if (query.response == null)
+            {
+                this.Count = 0;
+                this.Results = null;
+                this.ErrorMsg = String.Empty;
+            }
+            else
+            {
+                var results = query.response.results.AsQueryable();
+                this.Count = results.Count();
+
+                // sort
+                switch (sortOrder)
+                {
+                    case "eventid":
+                        results = results.OrderBy(r => r.event_id);
+                        break;
+                    case "eventid_desc":
+                        results = results.OrderByDescending(r => r.event_id);
+                        break;
+                    case "recallnum":
+                        results = results.OrderBy(r => r.recall_number);
+                        break;
+                    case "recallnum_desc":
+                        results = results.OrderByDescending(r => r.recall_number);
+                        break;
+                    case "reason":
+                        results = results.OrderBy(r => r.reason_for_recall);
+                        break;
+                    case "reason_desc":
+                        results = results.OrderByDescending(r => r.reason_for_recall);
+                        break;
+                    case "status":
+                        results = results.OrderBy(r => r.status);
+                        break;
+                    case "status_desc":
+                        results = results.OrderByDescending(r => r.status);
+                        break;
+                }
+
+                this.Results = results.ToPagedList (displayPageNumber, displayPageSize);
+            }
 
 			if (displayPageSize == -1)
-				displayPageSize = query.response.results.Count();
-
-			this.Results = results.ToPagedList (displayPageNumber, displayPageSize);
+                displayPageSize = this.Count;
 		}
 	}
 }

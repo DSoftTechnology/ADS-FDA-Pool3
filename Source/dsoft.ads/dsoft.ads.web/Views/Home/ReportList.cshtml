@@ -21,59 +21,62 @@ if (!String.IsNullOrWhiteSpace(Model.ErrorMsg)) {
     <p>
       Some helpful text here.
     </p>
-    <table class="table table-hover">
-      <thead>
-        <tr>
-            <th>
-                @Html.ActionLink(Html.DisplayNameFor(model => model.Results.First().event_id).ToHtmlString(), "ReportList", new { sortOrder = Model.EventIdSortParm })
-            </th>
-            <th>
-                @Html.ActionLink(Html.DisplayNameFor(model => model.Results.First().recall_number).ToHtmlString(), "ReportList", new { sortOrder = Model.RecallNumSortParm })
-                <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@recallNumberToolTip"></span>
-            </th>
-            <th>
-                @Html.ActionLink(Html.DisplayNameFor(model => model.Results.First().reason_for_recall).ToHtmlString(), "ReportList", new { sortOrder = Model.ReasonSortParm })
-                <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@reasonToolTip"></span>
-            </th>
-            <th>
-                @Html.ActionLink(Html.DisplayNameFor(model => model.Results.First().status).ToHtmlString(), "ReportList", new { sortOrder = Model.StatusSortParm })
-                <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@statusToolTip"></span>
-            </th>
-        </tr>
-      </thead>
-      <tbody>
-	    @foreach (var item in Model.Results) {
+    @if (Model.Count > 0) {
+	    <table class="table table-hover">
+	      <thead>
 	        <tr>
-	            <td>
-	                @Html.ActionLink(item.event_id.ToString(), "ReportDetails", new {@id = item.id})
-	            </td>
-	            <td>
-	                @Html.DisplayFor(modelItem => item.recall_number)
-	            </td>
-	            <td>
-	                @Html.DisplayFor(modelItem => item.reason_for_recall)
-	            </td>
-	            <td>
-	                @Html.DisplayFor(modelItem => item.status)
-	            </td>
+	            <th>
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.Results.First().event_id).ToHtmlString(), "ReportList", new { sortOrder = Model.EventIdSortParm })
+	            </th>
+	            <th>
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.Results.First().recall_number).ToHtmlString(), "ReportList", new { sortOrder = Model.RecallNumSortParm })
+	                <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="@recallNumberToolTip"></span>
+	            </th>
+	            <th>
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.Results.First().reason_for_recall).ToHtmlString(), "ReportList", new { sortOrder = Model.ReasonSortParm })
+	                <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@reasonToolTip"></span>
+	            </th>
+	            <th>
+	                @Html.ActionLink(Html.DisplayNameFor(model => model.Results.First().status).ToHtmlString(), "ReportList", new { sortOrder = Model.StatusSortParm })
+	                <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="auto" title="@statusToolTip"></span>
+	            </th>
 	        </tr>
-	    }
-      </tbody>
-    </table>
+	      </thead>
+	      <tbody>
+		    @foreach (var item in Model.Results) {
+		        <tr>
+		            <td>
+		                @Html.ActionLink(item.event_id.ToString(), "ReportDetails", new {@id = item.id, @eventid = item.event_id})
+		            </td>
+		            <td>
+		                @Html.DisplayFor(modelItem => item.recall_number)
+		            </td>
+		            <td>
+		                @Html.DisplayFor(modelItem => item.reason_for_recall)
+		            </td>
+		            <td>
+		                @Html.DisplayFor(modelItem => item.status)
+		            </td>
+		        </tr>
+		    }
+	      </tbody>
+	    </table>
+	    <br />
+	    <div>
+	        @Model.Count Exception Reports, 
 
-    <br />
-    <div>
-        @Model.Count Exception Reports, 
-
-        Page @(Model.Results.PageCount < Model.Results.PageNumber ? 0 : Model.Results.PageNumber) of @Model.Results.PageCount
-    
-        @Html.PagedListPager(Model.Results, page => Url.Action("ReportList", new { page, sortOrder = Model.CurrentSort }))
-    
-        Display 
-        @Html.DropDownList("PageSize", (List<SelectListItem>)Model.PageSizeOptions, new { @id = "PageSizeId", onchange = "PageSizeChange()" })
-        per page
-        <br />
-    </div>
+	        Page @(Model.Results.PageCount < Model.Results.PageNumber ? 0 : Model.Results.PageNumber) of @Model.Results.PageCount
+	    
+	        @Html.PagedListPager(Model.Results, page => Url.Action("ReportList", new { page, sortOrder = Model.CurrentSort }))
+	    
+	        Display 
+	        @Html.DropDownList("PageSize", (List<SelectListItem>)Model.PageSizeOptions, new { @id = "PageSizeId", onchange = "PageSizeChange()" })
+	        per page
+	        <br />
+	    </div>
+	} else {
+		<div>No results found.</div>
+	}
   </div>
 }
 
