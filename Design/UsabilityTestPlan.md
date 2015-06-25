@@ -35,6 +35,10 @@ The following are the usability test objectives:
 *	To establish user performance baseline and user satisfaction levels for future usability assessments.
 *	To provide user performance measures such as critical errors, non-critical errors, and subjective evaluations.
 
+<p align="center">
+<a href="#table-of-contents">Table of Contents</a>
+</p>
+
 ##Methodology
 Usability testing will be conducted inside DSoft Technology office in Colorado Springs, Colorado. Participants will be escorted to DSoft Technology’s conference room where 8 personal computers / laptops are configured with Windows 7, Internet Explorer (IE) v11 and the latest version of Firefox/Chrome. The conference room also has a laptop with Windows 7, IE, v11 installed connected to a projector to display the video output on a large screen. The facilitator will provide an introductory presentation followed by a short review/mission of the ADS Food Recall Reports web site and instruct the participants that they are evaluating the web site, rather than the facilitator evaluating the participant and that the following measures will be collected.
 *	Demographic information
