@@ -104,7 +104,7 @@
     		.post(formData, function(error, data) {
 	  			if (error) return console.error(error);
 
-    	var maxCount = d3.max(data.data, function(d) { return d.count; });
+    	var maxCount = d3.max(data.data, function(d) { return d.Count; });
     	if (maxCount === 0) maxCount = 1;
 
 		// define color scale
@@ -132,7 +132,7 @@
 		var stateCount = 0;
 		for (var i = 0, len = data.data.length; i < len; i++) {
 			if (data.data[i].StateName === name) {
-				stateCount = data.data[i].count;
+				stateCount = data.data[i].Count;
 				break;
 			}
 		}

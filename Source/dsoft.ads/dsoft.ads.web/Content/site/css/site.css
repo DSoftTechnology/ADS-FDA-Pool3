@@ -55,6 +55,7 @@ body {
 .navbar-default { 
 	background-color: #3e3e3e;
 	border-color: #3e3e3e;
+	background-image:none;
 }
 .navbar-default .navbar-brand {
 	color: #ffffff;
