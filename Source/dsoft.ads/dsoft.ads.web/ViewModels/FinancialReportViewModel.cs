@@ -93,11 +93,11 @@ namespace dsoft.ads.web.ViewModels
                     subquery.queryLimit = 1000;
                     success = subquery.RunQuery();                      
 
-                    if ((success) && (subquery.response != null) && (subquery.response.results.Count > 0))
+                    foreach (CompanyCount company in this.data)
                     {
-                        foreach (CompanyCount company in this.data)
+                        int cnt = 0;
+                        if ((success) && (subquery.response != null) && (subquery.response.results.Count > 0))
                         {
-                            int cnt = 0;
                             var result = subquery.response.results.Where(r => r.term.Equals(company.Name)).FirstOrDefault();
                             if (result != null)
                             {
@@ -105,9 +105,8 @@ namespace dsoft.ads.web.ViewModels
                                 yearHasData = true;
                                 yearHasHadData = true;
                             }
-                                
-                            company.YearlyCounts.Add(yr.ToString(), cnt);
                         }
+                        company.YearlyCounts.Add(yr.ToString(), cnt);
                     }
 
                     if (!yearHasData && !yearHasHadData)
