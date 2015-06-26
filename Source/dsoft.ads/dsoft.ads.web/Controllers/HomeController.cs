@@ -23,22 +23,22 @@ namespace dsoft.ads.web.Controllers
 			return View ();
 		}
 
-        public ActionResult GeographicReport ()
+        public ActionResult GeographicReport (string keyword, DateTime? startDate, DateTime? endDate)
 		{
 			ViewData ["HideStateFilter"] = true;
-            return View(new BaseViewModel(true));
+            return View(new BaseViewModel());
 		}
 
         public ActionResult BusinessReport () 
 		{
             ViewData["HideDateFilter"] = true;
-            return View (new BaseViewModel(true));
+            return View (new BaseViewModel());
 		}
 
         public ActionResult FinancialReport ()
 		{
             ViewData["HideDateFilter"] = true;
-            return View (new BaseViewModel(true));
+            return View (new BaseViewModel());
 		}
 
         public async Task<ActionResult> ReportList (string sortOrder, int? page, int? pageSize, string keyword = null, string state = null, DateTime? startDate = null, DateTime? endDate = null)

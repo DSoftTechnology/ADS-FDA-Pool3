@@ -16,6 +16,7 @@
 <div id="mapcontainer" class="graphContainer">
   <svg>
     <g id="states"></g>
+    <g id="labels"></g>
     <g id="border"></g>
   </svg>
 </div>
@@ -36,6 +37,7 @@
 		.attr("viewBox", "0 0 800 500");
 
 	var states = d3.select("#mapcontainer svg #states");
+	var labels = d3.select("#mapcontainer svg #labels");
 	var border = d3.select("#mapcontainer svg #border");
 	var legend = d3.select("#mapLegend");
 
@@ -47,6 +49,7 @@
 		.projection(projection);
 
 	var colorRange = colorbrewer.Purples[7];
+	var stateData = null;
 
 	// queue json requests, calls buildMap when done
     queue()
@@ -57,13 +60,39 @@
     function buildMap(error, us, data){
 	  	if (error) return console.error(error);
 
+	  	stateData = data;
+
 		// Create states
 	  	states
 	  		.selectAll("path")
 	  		.data(topojson.feature(us, us.objects.units).features)
 	  		.enter().append("path")
+      			.attr("id", function(d) { return 'path-' + d.properties.abbr; })
 	  			.attr("d", path)
-	  			.attr("fill", "white");
+	  			.attr("fill", "white")
+	  			.on("click", function(d) { return redirectToList(d.properties.abbr); })
+	  			.on("mouseover", stateMouseOver)
+	  			.on("mouseout", stateMouseOut);
+
+	  	var labelsText = labels
+	  		.selectAll("text")
+    		.data(topojson.feature(us, us.objects.units).features)
+    		.enter().append("text")
+      			.attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+      			.attr("id", function(d) { return 'label-' + d.properties.abbr; })
+      			.style("display", "none")
+      			.on("click", function(d) { return redirectToList(d.properties.abbr); });
+
+      	labelsText
+      			.append("tspan")
+      			.attr("x", -5)
+      			.text(function(d) { return d.properties.abbr; });
+
+      	labelsText
+      			.append("tspan")
+      			.attr("class", "stateCount")
+      			.attr("x", -5)
+      			.attr("dy", "15px");
 
 	  	// Create state border overlay
 	  	border.append("path")
@@ -84,6 +113,21 @@
 			.style("border-top-color", String)
 
 		colorMap();
+	}
+
+	function redirectToList(state){
+		window.location.href = "/Home/ReportList?state=" + state;
+	}
+
+	// mouse over will hide circles and show actual values
+	function stateMouseOver(p) {
+		var abbr = d3.select(this).node().id.replace("path-","");
+		labels.select("#label-"+abbr).style("display", "block");
+	}
+
+	function stateMouseOut(p) {
+		var abbr = d3.select(this).node().id.replace("path-","");
+		labels.select("#label-"+abbr).style("display", "none");
 	}
 
 	// (re)colors the map, called after map is built and by the filter button on the _FilterList partial view
@@ -118,14 +162,16 @@
   		// recalculate legend numbers
   		legend.selectAll("li.key")
   			.text(function(d){ return Math.round(colors.invertExtent(d)[0]); });
+
+  		labels.selectAll(".stateCount")
+  			.text(function(d) { return getStateCount(data, d.properties.name); });
   		});
 
   		// prevent event from bubbling up
   		return false;
   	}
 
-  	// determines the state color based on the state count
-  	function colorForStateCount(colors, data, name) {
+  	function getStateCount(data, name) {
 		var stateCount = 0;
 		for (var i = 0, len = data.data.length; i < len; i++) {
 			if (data.data[i].StateName === name) {
@@ -134,7 +180,12 @@
 			}
 		}
 
-		return colors(stateCount); 
+		return stateCount;
+  	}
+
+  	// determines the state color based on the state count
+  	function colorForStateCount(colors, data, name) {
+		return colors(getStateCount(data, name)); 
 	}
 
  	$('#reportTitleInput').on('input', function() {
