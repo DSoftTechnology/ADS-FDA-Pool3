@@ -80,9 +80,7 @@ The facilitator will distribute a consent that acknowledges the participation as
 
 After a brief questions/answer session, participants will complete a demographic and background information questionnaire.  Each test task will start with a participant reading a test task description out loud from the printed copy followed by the test implementation. Time measurement begins when the participant starts the task.  The facilitator will instruct the participant to ‘think aloud’ so that a verbal record exists of their interaction with the web site. During the test, the facilitator and note taker(s) will observe participant’s behavior and manually record it. 
 
-The facilitator will instruct the participant to ‘think aloud’ so that a verbal record exists of their interaction with the Web site/Web application. The facilitator will observe and enter user behavior, user comments, and system actions in the data logging application.
-
-After each task, the participant will complete the post-task questionnaire and elaborate on the task session.  In addition, participants will have a chance to conduct their own independent usability tests using their browser of choice. The post-task questionnaire will address usability of each web page in the test implementation and suggested improvements or changes to each web page.  Results of participant’s independent usability tests will be include in the post-task questionnaire. After the participant completes all tasks, he/she will complete the satisfaction questionnaire. 
+After each task, the participant will complete the post-task questionnaire and elaborate on the task session.  In addition, participants will have a chance to conduct their own independent usability tests using their mobile device and browser of choice. The post-task questionnaire will address usability of each web page in the test implementation and suggested improvements or changes to each web page.  Results of participant’s independent usability tests will be include in the post-task questionnaire. After the participant completes all tasks, he/she will complete the satisfaction questionnaire. 
 
 ##Roles
 
