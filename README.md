@@ -4,7 +4,7 @@
 *Prototype URL: http://dsoft-ads.azurewebsites.net
 *Staging URL: http://staging-dsoft-ads.azurewebsites.net
 
-The DSoft Technology prototype and submission meets all the evidence criteria listed in the Design Pool and Development Pool and Attachment C includes all 13 labor categories from the Full Stack Pool categories.
+The DSoft Technology ADS Pool 3 prototype and submission meets all the evidence criteria listed in the Design Pool 1 and Development Pool 2 and Attachment C includes all 13 labor categories from the Full Stack Pool categories.
 
 ##Approach (TBD words)
 
@@ -36,9 +36,9 @@ On June 17, 2015, M. Coon, T. Weckx, A. Brunner, M. Case, K. Lucas, D. Hollenbac
 
 This assignment was documented in /Design/Meetings/2014-06-17/MeetingNotes.md.
 
-###c) Modern and open source technologies
+###c) Modern and open source technologies used
 
-The following were used in the design and development of the ADS prototype
+The following were used in the design and development of the ADS prototype:
 * Mono (http://www.mono-project.com)
 * D3.js (BSD license) (http://d3js.org)
 * JSON.Net (MIT license) (http://www.newtonsoft.com/json)
@@ -51,7 +51,7 @@ The following were used in the design and development of the ADS prototype
 
 ###d) Deployed prototype on an IaaS or PaaS provider
 
-Deployed on Microsoft Azure Web Servcies which is a PaaS and IaaS provider.  Azure supports the broadest selection of operating systems, programming languages, frameworks, tools, databases and devices: apps with JavaScript, Python, .NET, PHP, Java, Node.js; build backends for iOS, Android, and Windows devices.
+Deployed on ADS protype on Microsoft Azure Web Services which is a PaaS provider.  Azure supports the broadest selection of operating systems, programming languages, frameworks, tools, databases and devices: runs apps with JavaScript, Python, .NET, PHP, Java, Node.js; provides build backends for iOS, Android, and Windows devices.
 
 ###e) Wrote unit tests for code
 
@@ -61,20 +61,24 @@ Deployed on Microsoft Azure Web Servcies which is a PaaS and IaaS provider.  Azu
 
 ###f) Continuous Integration System
 
+TBD
+
 ###g) Configuration Management
 
-Tools used include:
+Configuration management tools used include:
 * Github (Source Control)
 * TeamCity (Continuous Integration)
 * Azure Web Apps (PaaS)
 
-The deployment is fully automated using TeamCity. Commits pushed to Github trigger TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are commited to the Azure git repository which triggers an automated deployment on the Azure Staging Web App for QA / Integration tests. After success in QA, the automated deployment to Azure Production Web App is manually triggered in TeamCity.
+The ADS protype deployment is fully automated using TeamCity. Commits pushed to Github trigger TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are commited to the Azure git repository which triggers an automated deployment on the Azure Staging Web App for QA / Integration tests. After success in QA, the automated deployment to Azure Production Web App is manually triggered in TeamCity.
 
 ###h) Continuous Monitoring
 
 Using Azure Web Apps as a Platform as a Service (PaaS) comes with built-in continuous monitoring of CPU, Memory, Bandwith, HTTP errors, Response times, Page Requests. Alerts can be configured as well as automatic scaling of the underlying infrastructure based on the metrics.  Reference Web Apps Dashboard here: https://azure.microsoft.com/en-us/documentation/articles/web-sites-monitor/
 
 ###i) Deploy software in a container
+
+TBD
 
 ###j) Used Interactive Approach
 
@@ -98,7 +102,7 @@ TBD
 
 ###l) Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge
 
-The following were used in the design and development of the ADS prototype:
+The following were used to create and run the ADS prototype:
 * Mono (http://www.mono-project.com)
 * D3.js (BSD license) (http://d3js.org)
 * JSON.Net (MIT license) (http://www.newtonsoft.com/json)
