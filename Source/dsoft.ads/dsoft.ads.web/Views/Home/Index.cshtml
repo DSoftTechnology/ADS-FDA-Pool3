@@ -16,7 +16,9 @@
 <div class="form-group">
 	<div class="col-sm-4">
 	    <div class="thumbnail">
-	      <img src="/Content/images/geopreview.png">
+	      <a href="@Url.Action("GeographicReport")">
+	      	<img src="/Content/images/geopreview.png">
+	      </a>
 	      <div class="caption">
 	        <h3>
 	          Geographic Research
@@ -24,41 +26,45 @@
 	        <p>
 	          Use geographic data to visualize the number of FDA Enforcement Reports across the US states.
 	        </p>
-	        <p>
+	        <div class="thunbnail-bottom-align-text">
 	        	@Html.ActionLink("View Report", "GeographicReport", null, new {@class="btn btn-primary pull-right"})
-	        </p>
+	        </div>
 	      </div>
 	    </div>
 	  </div>
 	  <div class="col-sm-4">
 	    <div class="thumbnail">
-	      <img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=Business%20Image&amp;w=350&amp;h=200">
+	      <a href="@Url.Action("BusinessReport")">
+	      	<img src="/Content/images/barpreview.png">
+	      </a>
 	      <div class="caption">
 	        <h3>
 	          Business Research
 	        </h3>
 	        <p>
-	          Use business data to [insert something cool here].
+	          Configure and generate a report illustrating the number of food recalls per year.
 	        </p>
-	        <p>
+	        <div class="thunbnail-bottom-align-text">
 	          @Html.ActionLink("View Report", "BusinessReport", null, new {@class="btn btn-primary pull-right"})
-	        </p>
+	        </div>
 	      </div>
 	    </div>
 	  </div>
 	  <div class="col-sm-4">
 	    <div class="thumbnail">
-	      <img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=Trending%20Image&amp;w=350&amp;h=200">
+	      <a href="@Url.Action("FinancialReport")">
+	      	<img src="/Content/images/dotpreview.png">
+	      </a>
 	      <div class="caption">
 	        <h3>
 	          Company Recall Trending Research
 	        </h3>
 	        <p>
-	          Use trending data to [insert something cool here].
+	          Configure and generate a report illustrating Top 10 companies with number of recall reports trends.
 	        </p>
-	        <p>
+	        <div class="thunbnail-bottom-align-text">
 	          @Html.ActionLink("View Report", "FinancialReport", null, new {@class="btn btn-primary pull-right"})
-	        </p>
+	        </div>
 	      </div>
 	    </div>
 	  </div>
