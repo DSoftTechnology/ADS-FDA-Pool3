@@ -11,8 +11,6 @@ namespace dsoft.ads.web.ViewModels
     {
         public List<RecallCount> data { get; set; }
 
-        public BusinessReportViewModel() {}
-
         public BusinessReportViewModel (bool setStates) : base(setStates) {}
 
         public async Task GetFinancialReport(bool isAjax, string keyword, string state)
