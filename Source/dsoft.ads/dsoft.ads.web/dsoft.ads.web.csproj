@@ -110,7 +110,6 @@
     <Compile Include="Models\OpenFDAResponseMeta.cs" />
     <Compile Include="Models\OpenFDAResponseMetaResults.cs" />
     <Compile Include="Helpers\StateNames.cs" />
-    <Compile Include="Models\StateCount.cs" />
     <Compile Include="Helpers\SessionHelper.cs" />
     <Compile Include="ViewModels\ReportListViewModel.cs" />
     <Compile Include="ViewModels\ReportDetailsViewModel.cs" />
@@ -118,13 +117,14 @@
     <Compile Include="Models\OpenFDAResult.cs" />
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="ViewModels\FinancialReportViewModel.cs" />
-    <Compile Include="Models\CompanyCount.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\BusinessReportViewModel.cs" />
-    <Compile Include="Models\RecallCount.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="Helpers\CompanyCount.cs" />
+    <Compile Include="Helpers\RecallCount.cs" />
+    <Compile Include="Helpers\StateCount.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />

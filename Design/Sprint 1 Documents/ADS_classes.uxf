@@ -4,12 +4,12 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>770</x>
-      <y>40</y>
+      <x>820</x>
+      <y>80</y>
       <w>260</w>
-      <h>370</h>
+      <h>410</h>
     </coordinates>
-    <panel_attributes>EnforcementReport
+    <panel_attributes>OpenFDAResult
 --
 +id: string
 +event_id: integer
@@ -30,6 +30,9 @@
 +product_description: string
 +code_info: string
 +initial_firm_notification: string
++term: string
++count: string
++countNumeric: integer
 --
 +GetStateList</panel_attributes>
     <additional_attributes/>
@@ -37,8 +40,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>230</y>
+      <x>120</x>
+      <y>280</y>
       <w>220</w>
       <h>220</h>
     </coordinates>
@@ -53,7 +56,7 @@
 +querySkip: integer
 +response: OpenFDAResponse
 --
-+RunQuery
++RunQueryAsync
 -GetUrl
 </panel_attributes>
     <additional_attributes/>
@@ -61,19 +64,19 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>620</x>
-      <y>320</y>
+      <x>670</x>
+      <y>390</y>
       <w>170</w>
-      <h>60</h>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;40.0;150.0;10.0</additional_attributes>
+    <additional_attributes>10.0;20.0;150.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>770</x>
-      <y>430</y>
+      <x>820</x>
+      <y>510</y>
       <w>260</w>
       <h>80</h>
     </coordinates>
@@ -86,8 +89,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>770</x>
-      <y>540</y>
+      <x>820</x>
+      <y>610</y>
       <w>260</w>
       <h>80</h>
     </coordinates>
@@ -100,30 +103,30 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>620</x>
-      <y>370</y>
+      <x>670</x>
+      <y>420</y>
       <w>170</w>
-      <h>120</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;150.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;150.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>620</x>
-      <y>390</y>
+      <x>670</x>
+      <y>440</y>
       <w>170</w>
-      <h>210</h>
+      <h>230</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;150.0;190.0</additional_attributes>
+    <additional_attributes>10.0;10.0;150.0;210.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>500</y>
+      <x>120</x>
+      <y>550</y>
       <w>220</w>
       <h>100</h>
     </coordinates>
@@ -139,8 +142,8 @@ Foods
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>630</y>
+      <x>120</x>
+      <y>680</y>
       <w>220</w>
       <h>100</h>
     </coordinates>
@@ -155,8 +158,8 @@ EnforcementReport</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>310</y>
+      <x>400</x>
+      <y>360</y>
       <w>280</w>
       <h>120</h>
     </coordinates>
@@ -171,8 +174,8 @@ EnforcementReport</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>480</y>
+      <x>400</x>
+      <y>530</y>
       <w>280</w>
       <h>100</h>
     </coordinates>
@@ -189,8 +192,8 @@ EnforcementReport</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>610</y>
+      <x>400</x>
+      <y>660</y>
       <w>280</w>
       <h>90</h>
     </coordinates>
@@ -206,8 +209,8 @@ EnforcementReport</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
-      <y>370</y>
+      <x>330</x>
+      <y>420</y>
       <w>90</w>
       <h>40</h>
     </coordinates>
@@ -218,8 +221,8 @@ m1=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>770</x>
-      <y>660</y>
+      <x>820</x>
+      <y>710</y>
       <w>260</w>
       <h>100</h>
     </coordinates>
