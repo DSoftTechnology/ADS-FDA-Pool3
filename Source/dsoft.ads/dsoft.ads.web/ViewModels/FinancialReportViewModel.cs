@@ -57,9 +57,11 @@ namespace dsoft.ads.web.ViewModels
                     string name = result.term;
 
                     /*
-					 * TODO:  FDA API contains a bug which does not permit string text search queries containing single-quote
-					 * whether or not it is URL-encoded properly.  For demonstration purposes, names with single-quote/apostrophes
-					 * will be excluded from the top-ten list.
+					 * TODO:  FDA API contains a known issue which does not permit string text search queries 
+                     * containing single-quote whether or not it is URL-encoded properly.  For demonstration 
+                     * purposes, names with single-quote/apostrophes will be excluded from the top-ten list.
+                     * Actual fix for this issue may involve making broader queries and string matching to find 
+                     * the desired company within the result set.
 					 * 
 					 */
                     if (!name.Contains("'"))
@@ -81,7 +83,7 @@ namespace dsoft.ads.web.ViewModels
                     loopEnd = ((DateTime)end).Year;
                 }
 
-                bool yearHasHadData = false;        // don't drop year columns after first year with data is found
+                bool yearHasHadData = false;
                 for (int yr = loopStart; yr <= loopEnd; yr++)
                 {
                     bool yearHasData = false;
@@ -111,7 +113,7 @@ namespace dsoft.ads.web.ViewModels
 
                     if (!yearHasData && !yearHasHadData)
                     {
-                        // remove year from all company dictionaries
+                        // remove year from all company dictionaries if year (and no previous year) contains data
                         foreach (CompanyCount company in this.data)
                         {
                             company.YearlyCounts.Remove(yr.ToString());
