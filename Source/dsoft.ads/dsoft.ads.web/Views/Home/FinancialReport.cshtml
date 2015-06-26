@@ -38,9 +38,10 @@
 
 	var svg = d3.select("#matrixContainer").append("svg")
 		.attr("preserveAspectRatio", "xMinYMin meet")
-		.attr("viewBox", "0 0 920 280")
+		.attr("viewBox", "0 0 920 310")
 		.append("g")
-		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+		.attr("height", "100%");
 
 	refreshGraph();
 
