@@ -50,7 +50,8 @@ namespace dsoft.ads.web.ViewModels
                 subtitle.Append(String.Format("Date Range: {0} - {1}; ", ((DateTime)startDate).ToString("d", dtfi), ((DateTime)endDate).ToString("d", dtfi)));
             }
 
-            this.Subtitle = subtitle.ToString();
+            char[] charsToTrim = {';', ' '};
+            this.Subtitle = subtitle.ToString().TrimEnd(charsToTrim);
         }
 
     }
