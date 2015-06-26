@@ -1,7 +1,7 @@
 # ADS-FDA-Pool3
 #README
 
-Prototype Url: http://staging-dsoft-ads.azurewebsites.net/
+Prototype URL: http://staging-dsoft-ads.azurewebsites.net/
 
 ##Approach (TBD words)
 
@@ -15,7 +15,7 @@ DSoft employs our internally-developed AgileSprinter™ tool to manage/track our
 
 ###a) Assigned one leader and gave that person authority and responsibility
 
-On June 17, 2015, K. Reece, Category 1 Product Manager, was assigned as the team leader, responsible and accountable for the prototype delivery.  Ms. Reece has the skillset (long time IT project manager and certified Scrum Master) to perform this role.
+On June 17, 2015, K. Reece, Category 1 Product Manager, was assigned as the team leader, responsible and accountable for the prototype delivery.  Ms. Reece has the skillset (long time IT project manager and certified Scrum Master) to perform this role.  Her bio is located in ...ADS-FDA-Pool3/
 
 ###b) Assembled a multidisciplinary and collaborative team
 
@@ -46,6 +46,8 @@ A 3rd paper prototyping session was held with the Financial Analyst becuase we d
 Live demonstrations of the prototypes were provided to users whose comments were reflected back into the design when possible.
 
 ###d) Human-centered design techniques and tools
+
+The entire project was conducted with human-centered design and tools.  Changes were continuously integrated, deployed on a staging system and tested, and then provided back to users for their inputs and reactions.
 
 * Brainstorming sessions - worked within the project team to brainstorm concepts and wireframes for development to meet user needs; developed a user navigation map
 * Use Cases - 3 iterations centered on the identified 3 primary personas (not potential FDA data maintainer personas)
@@ -94,7 +96,7 @@ TBD
 
 ###k) Openly Licensed Technologies
 
-Initial List:
+The following were used in the design and development of the ADS prototype:
 * Mono (http://www.mono-project.com)
 * D3.js (BSD license) (http://d3js.org)
 * JSON.Net (MIT license) (http://www.newtonsoft.com/json)
