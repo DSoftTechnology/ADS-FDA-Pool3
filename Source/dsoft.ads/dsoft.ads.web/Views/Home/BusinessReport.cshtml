@@ -32,7 +32,8 @@
 
     var svg = d3.select("#barContainer").append("svg")
 		.attr("preserveAspectRatio", "xMinYMin meet")
-		.attr("viewBox", "0 0 870 470");
+		.attr("viewBox", "0 0 870 470")
+		.attr("height", "100%");
 
 	var g = svg.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
