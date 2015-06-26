@@ -4,7 +4,7 @@
 @using PagedList; 
 @{
     Layout = "~/Views/Shared/_ReportLayout.cshtml";
-    ViewBag.Title = ViewBag.ReportType = "Report List";
+    ViewBag.Title = ViewBag.ReportType = "Food Recall Reports";
 	var recallNumberToolTip = ModelMetadata.FromLambdaExpression<ReportListViewModel, string>(x => x.Results.First().recall_number, ViewData).Description;
 	var reasonToolTip = ModelMetadata.FromLambdaExpression<ReportListViewModel, string>(x => x.Results.First().reason_for_recall, ViewData).Description;
     var statusToolTip = ModelMetadata.FromLambdaExpression<ReportListViewModel, string>(x => x.Results.First().status, ViewData).Description;
