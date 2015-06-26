@@ -72,6 +72,10 @@ body {
 }
 
 /* Navbar */
+.navbar a {
+    font-size: 18px;
+}
+
 .navbar-brand,
 .navbar-nav li a {
     line-height: 55px;
