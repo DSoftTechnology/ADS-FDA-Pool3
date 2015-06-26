@@ -40,13 +40,6 @@ namespace dsoft.ads.web.ViewModels
             if (!String.IsNullOrEmpty(keyword))
                 subtitle.Append(String.Format("Keyword: {0}; ", HttpUtility.HtmlEncode(keyword)));
 
-            if (!String.IsNullOrEmpty(state))
-            {
-                subtitle.Append(String.Format("State: {0}; ", HttpUtility.HtmlEncode(state)));
-                var selected = StateList.Where(x => x.Value == state).First();
-                selected.Selected = true;
-            }
-
             if ((startDate != null) && (endDate != null))
             {
                 DateTimeFormatInfo dtfi = CultureInfo.CreateSpecificCulture("en-US").DateTimeFormat;
