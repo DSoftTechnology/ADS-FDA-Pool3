@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
@@ -25,10 +26,10 @@ namespace dsoft.ads.web.Tests
          */
 
 		[Test]
-		public void GeoReport ()
+		public async void GeoReport ()
 		{
 			var controller = new ReportController ();
-			var result = (JsonResult)controller.GeoReport ();
+            var result = await controller.GeoReport ();
 
 			GeoReportViewModel geo = null;
 			try 
@@ -41,15 +42,15 @@ namespace dsoft.ads.web.Tests
 			}
 
 			Assert.NotNull (geo);
-			//Assert.AreEqual (String.Empty, geo.ErrorMsg);
+			Assert.AreEqual (String.Empty, geo.ErrorMsg);
 			Assert.AreEqual (50, geo.data.Count);
 		}
 
 		[Test]
-		public void FinancialReport()
+		public async void FinancialReport()
 		{
 			var controller = new ReportController ();
-			var result = (JsonResult)controller.FinancialReport ();
+			var result = await controller.FinancialReport ();
 
 			FinancialReportViewModel fin = null;
 			try 
@@ -62,15 +63,15 @@ namespace dsoft.ads.web.Tests
 			}
 
 			Assert.NotNull (fin);
-			//Assert.AreEqual (String.Empty, fin.ErrorMsg);
+			Assert.AreEqual (String.Empty, fin.ErrorMsg);
 			Assert.AreEqual (10, fin.data.Count);
 		}
 
         [Test]
-        public void BusinessReport()
+        public async void BusinessReport()
         {
             var controller = new ReportController ();
-            var result = (JsonResult)controller.BusinessReport ();
+            var result = await controller.BusinessReport ();
 
             BusinessReportViewModel bus = null;
             try 
@@ -83,7 +84,7 @@ namespace dsoft.ads.web.Tests
             }
 
             Assert.NotNull (bus);
-            //Assert.AreEqual (String.Empty, bus.ErrorMsg);
+            Assert.AreEqual (String.Empty, bus.ErrorMsg);
 
             int span = DateTime.Today.Year - 2008 + 1;
             Assert.AreEqual (span, bus.data.Count);

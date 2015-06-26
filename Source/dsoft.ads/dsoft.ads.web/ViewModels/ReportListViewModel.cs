@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
@@ -28,8 +29,8 @@ namespace dsoft.ads.web.ViewModels
 
         public ReportListViewModel (bool setStates) : base(setStates) {}
 
-        public ReportListViewModel (string sortOrder, int? page, int? pageSize, string keyword, string state, DateTime? start, DateTime? end)
-		{
+        public async Task GetReportList(string sortOrder, int? page, int? pageSize, string keyword, string state, DateTime? start, DateTime? end)
+        {
             this.SetFilters(false, keyword, state, start, end);
 
 			this.CurrentSort = sortOrder;	
@@ -78,7 +79,7 @@ namespace dsoft.ads.web.ViewModels
             if (searchQuery.Count > 0)
                 query.querySearch = string.Join ("+AND+", searchQuery);
 
-			bool success = query.RunQuery ();
+			bool success = await query.RunQueryAsync();
 
 			if (success)
 				this.ErrorMsg = String.Empty;

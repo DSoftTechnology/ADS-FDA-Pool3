@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using dsoft.ads.web.Helpers;
 using dsoft.ads.web.Models;
@@ -15,7 +16,7 @@ namespace dsoft.ads.web.ViewModels
 
         public FinancialReportViewModel (bool setStates) : base(setStates) {}
 
-        public void GetFinancialReport(bool isAjax, string keyword, string state, DateTime? start, DateTime? end)
+        public async Task GetFinancialReport(bool isAjax, string keyword, string state, DateTime? start, DateTime? end)
 		{
 			this.data = new List<CompanyCount> ();
             this.SetFilters(isAjax, keyword, state, start, end);
@@ -41,7 +42,7 @@ namespace dsoft.ads.web.ViewModels
             if (searchQuery.Count > 0)
                 query.querySearch = string.Join ("+AND+", searchQuery);
 
-            bool success = query.RunQuery ();
+            bool success = await query.RunQueryAsync();
 
 			if (!success)
 				this.ErrorMsg = "An error occurred executing the query.  Please try again.";
@@ -93,7 +94,7 @@ namespace dsoft.ads.web.ViewModels
                     subquery.queryCount = "recalling_firm.exact";
                     subquery.querySearch = String.Format("recall_initiation_date:[{0}0101+TO+{1}0101]", yr, yr + 1);
                     subquery.queryLimit = 1000;
-                    success = subquery.RunQuery();                      
+                    success = await subquery.RunQueryAsync();
 
                     foreach (CompanyCount company in this.data)
                     {

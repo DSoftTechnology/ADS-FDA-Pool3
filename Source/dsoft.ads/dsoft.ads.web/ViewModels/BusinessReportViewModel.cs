@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Web;
 using dsoft.ads.web.Helpers;
 using dsoft.ads.web.Models;
@@ -14,7 +15,7 @@ namespace dsoft.ads.web.ViewModels
 
         public BusinessReportViewModel (bool setStates) : base(setStates) {}
 
-        public void GetFinancialReport(bool isAjax, string keyword, string state)
+        public async Task GetFinancialReport(bool isAjax, string keyword, string state)
         {
             this.data = new List<RecallCount>();
             this.SetFilters(isAjax, keyword, state, null, null);
@@ -41,7 +42,7 @@ namespace dsoft.ads.web.ViewModels
                 if (searchQuery.Count > 0)
                     query.querySearch = string.Join("+AND+", searchQuery);
 
-                bool success = query.RunQuery();
+                bool success = await query.RunQueryAsync();
 
                 int cnt = 0;
                 if (success && (query.response != null))

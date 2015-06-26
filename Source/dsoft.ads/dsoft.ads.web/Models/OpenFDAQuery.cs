@@ -2,6 +2,8 @@
 using System.Configuration;
 using System.IO;
 using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace dsoft.ads.web.Models
@@ -66,7 +68,7 @@ namespace dsoft.ads.web.Models
 			return url;
 		}
 
-		public bool RunQuery()
+		public async Task<bool> RunQueryAsync()
 		{
 			this.response = null;
 
@@ -78,7 +80,7 @@ namespace dsoft.ads.web.Models
 
 				Console.WriteLine(url);
 				WebRequest request = WebRequest.Create(url) as WebRequest;
-				using (WebResponse response = request.GetResponse() as WebResponse)
+				using (WebResponse response = await request.GetResponseAsync() as WebResponse)
 				{
 					if (response is HttpWebResponse)
 					{
@@ -87,11 +89,21 @@ namespace dsoft.ads.web.Models
 							throw new Exception(String.Format("Server error (HTTP {0}: {1}).", testResponse.StatusCode, testResponse.StatusDescription));
 					}
 
-					Stream stream = response.GetResponseStream();
-					StreamReader sr = new StreamReader(stream);
-					string json = sr.ReadToEnd();
-					this.responseRaw = json;
-					this.response = JsonConvert.DeserializeObject<OpenFDAResponse> (json);
+                    string json = String.Empty;
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        using (Stream stream = response.GetResponseStream())
+                        {
+                            await stream.CopyToAsync(ms);
+                        }
+
+                        ms.Position = 0;
+                        StreamReader sr = new StreamReader(ms);
+                        json = sr.ReadToEnd();
+                    }
+                    this.responseRaw = json;
+                    if (!String.IsNullOrEmpty(json))
+					    this.response = JsonConvert.DeserializeObject<OpenFDAResponse> (json);
 					return true;
 				}
 			}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Web;
 
 using dsoft.ads.web.Helpers;
@@ -17,7 +18,7 @@ namespace dsoft.ads.web.ViewModels
 
         public GeoReportViewModel (bool setStates) : base(setStates) {}
 
-        public void GetGeoReport(bool isAjax, string keyword, DateTime? start, DateTime? end)
+        public async Task GetGeoReport(bool isAjax, string keyword, DateTime? start, DateTime? end)
 		{
             this.SetFilters(isAjax, keyword, String.Empty, start, end);
 
@@ -57,7 +58,7 @@ namespace dsoft.ads.web.ViewModels
 			if (searchQuery.Count > 0)
 				query.querySearch = string.Join ("+AND+", searchQuery);
 
-			bool success = query.RunQuery ();
+			bool success = await query.RunQueryAsync();
 
 			if (!success)
 				this.ErrorMsg = "An error occurred executing the query.  Please try again.";

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
@@ -40,14 +41,18 @@ namespace dsoft.ads.web.Controllers
             return View (new BaseViewModel(true));
 		}
 
-        public ActionResult ReportList (string sortOrder, int? page, int? pageSize, string keyword = null, string state = null, DateTime? startDate = null, DateTime? endDate = null)
+        public async Task<ActionResult> ReportList (string sortOrder, int? page, int? pageSize, string keyword = null, string state = null, DateTime? startDate = null, DateTime? endDate = null)
 		{
-            return View(new ReportListViewModel(sortOrder, page, pageSize, keyword, state, startDate, endDate));
+            ReportListViewModel report = new ReportListViewModel();
+            await report.GetReportList(sortOrder, page, pageSize, keyword, state, startDate, endDate);
+            return View(report);
 		}
 
-        public ActionResult ReportDetails (string id, string eventid)
+        public async Task<ActionResult> ReportDetails (string id, string eventid)
 		{
-            return View (new ReportDetailsViewModel(id, eventid));
+            ReportDetailsViewModel report = new ReportDetailsViewModel();
+            await report.GetReportDetails(id, eventid);
+            return View (report);
 		}
 	}
 }

@@ -118,21 +118,20 @@ namespace dsoft.ads.web.Tests
 		}
 
 		[Test]
-		public void QueryTest()
+		public async void QueryTest()
 		{
 
-			/*
-			 * this runs a live query 
 			OpenFDAQuery query = new OpenFDAQuery ();
 			query.baseUrl = "https://api.fda.gov";
 			query.apiKey = "iECPoOgnA6LVBZ5X3PHyx5Slpj1smHE6u4FuzlHl";
 			query.source = OpenFDAQuery.FDAReportSource.food;
 			query.type = OpenFDAQuery.FDAReportType.enforcement;
-			bool result = query.runQuery ();
+			bool result = await query.RunQueryAsync();
 
 			Assert.IsTrue (result);
-			*/
 
+            /*
+             * Note: mocked request TestWebRequest does not support async calls
 			// test against a mock WebRequest
 			WebRequest.RegisterPrefix ("test", new TestWebRequestCreate ());
 			TestWebRequest request = TestWebRequestCreate.CreateTestRequest (json_response);
@@ -142,11 +141,12 @@ namespace dsoft.ads.web.Tests
 			query.apiKey = "iECPoOgnA6LVBZ5X3PHyx5Slpj1smHE6u4FuzlHl";
 			query.source = OpenFDAQuery.FDAReportSource.food;
 			query.type = OpenFDAQuery.FDAReportType.enforcement;
-			bool result = query.RunQuery ();
+			bool result = await query.RunQueryAsync();
 
 			Assert.IsTrue (result);
 			Assert.AreEqual ("F-0924-2013", query.response.results [1].recall_number);
 			Assert.AreEqual ("US", query.response.results [0].country);
+            */
 		}
 	}
 }
