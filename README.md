@@ -1,15 +1,15 @@
 # ADS-FDA-Pool3
 #README
 
-Prototype Url: TBD
+Prototype Url: http://staging-dsoft-ads.azurewebsites.net/
 
-##Approach (158 words)
+##Approach (TBD words)
 
-DSoft Technology uses an Agile methodology (Scrum), an iterative, incremental framework for software project development. Every two week interval is planned by the team using a tracking tool, and projects are kept on track using frequent short meetings to communicate what has been accomplished and what roadblocks are preventing progress. A Scrum Master is assigned who is responsible for removing these roadblocks and with making sure that the project stays on track.
+DSoft Technology uses an Agile methodology (Scrum), an iterative, incremental framework for software project development. Every two week interval is planned by the team using a tracking tool, and projects are kept on track using frequent short meetings to communicate what has been accomplished and what roadblocks are preventing progress. A Scrum Master is assigned who is responsible for working with project managers to remove these roadblocks and to make sure that the project stays on track.
 
-At the beginning of the project, after writing a brief requirements document we add user stories and tasks to the product backlog for design, testing, and release documentation, with an estimated complexity and priority for each. Both the backlog and the requirements document are continually updated to keep up with changing user requirements. Every two weeks, based on priority, we pull user stories from the product backlog and add them to the current sprint.
+At the beginning of the project, after writing a brief requirements document we add use cases and user stories and tasks to the product backlog for design, testing, and release documentation, with an estimated complexity and priority for each. Both the backlog and the requirements document are continually updated to keep up with changing user requirements. Every two weeks, based on priority, we pull user stories from the product backlog and add them to the current sprint.
 
-DSoft employs our internally-developed AgileSprinter™ to manage/track our Scrum process (screenshots provided under /Design/Sprint X Documents).  
+DSoft employs our internally-developed AgileSprinter™ tool to manage/track our Scrum process (screenshots provided under /Design/Sprint 1 Documents).  
 
 ##U.S. Digital Services Playbook Evidence
 
@@ -41,12 +41,17 @@ An initial meeting with potential users uninvolved in the design and development
 
 The second paper prototype session was performed with customers on Monday, 22 June 2015, with DSoft’s Business Analyst and Visual Designer.  Customers/Personas identified changes and added requirements to the web forms and resultant reports (generated from open.FDA.gov).  Changes were made to the use cases to capture changes, separate variants of the use case. Some requirements were deferred until the next build.
 
+A 3rd paper prototyping session was held with the Financial Analyst becuase we determined the dataset was limited and may not be able to provide the exact report she requested.
+
+Live demonstrations of the prototypes were provided to users whose comments were reflected back into the design when possible.
+
 ###d) Human-centered design techniques and tools
 
-* Use Cases 
-* Paper Prototyping
-* Participatory Design
-* Hallway Usability Testing
+* Brainstorming sessions - worked within the project team to brainstorm concepts for development to meet user needs
+* Use Cases - 3 iterations centered on the identified 3 primary personas (not potential FDA data maintainer personas)
+* Paper Prototyping - 3 iterations with 3 primary personas and using comments to affect design
+* Participatory Design - multiple live demonstrations showing prototypes to various users and using comments to affect design
+* Usability Testing - Performed 1 iteration with uninvolved, non-IT users; invited non-IT users to use the website and provide feedback
 
 ###e) Design Style Guide and Pattern Library
 
@@ -67,13 +72,17 @@ Initial List:
 
 ###g) Usability Tests
 
-see Usability Test Plan under /Design
+* To put the needs of users first, we provided usability testing
+* Performed usability tests with non-IT volunteers
+* See Usability Test Plan under /Design
 
 ###h) Interactive Approach
 
-See folders under /Design/Meetings. The first meeting for our iterative approach to the design was held on June 18, 2015.
+See folders under /Design/Meetings. The first meeting for our iterative approach to the design was held on June 18, 2015 and every day hence following the project initiation.
 
-Scrum meetings were held twice daily to provide status reports and roadblocks. A project status review was held on 23 June 2015 to discuss project status with the Product Manager documented in /Design/Meetings/2014-06-23/ProjectStatusReview.md
+Scrum meetings were held twice daily to provide status reports, course corrcetions and remove roadblocks. A project status review was held on 23 June 2015 to discuss project status with the Product Manager documented in /Design/Meetings/2014-06-23/ProjectStatusReview.md
+
+Personas were involved in every iteration through general discussions, paper prototyping, demonstartions and testing.
 
 ###i) Prototype
 
