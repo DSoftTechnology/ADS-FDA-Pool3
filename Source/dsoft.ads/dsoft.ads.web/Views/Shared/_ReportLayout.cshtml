@@ -16,12 +16,25 @@
 		<div class="form-group">
 			<div class="col-sm-3">
 				<h2>@ViewBag.ReportType</h2>
+			</div>
+			<div class="col-sm-9">
+				<h2 id="reportTitle"></h2>
+				<h4 id="reportSubtitle"></h4>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-3">
 				<hr/>
+			</div>
+			<div class="col-sm-9">
+				<hr/>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-3">
 				@Html.Partial("~/Views/Shared/_FilterList.cshtml")
 			</div>
 			<div class="col-sm-9">
-				<h2 id="reportSubtitle"></h2>
-				<hr />
 				@RenderBody()
 			</div>
 		</div>
@@ -31,3 +44,13 @@
 	@RenderSection("bodybottom", required: false)
 </body>
 </html>
+
+<script>
+	function SetTitle(title) {
+		$('#reportTitle').text(title);
+	}
+
+	function SetSubtitle(subtitle) {
+		$('#reportSubtitle').text(subtitle);
+	}
+</script>

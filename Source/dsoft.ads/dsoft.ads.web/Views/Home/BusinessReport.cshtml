@@ -1,7 +1,7 @@
 ﻿@{
 	Layout = "~/Views/Shared/_ReportLayout.cshtml";
     ViewBag.Title = ViewBag.ReportType = "Business Report";
-    var defaultSubtitle = "Report Title";
+    var defaultTitle = "Report Count Per Year";
 }
 
 <p>
@@ -13,21 +13,17 @@
     $(document).ready(function () {
         $('#businessNav').parent().addClass('active');
         $('#filterSubmit').on("click", refreshGraph);
-        SetSubtitle('@defaultSubtitle');
-
-        $('#reportSubtitleInput').on('input', function() {
-            if ($(this).val() != ''){
-                SetSubtitle($('#reportSubtitleInput').val());
-            }
-            else {
-                SetSubtitle('@defaultSubtitle');
-            }
-        });
+        SetTitle('@defaultTitle');
     });
 
-	function SetSubtitle(subtitle) {
-		$('#reportSubtitle').text(subtitle);
-	}
+   $('#reportTitleInput').on('input', function() {
+		if ($(this).val() != '') {
+			SetTitle($(this).val());
+		}
+		else {
+			SetTitle('@defaultTitle');
+		}
+	});
 
     var width = 800,
     	height = 400,
@@ -64,6 +60,8 @@
 	}
 
 	function buildGraph(error, bus) {
+		SetSubtitle(bus.Subtitle);
+
 		var maxCount = d3.max(bus.data, function(d) { return d.Count; });
 		var years = $.map(bus.data, function(value, index) { return value.Year; });
 

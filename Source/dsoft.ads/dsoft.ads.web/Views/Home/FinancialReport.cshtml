@@ -1,7 +1,7 @@
 ﻿@{
 	Layout = "~/Views/Shared/_ReportLayout.cshtml";
     ViewBag.Title = ViewBag.ReportType = "Company Trending Report";
-    var defaultSubtitle = "Top Ten Reported Companies";
+    var defaultTitle = "Top Ten Reported Companies";
 }
 
 <p>
@@ -15,7 +15,7 @@
         $('#trendingNav').parent().addClass('active');
 
         $("filterSubmit").on("click", refreshGraph);
-        SetSubtitle('@defaultSubtitle');
+        SetTitle('@defaultTitle');
     });
 
     // initialize svg elements
@@ -62,6 +62,9 @@
 
 	// Callback function for the refreshGraph ajax post
 	function buildGraph(error, fin) {
+	// set subtitle
+		SetSubtitle(fin.Subtitle);
+
 	// example row in fin.data
 	// {"Name":"Garden-Fresh+Foods","TotalCount":629,"CountNonZero":3,"YearlyCounts":{"2008":0,"2009":0,"2010":0,"2011":0,"2012":94,"2013":534,"2014":1,"2015":0}}
 		var start_year = d3.min(fin.data, function(d) { return d3.min(d3.keys(d.YearlyCounts)); });
@@ -140,16 +143,12 @@
 		d3.select(g).selectAll("text.value").style("display", "none");
 	}
 
-	$('#reportSubtitleInput').on('input', function() {
-		if ($(this).val() != ''){
-			SetSubtitle($('#reportSubtitleInput').val());
+	$('#reportTitleInput').on('input', function() {
+		if ($(this).val() != '') {
+			SetTitle($(this).val());
 		}
 		else {
-			SetSubtitle('@defaultSubtitle');
+			SetTitle('@defaultTitle');
 		}
 	});
-
-	function SetSubtitle(subtitle) {
-		$('#reportSubtitle').text(subtitle);
-	}
 </script>
