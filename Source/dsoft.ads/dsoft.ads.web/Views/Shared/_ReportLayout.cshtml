@@ -13,30 +13,35 @@
 	@Html.Partial("~/Views/Shared/_MainMenu.cshtml")
 	<div class="col-sm-12">
 		@Html.Partial("~/Views/Shared/_BetaWarning.cshtml")
-		<div class="form-group">
-			<div class="col-sm-3 hidden-xs">
-				<h2>@ViewBag.ReportType</h2>
-			</div>
-			<div class="col-sm-9">
-				<h2 id="reportTitle"></h2>
-				<h4 id="reportSubtitle"></h4>
-			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-sm-3 hidden-xs">
-				<hr/>
-			</div>
-			<div class="col-sm-9">
-				<hr/>
+		<div class="row">
+			<div class="form-group">
+				<div class="col-sm-3 hidden-xs">
+					<h2>@ViewBag.ReportType</h2>
+				</div>
+				<div class="col-sm-9">
+					<h2 id="reportTitle"></h2>
+					<h4 id="reportSubtitle"></h4>
+				</div>
 			</div>
 		</div>
-		<div class="form-group">
-			<div class="col-sm-3">
-				@Html.Partial("~/Views/Shared/_FilterList.cshtml")
+		<div class="row">
+			<div class="form-group">
+				<div class="col-sm-3 hidden-xs">
+					<hr/>
+				</div>
+				<div class="col-sm-9">
+					<hr/>
+				</div>
 			</div>
-			<div class="visible-xs"><hr/></div>
-			<div class="col-sm-9">
-				@RenderBody()
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<div class="col-sm-3">
+					@Html.Partial("~/Views/Shared/_FilterList.cshtml")
+				</div>
+				<div class="col-sm-9">
+					@RenderBody()
+				</div>
 			</div>
 		</div>
 		@Html.Partial("~/Views/Shared/_Footer.cshtml")
