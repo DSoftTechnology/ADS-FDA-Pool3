@@ -67,7 +67,7 @@ Initial List:
 
 ###g) Usability Tests
 
-TBD
+see Usability Test Plan under /Design
 
 ###h) Interactive Approach
 
@@ -99,7 +99,7 @@ Initial List:
 ###l) Unit Tests
 
 * Created automated tests to verify all user-facing functionality
-* Test Plan finalized on TBD 2015
+* Test Plan finalized on 25 June 2015
 * Testing team session planned for Friday, 26 June 2015 using multiple mobile devices and various operating systems with users unfamiliar with system and development.
 
 ###m) Configuration Management
