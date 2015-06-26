@@ -1,4 +1,4 @@
-#Style Guide
+#DSOft Technology ADS Prototype Style Guide
 
 ##Colors
 ![](http://i.imgur.com/KtazqDx.png)
