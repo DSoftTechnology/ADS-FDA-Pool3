@@ -72,6 +72,10 @@ body {
 }
 
 /* Navbar */
+.navbar a {
+    font-size: 18px;
+}
+
 .navbar-brand,
 .navbar-nav li a {
     line-height: 55px;
@@ -156,8 +160,14 @@ body {
 
 /* Thumbnail */
 .thumbnail{
-    height: 400px;
+    height: 450px;
     overflow: auto;
+}
+
+.thunbnail-bottom-align-text {
+    position: absolute;
+    right: 25px;
+    bottom: 30px;
 }
 
 /* Map */

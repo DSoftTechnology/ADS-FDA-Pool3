@@ -8,8 +8,11 @@
 
 <footer class="col-sm-12">
 	<hr />
-	<span class="text-muted">&copy; DSoft Technology Company 2000-@DateTime.Now.Year. All Rights Reserved.</span>
-	<div id="socialMedia" class="pull-right">
+	<div class="text-muted col-sm-4">&copy; DSoft Technology Company 2000-@DateTime.Now.Year. All Rights Reserved.</div>
+	<div class="text-center col-sm-4">
+		@System.Configuration.ConfigurationManager.AppSettings["appVersion"]
+	</div>
+	<div id="socialMedia" class="text-right col-sm-4">
 		<a href="@facebookLink" target="_blank"><img src="~/Content/images/facebook_32.png"></a>
 		<a href="@twitterLink" target="_blank"><img src="~/Content/images/twitter_32.png"></a>
 		<a href="@linkedInLink" target="_blank"><img src="~/Content/images/linkedin_32.png"></a>
