@@ -47,10 +47,10 @@ Live demonstrations of the prototypes were provided to users whose comments were
 
 ###d) Human-centered design techniques and tools
 
-* Brainstorming sessions - worked within the project team to brainstorm concepts for development to meet user needs
+* Brainstorming sessions - worked within the project team to brainstorm concepts and wireframes for development to meet user needs; developed a user navigation map
 * Use Cases - 3 iterations centered on the identified 3 primary personas (not potential FDA data maintainer personas)
 * Paper Prototyping - 3 iterations with 3 primary personas and using comments to affect design
-* Participatory Design - multiple live demonstrations showing prototypes to various users and using comments to affect design
+* Participatory Design - multiple live demonstrations (using both test data for quick reviews and FDA data once that capability was integrated) showing prototypes to various users and incorporating their comments to affect design
 * Usability Testing - Performed 1 iteration with uninvolved, non-IT users; invited non-IT users to use the website and provide feedback
 
 ###e) Design Style Guide and Pattern Library
@@ -59,7 +59,7 @@ See StyleGuide.md under /Design.
 
 ###f) Modern and open source technologies
 
-Initial List:
+The following were used in the design and development of the ADS prototype
 * Mono (http://www.mono-project.com)
 * D3.js (BSD license) (http://d3js.org)
 * JSON.Net (MIT license) (http://www.newtonsoft.com/json)
@@ -72,7 +72,7 @@ Initial List:
 
 ###g) Usability Tests
 
-* To put the needs of users first, we provided usability testing
+* To put the "needs of users first", we provided usability testing
 * Performed usability tests with non-IT volunteers
 * See Usability Test Plan under /Design
 
