@@ -206,15 +206,29 @@ body {
  	margin-top: 20px;
 }
 
+#barContainer {
+ 	padding-top: 33%;
+ 	margin-top: 20px;
+}
+
 .axis path,
 .axis line {
 	fill: none;
-  	stroke: white;
+  	stroke: #3e3e3e;
   	shape-rendering: crispEdges;
 }
 
 .axis text {
 	font-size:large;
+}
+
+.bar rect {
+	fill: #565ab5;
+}
+
+.bar text {
+	fill: #2c2768;
+	text-anchor: middle;
 }
 
 /* Glyphicons */

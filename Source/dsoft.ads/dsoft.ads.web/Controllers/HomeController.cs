@@ -25,19 +25,18 @@ namespace dsoft.ads.web.Controllers
         public ActionResult GeographicReport ()
 		{
 			ViewData ["HideStateFilter"] = true;
-
             return View(new BaseViewModel(true));
 		}
 
         public ActionResult BusinessReport () 
 		{
+            ViewData["HideDateFilter"] = true;
             return View (new BaseViewModel(true));
 		}
 
         public ActionResult FinancialReport ()
 		{
-            ViewData ["HideDateFilter"] = true;
-
+            ViewData["HideDateFilter"] = true;
             return View (new BaseViewModel(true));
 		}
 
