@@ -23,13 +23,13 @@ namespace dsoft.ads.web.ViewModels
         public BaseViewModel(bool setStates)
         {
             if (setStates)
-                this.StateList = StateNames.GetStateDropdown();
+                this.StateList = StateNames.GetStateDropdown(String.Empty);
         }
 
         protected void SetFilters(bool isAjax, string keyword = null, string state = null, DateTime? startDate = null, DateTime? endDate = null)
         {
             if (!isAjax)
-                this.StateList = StateNames.GetStateDropdown();
+                this.StateList = StateNames.GetStateDropdown(state);
 
             this.FilterKeyword = keyword;
             this.FilterState = state;

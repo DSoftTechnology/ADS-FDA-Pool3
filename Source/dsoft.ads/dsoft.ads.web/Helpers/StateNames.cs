@@ -82,7 +82,7 @@ namespace dsoft.ads.web.Helpers
 		}
 
 
-        public static SelectList GetStateDropdown()
+        public static SelectList GetStateDropdown(string selectedState)
         {
             var states = stateNames
                 .Select(x =>
@@ -96,7 +96,7 @@ namespace dsoft.ads.web.Helpers
             statelist.AddRange(new SelectList(states, "Text", "Value"));
             statelist.Insert(0, new SelectListItem{Text = "", Value = ""});
 
-            return new SelectList(statelist, "Value", "Text");
+            return new SelectList(statelist, "Value", "Text", selectedState);
         }
 	}
 }

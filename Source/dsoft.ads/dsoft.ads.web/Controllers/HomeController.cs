@@ -43,8 +43,10 @@ namespace dsoft.ads.web.Controllers
 
         public async Task<ActionResult> ReportList (string sortOrder, int? page, int? pageSize, string keyword = null, string state = null, DateTime? startDate = null, DateTime? endDate = null)
 		{
+            string referrer = Request.UrlReferrer.AbsoluteUri;
+
             ReportListViewModel report = new ReportListViewModel();
-            await report.GetReportList(sortOrder, page, pageSize, keyword, state, startDate, endDate);
+            await report.GetReportList(sortOrder, page, pageSize, keyword, state, startDate, endDate, referrer);
             return View(report);
 		}
 

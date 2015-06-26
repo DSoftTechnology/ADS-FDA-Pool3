@@ -15,6 +15,8 @@ namespace dsoft.ads.web.ViewModels
 {
     public class ReportListViewModel : BaseViewModel
 	{
+        public const string FilterSessionKey = "ReportListFilters";
+
 		public string CurrentSort { get; set; }	
 		public string EventIdSortParm { get; set; }
 		public string RecallNumSortParm { get; set; }
@@ -29,8 +31,27 @@ namespace dsoft.ads.web.ViewModels
 
         public ReportListViewModel (bool setStates) : base(setStates) {}
 
-        public async Task GetReportList(string sortOrder, int? page, int? pageSize, string keyword, string state, DateTime? start, DateTime? end)
+        public async Task GetReportList(string sortOrder, int? page, int? pageSize, string keyword, string state, DateTime? start, DateTime? end, string referrer)
         {
+            // restore filters on return from detail report
+            if ((keyword == null) &&
+                (state == null) &&
+                (start == null) &&
+                (end == null) &&
+                (HttpContext.Current.Session[ReportListViewModel.FilterSessionKey] != null) &&
+                (referrer.ToLower().Contains("/reportdetails/")))
+            {
+                List<Object> filters = (List<Object>)HttpContext.Current.Session[ReportListViewModel.FilterSessionKey];
+                keyword = (string)filters[0];
+                state = (string)filters[1];
+                start = (DateTime?)filters[2];
+                end = (DateTime?)filters[3];
+            }
+            else
+            {
+                this.SaveFilters(keyword, state, start, end);
+            }
+
             this.SetFilters(false, keyword, state, start, end);
 
 			this.CurrentSort = sortOrder;	
@@ -132,6 +153,17 @@ namespace dsoft.ads.web.ViewModels
 			if (displayPageSize == -1)
                 displayPageSize = this.Count;
 		}
+
+        private void SaveFilters(string keyword, string state, DateTime? start, DateTime? end)
+        {
+            /*
+             * TODO:  this is a basic implementation to restore filter settings when the user returns from detail report.
+             * This does not account for many factors like having multiple reports open in tabs, etc.  Need a more thorough 
+             * design, but do not want to convert all detail report links and return link to posts (because isn't RESTful)
+             * or include all the filters on the querystring.
+             */
+            HttpContext.Current.Session[FilterSessionKey] = new List<Object>() {keyword, state, start, end};
+        }
 	}
 }
 
