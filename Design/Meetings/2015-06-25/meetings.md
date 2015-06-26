@@ -5,3 +5,5 @@
 <need  pic here>
 
 Product Manager completed the labor categories for all 3 pools and reviewed with Business Analyst.
+
+Usability testing with non-developer personnel scheduled for 26 June 2015.
