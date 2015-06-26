@@ -70,49 +70,55 @@ namespace dsoft.ads.web.Models
 
 		public async Task<bool> RunQueryAsync()
 		{
-			this.response = null;
+            int retryLimit = 3;
+            this.response = null;
 
-			try
-			{
-				string url = GetUrl ();
-				if (String.IsNullOrEmpty(url))
-					throw new Exception("No URL specified.");
+            for (int retryCount = 0; retryCount < retryLimit; retryCount++)
+            {
+                try
+                {
+                    string url = GetUrl();
+                    if (String.IsNullOrEmpty(url))
+                        throw new Exception("No URL specified.");
 
-				Console.WriteLine(url);
-				WebRequest request = WebRequest.Create(url) as WebRequest;
-				using (WebResponse response = await request.GetResponseAsync() as WebResponse)
-				{
-					if (response is HttpWebResponse)
-					{
-						HttpWebResponse testResponse = response as HttpWebResponse;
-						if (testResponse.StatusCode != HttpStatusCode.OK)
-							throw new Exception(String.Format("Server error (HTTP {0}: {1}).", testResponse.StatusCode, testResponse.StatusDescription));
-					}
-
-                    string json = String.Empty;
-                    using (MemoryStream ms = new MemoryStream())
+                    Console.WriteLine(url);
+                    WebRequest request = WebRequest.Create(url) as WebRequest;
+                    using (WebResponse response = await request.GetResponseAsync() as WebResponse)
                     {
-                        using (Stream stream = response.GetResponseStream())
+                        if (response is HttpWebResponse)
                         {
-                            await stream.CopyToAsync(ms);
+                            HttpWebResponse testResponse = response as HttpWebResponse;
+                            if (testResponse.StatusCode != HttpStatusCode.OK)
+                                throw new Exception(String.Format("Server error (HTTP {0}: {1}).", testResponse.StatusCode, testResponse.StatusDescription));
                         }
 
-                        ms.Position = 0;
-                        StreamReader sr = new StreamReader(ms);
-                        json = sr.ReadToEnd();
-                    }
-                    this.responseRaw = json;
-                    if (!String.IsNullOrEmpty(json))
-					    this.response = JsonConvert.DeserializeObject<OpenFDAResponse> (json);
-					return true;
-				}
-			}
-			catch (Exception ex)
-			{
-				// TODO: log
-                Console.WriteLine(ex.Message);
-			}
+                        string json = String.Empty;
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            using (Stream stream = response.GetResponseStream())
+                            {
+                                await stream.CopyToAsync(ms);
+                            }
 
+                            ms.Position = 0;
+                            StreamReader sr = new StreamReader(ms);
+                            json = sr.ReadToEnd();
+                        }
+                        this.responseRaw = json;
+                        if (!String.IsNullOrEmpty(json))
+                            this.response = JsonConvert.DeserializeObject<OpenFDAResponse>(json);
+                        return true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // TODO: log
+                    Console.WriteLine(ex.Message);
+                }
+
+                // short delay before retry
+                await Task.Delay(100);
+            }
 			return false;
 		}
 	}
