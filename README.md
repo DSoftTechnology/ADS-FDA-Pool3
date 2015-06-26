@@ -1,7 +1,10 @@
 # ADS-FDA-Pool3
 #README
 
-Prototype URL: http://staging-dsoft-ads.azurewebsites.net/
+Prototype URL: http://dsoft-ads.azurewebsites.net
+Staging URL: http://staging-dsoft-ads.azurewebsites.net
+
+The DSoft Technology prototype and submission meets all the evidence criteria listed in the Design Pool and Development Pool and Attachment C includes all 13 labor categories from the Full Stack Pool categories.
 
 ##Approach (TBD words)
 
@@ -15,7 +18,7 @@ DSoft employs our internally-developed AgileSprinter™ tool to manage/track our
 
 ###a) Assigned one leader and gave that person authority and responsibility
 
-On June 17, 2015, K. Reece, Category 1 Product Manager, was assigned as the team leader, responsible and accountable for the prototype delivery.  Ms. Reece has the skillset (long time IT project manager and certified Scrum Master) to perform this role.  Her bio is located in ...ADS-FDA-Pool3/
+On June 17, 2015, K. Reece, Category 1 Product Manager, was assigned as the team leader, responsible and accountable for the prototype delivery.  Ms. Reece has the skillset (long time IT project manager and certified Scrum Master) to perform this role.  Her bio is located in ...ADS-FDA-Pool3 / Design / Meetings / 2015-06-17 / ProductManagerAppointment.md
 
 ###b) Assembled a multidisciplinary and collaborative team
 
@@ -33,33 +36,7 @@ On June 17, 2015, M. Coon, T. Weckx, A. Brunner, M. Case, K. Lucas, D. Hollenbac
 
 This assignment was documented in /Design/Meetings/2014-06-17/MeetingNotes.md.
 
-###c) Include people in the protype design process
-
-See folders under /Design/Meetings. 
-
-An initial meeting with potential users uninvolved in the design and development process was held on June 18, 2015, and was documented in /Design/Meetings/2015-06-18/MeetingNotes.md. In this meeting, users were assigned personas of a Food Researcher, Financial Analyst and a small Business Owner. An initial idea of what functionality would be useful for these personas was documented, and use cases were created.
-
-The second paper prototype session was performed with customers on Monday, 22 June 2015, with DSoft’s Business Analyst and Visual Designer.  Customers/Personas identified changes and added requirements to the web forms and resultant reports (generated from open.FDA.gov).  Changes were made to the use cases to capture changes, separate variants of the use case. Some requirements were deferred until the next build.
-
-A 3rd paper prototyping session was held with the Financial Analyst becuase we determined the dataset was limited and may not be able to provide the exact report she requested.
-
-Live demonstrations of the prototypes were provided to users whose comments were reflected back into the design when possible.
-
-###d) Human-centered design techniques and tools
-
-The entire project was conducted with human-centered design and tools.  Changes were continuously integrated, deployed on a staging system and tested, and then provided back to users for their inputs and reactions.
-
-* Brainstorming sessions - worked within the project team to brainstorm concepts and wireframes for development to meet user needs; developed a user navigation map
-* Use Cases - 3 iterations centered on the identified 3 primary personas (not potential FDA data maintainer personas)
-* Paper Prototyping - 3 iterations with 3 primary personas and using comments to affect design
-* Participatory Design - multiple live demonstrations (using both test data for quick reviews and FDA data once that capability was integrated) showing prototypes to various users and incorporating their comments to affect design
-* Usability Testing - Performed 1 iteration with uninvolved, non-IT users; invited non-IT users to use the website and provide feedback
-
-###e) Design Style Guide and Pattern Library
-
-See StyleGuide.md under /Design. 
-
-###f) Modern and open source technologies
+###c) Modern and open source technologies
 
 The following were used in the design and development of the ADS prototype
 * Mono (http://www.mono-project.com)
@@ -72,29 +49,54 @@ The following were used in the design and development of the ADS prototype
 * Postal (https://github.com/andrewdavey/postal)
 * PagedList.Mvc (https://www.nuget.org/packages/PagedList.Mvc)
 
-###g) Usability Tests
+###d) Deployed prototype on an IaaS or PaaS provider
 
-* To put the "needs of users first", we provided usability testing
-* Performed usability tests with non-IT volunteers
-* See Usability Test Plan under /Design
+Deployed on Microsoft Azure Web Servcies which is a PaaS and IaaS provider.  Azure supports the broadest selection of operating systems, programming languages, frameworks, tools, databases and devices: apps with JavaScript, Python, .NET, PHP, Java, Node.js; build backends for iOS, Android, and Windows devices.
 
-###h) Interactive Approach
+###e) Wrote unit tests for code
+
+* Created automated tests to verify all user-facing functionality
+* Test Plan finalized on 25 June 2015
+* Testing team session planned for Friday, 26 June 2015 using multiple mobile devices and various operating systems with users unfamiliar with system and development.
+
+###f) Continuous Integration System
+
+###g) Configuration Management
+
+Tools used include:
+* Github (Source Control)
+* TeamCity (Continuous Integration)
+* Azure Web Apps (PaaS)
+
+The deployment is fully automated using TeamCity. Commits pushed to Github trigger TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are commited to the Azure git repository which triggers an automated deployment on the Azure Staging Web App for QA / Integration tests. After success in QA, the automated deployment to Azure Production Web App is manually triggered in TeamCity.
+
+###h) Continuous Monitoring
+
+Using Azure Web Apps as a Platform as a Service (PaaS) comes with built-in continuous monitoring of CPU, Memory, Bandwith, HTTP errors, Response times, Page Requests. Alerts can be configured as well as automatic scaling of the underlying infrastructure based on the metrics.  Reference Web Apps Dashboard here: https://azure.microsoft.com/en-us/documentation/articles/web-sites-monitor/
+
+###i) Deploy software in a container
+
+###j) Used Interactive Approach
 
 See folders under /Design/Meetings. The first meeting for our iterative approach to the design was held on June 18, 2015 and every day hence following the project initiation.
 
 Scrum meetings were held twice daily to provide status reports, course corrcetions and remove roadblocks. A project status review was held on 23 June 2015 to discuss project status with the Product Manager documented in /Design/Meetings/2014-06-23/ProjectStatusReview.md
 
-Personas were involved in every iteration through general discussions, paper prototyping, demonstartions and testing.
+Personas were involved in every iteration through general discussions, paper prototyping, demonstrations and testing.
 
-###i) Prototype
+The entire project was conducted with human-centered design and tools.  Changes were continuously integrated, deployed on a staging system and tested, and then provided back to users for their inputs and reactions.
+
+* Brainstorming sessions - worked within the project team to brainstorm concepts and wireframes for development to meet user needs; developed a user navigation map
+* Use Cases - 3 iterations centered on the identified 3 primary personas (not potential FDA data maintainer personas)
+* Paper Prototyping - 3 iterations with 3 primary personas and using comments to affect design
+* Participatory Design - multiple live demonstrations (using both test data for quick reviews and FDA data once that capability was integrated) showing prototypes to various users and incorporating their comments to inform/affect design
+* Usability Testing - Performed 1 iteration with uninvolved, non-IT users; invited non-IT users to use the website and provide feedback
+
+###k) Documentation to install and run prototype on different machine
 
 TBD
 
-###j) Documentation
-
-TBD
-
-###k) Openly Licensed Technologies
+###l) Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge
 
 The following were used in the design and development of the ADS prototype:
 * Mono (http://www.mono-project.com)
@@ -107,24 +109,5 @@ The following were used in the design and development of the ADS prototype:
 * Postal (https://github.com/andrewdavey/postal)
 * PagedList.Mvc (https://www.nuget.org/packages/PagedList.Mvc)
 
-###l) Unit Tests
 
-* Created automated tests to verify all user-facing functionality
-* Test Plan finalized on 25 June 2015
-* Testing team session planned for Friday, 26 June 2015 using multiple mobile devices and various operating systems with users unfamiliar with system and development.
 
-###m) Configuration Management
-
-* Github (Source Control)
-* TeamCity (Continuous Integration)
-* Azure Web Apps (PaaS)
-
-The deployment is fully automated using TeamCity. Commits pushed to Github trigger TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are commited to the Azure git repository which triggers an automated deployment on the Azure Staging Web App for QA / Integration tests. After success in QA, the automated deployment to Azure Production Web App is manually triggered in TeamCity.
-
-###n) Continuous Monitoring 
-
-Using Azure Web Apps as a Platform as a Service (PaaS) comes with built-in continuous monitoring of CPU, Memory, Bandwith, HTTP errors, Response times, Page Requests. Alerts can be configured as well as automatic scaling of the underlying infrastructure based on the metrics.  Reference Web Apps Dashboard here: https://azure.microsoft.com/en-us/documentation/articles/web-sites-monitor/
-
-###o) Deployed Software in Container
-
-TBD
