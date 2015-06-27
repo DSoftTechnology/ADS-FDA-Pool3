@@ -57,7 +57,8 @@ Deployed on ADS protype on Microsoft Azure Web Services which is a PaaS provider
 
 * Created automated tests to verify all user-facing functionality
 * Test Plan finalized on 25 June 2015
-* Testing team session planned for Friday, 26 June 2015 using multiple mobile devices and various operating systems with users unfamiliar with system and development.
+* Testing team session planned for Friday, 26 June 2015 using multiple mobile devices and various operating systems with users unfamiliar with system and development
+* All web forms were tested for browser compatibility on major browsers
 
 ###f) Continuous Integration System
 
