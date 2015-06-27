@@ -98,7 +98,7 @@ The entire project was conducted with human-centered design and tools.  Changes 
 
 ###k) Documentation to install and run prototype on different machine
 
-TBD
+TBD - Provided instructions for Windows and Linux.
 
 ###l) Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge
 
