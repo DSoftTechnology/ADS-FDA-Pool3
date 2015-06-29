@@ -1,8 +1,8 @@
 # ADS-FDA-Pool3
 #README
 
-*Prototype URL: http://dsoft-ads.azurewebsites.net
-*Staging URL: http://staging-dsoft-ads.azurewebsites.net
+* Prototype URL: http://dsoft-ads.azurewebsites.net
+* Staging URL: http://staging-dsoft-ads.azurewebsites.net
 
 The DSoft Technology ADS Pool 3 prototype and submission meets all the evidence criteria listed in the Design Pool 1 and Development Pool 2 and Attachment C includes all 13 labor categories from the Full Stack Pool categories.
 
