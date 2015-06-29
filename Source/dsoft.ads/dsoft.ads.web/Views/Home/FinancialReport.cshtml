@@ -87,8 +87,6 @@
 				.attr("x", function (d, i) { return i * columnWidth })
 				.attr("text-anchor", "middle")
 				.text(String);
-			//.attr("class", "x axis")
-			//.call(xAxis);
 
 		for (var j = 0; j < fin.data.length; j++) {
 			var companyData = fin.data[j];
@@ -124,7 +122,7 @@
 				.style("font-size", "large")
 				.style("fill", function(d) { return c(j); })
 				.style("width", "200px")
-				.text(fin.data[j].Name)
+				.text(truncate(fin.data[j].Name, 30, "..."))
 				.on("mouseover", mouseover)
 				.on("mouseout", mouseout);
 		}
