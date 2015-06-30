@@ -4,7 +4,7 @@
 * Prototype URL: http://dsoft-ads.azurewebsites.net
 * GitHub URL: https://github.com/DSoftTechnology/ADS-FDA-Pool3
 
-The DSoft Technology ADS Pool 3 prototype and submission meets all the evidence criteria listed in the Design Pool 3 and all 13 labor categories from the Full Stack Pool categories.
+The DSoft Technology ADS Pool 3 prototype and submission meets all the evidence criteria listed in the Design Pool 3 and exercises/uses 7 (of 13) labor categories from the Full Stack Pool 3 categories.
 
 ##Approach
 
@@ -56,11 +56,11 @@ Deployed on ADS protype on Microsoft Azure Web Services, a PaaS provider.  Azure
 * Testing team session planned for Friday, 26 June 2015 using multiple mobile devices and various operating systems with users unfamiliar with system and development
 * All web forms were tested for browser compatibility on major browsers
 
-Documented in ...ADS-FDA-Pool3/tree/master/Test
+Tests documented in ...ADS-FDA-Pool3/tree/master/Test
 
 ###f) Continuous Integration System
 
-The ADS protype deployment is fully automated using TeamCity. Commits pushed to Github trigger TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are commited to the Azure git repository which triggers an automated deployment on the Azure Staging Web App for QA / Integration tests. After success in QA, the automated deployment to Azure Production Web App is manually triggered in TeamCity.
+The ADS protype deployment is fully automated using TeamCity. Commits pushed to Github trigger a TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are commited to the Azure git repository which triggers an automated deployment on the Azure Staging Web App for QA / Integration tests. After success in QA, the automated deployment to Azure Production Web App is manually triggered in TeamCity.
 
 ###g) Configuration Management
 
