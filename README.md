@@ -34,9 +34,9 @@ This assignment was documented in ......ADS-FDA-Pool3/Design/Meetings/2014-06-17
 
 ###c) Understand what people need
 
-The entire project was conducted with human-centered design and tools.  Changes were continuously integrated, deployed on a staging system and tested, and then provided back to users for their reactions and additional inputs.
+The entire project was conducted with human-centered design and tools focused on user needs.  Changes were continuously integrated, deployed on a staging system and tested, and then provided back to users for their reactions and additional inputs.
 
-See ...ADS-FDA-Pool3/Design/
+See ...ADS-FDA-Pool3 / Design / Sprint 1 Documents
 
 ###d) Used at least 3 human-centered design techniques
 
@@ -48,13 +48,7 @@ The entire project was conducted with human-centered design and tools.  Changes 
 * 4) Participatory Design - multiple live demonstrations (using both test data for quick reviews and FDA data once that capability was integrated) showing prototypes to various users and incorporating their comments to inform/affect design
 * 5) Usability Testing - Performed 1 iteration with uninvolved, non-IT users; invited non-IT users to use the website and provide feedback
 
-###k) Documentation to install and run prototype on different machine
-
-TBD - Provided instructions for Windows and Linux.
-
-###l) Continuous integration
-
-###e) Created or used a design style guide
+###e) Created or used a design style guide or pattern library
 
 See StyleGuide.md under ...ADS-FDA-Pool3/Design. 
 
@@ -77,6 +71,9 @@ A 3rd paper prototyping session was held with the Financial Analyst becuase we d
 Live demonstrations of the prototypes were provided to users whose comments were reflected back into the design when possible.
 
 ###h) Created a prototype that works with multiple devices
+Developed prototype to be responsive and successfully tested on various mobile and traditional devices including iPad, Android phone, ChromeBook, and PCs
+
+Documented in ...ADS-FDA-Pool3/tree/master/Test
 
 ###i) Used at least 5 modern and open source technologies
 
@@ -91,9 +88,9 @@ The following were used in the design and development of the ADS prototype:
 * Postal (https://github.com/andrewdavey/postal)
 * PagedList.Mvc (https://www.nuget.org/packages/PagedList.Mvc)
 
-###j) Deployed prototype on an IaaS or PaaS provider
+###j) Continuous integration
 
-Deployed on ADS protype on Microsoft Azure Web Services, a PaaS provider.  Azure supports aselection of operating systems, programming languages, frameworks, tools, databases and devices: runs apps with JavaScript, Python, .NET, PHP, Java, Node.js; provides build backends for iOS, Android, and Windows devices.
+The ADS protype deployment is fully automated using TeamCity. Commits pushed to Github trigger a TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are commited to the Azure git repository which triggers an automated deployment on the Azure Staging Web App for QA / Integration tests. After success in QA, the automated deployment to Azure Production Web App is manually triggered in TeamCity.
 
 ###k) Wrote unit tests for code
 
@@ -104,18 +101,17 @@ Deployed on ADS protype on Microsoft Azure Web Services, a PaaS provider.  Azure
 
 Tests documented in ...ADS-FDA-Pool3/tree/master/Test
 
-###l) Continuous Integration System
+###l) Used Continuous Integration System to automate tests and continuous deployed to PaaS provider
 
-The ADS protype deployment is fully automated using TeamCity. Commits pushed to Github trigger a TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are commited to the Azure git repository which triggers an automated deployment on the Azure Staging Web App for QA / Integration tests. After success in QA, the automated deployment to Azure Production Web App is manually triggered in TeamCity.
+Deployed on ADS protype on Microsoft Azure Web Services, a PaaS provider.  Azure supports aselection of operating systems, programming languages, frameworks, tools, databases and devices: runs apps with JavaScript, Python, .NET, PHP, Java, Node.js; provides build backends for iOS, Android, and Windows devices.  The ADS protype deployment is fully automated using TeamCity. Commits pushed to Github trigger a TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are commited to the Azure git repository which triggers an automated deployment on the Azure Staging Web App for QA / Integration tests. After success in QA, the automated deployment to Azure Production Web App is manually triggered in TeamCity.
 
-###m) Configuration Management
+###m) Used Configuration Management
 
-Configuration management tools used include:
 * Github (Source Control)
 * TeamCity (Continuous Integration)
 * Azure Web Apps (PaaS)
 
-###n) Continuous Monitoring
+###n) Used Continuous Monitoring
 
 Using Azure Web Apps as a Platform as a Service (PaaS) comes with built-in continuous monitoring of CPU, Memory, Bandwith, HTTP errors, Response times, Page Requests. Alerts can be configured as well as automatic scaling of the underlying infrastructure based on the metrics.  Reference Web Apps Dashboard here: https://azure.microsoft.com/en-us/documentation/articles/web-sites-monitor/
 
@@ -123,8 +119,9 @@ Using Azure Web Apps as a Platform as a Service (PaaS) comes with built-in conti
 
 TBD
 
-
 ###p) Install and run prototype on another machine
+
+TBD
 
 ###q) Prototype and underlying platforms used to create and run prototype are openly licensed and free of charge
 
