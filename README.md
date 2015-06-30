@@ -2,17 +2,13 @@
 #README
 
 * Prototype URL: http://dsoft-ads.azurewebsites.net
-* Staging URL: http://staging-dsoft-ads.azurewebsites.net
+* GitHub URL: https://github.com/DSoftTechnology/ADS-FDA-Pool3
 
-The DSoft Technology ADS Pool 3 prototype and submission meets all the evidence criteria listed in the Design Pool 1 and Development Pool 2 and Attachment C includes all 13 labor categories from the Full Stack Pool categories.
+The DSoft Technology ADS Pool 3 prototype and submission meets all the evidence criteria listed in the Design Pool 3 and all 13 labor categories from the Full Stack Pool categories.
 
-##Approach (TBD words)
+##Approach
 
-DSoft Technology uses an Agile methodology (Scrum), an iterative, incremental framework for software project development. Every two week interval is planned by the team using a tracking tool, and projects are kept on track using frequent short meetings to communicate what has been accomplished and what roadblocks are preventing progress. A Scrum Master is assigned who is responsible for working with project managers to remove these roadblocks and to make sure that the project stays on track.
-
-At the beginning of the project, after writing a brief requirements document we add use cases and user stories and tasks to the product backlog for design, testing, and release documentation, with an estimated complexity and priority for each. Both the backlog and the requirements document are continually updated to keep up with changing user requirements. Every two weeks, based on priority, we pull user stories from the product backlog and add them to the current sprint.
-
-DSoft employs our internally-developed AgileSprinter™ tool to manage/track our Scrum process (screenshots provided under /Design/Sprint 1 Documents).  
+DSoft Technology uses an Agile methodology (Scrum), an iterative, incremental framework for software project development. Every two week interval is planned by the team using a tracking tool, and projects are kept on track using frequent short meetings to communicate what has been accomplished and what roadblocks are preventing progress. A Scrum Master is assigned who is responsible for working with project managers to remove these roadblocks and to make sure that the project stays on track.  At the beginning of the project, after writing a brief requirements document we add use cases and user stories and tasks to the product backlog for design, testing, and release documentation, with an estimated complexity and priority for each. Both the backlog and the requirements document are continually updated to keep up with changing user requirements. Every two weeks, based on priority, we pull user stories from the product backlog and add them to the current sprint. DSoft employs our internally-developed AgileSprinter™ tool to manage/track our Scrum process (screenshots provided under /Design/Sprint 1 Documents).  
 
 ##U.S. Digital Services Playbook Evidence
 
@@ -34,7 +30,7 @@ On June 17, 2015, M. Coon, T. Weckx, A. Brunner, M. Case, K. Lucas, D. Hollenbac
 | D. Hollenbach | Cat 12: Business Analyst    |
 | K. Reece   | Cat 1: Product Manager     |
 
-This assignment was documented in /Design/Meetings/2014-06-17/MeetingNotes.md.
+This assignment was documented in .../Design/Meetings/2014-06-17/MeetingNotes.md
 
 ###c) Modern and open source technologies used
 
@@ -49,9 +45,11 @@ The following were used in the design and development of the ADS prototype:
 * Postal (https://github.com/andrewdavey/postal)
 * PagedList.Mvc (https://www.nuget.org/packages/PagedList.Mvc)
 
+Documented in .../Design/Meetings/
+
 ###d) Deployed prototype on an IaaS or PaaS provider
 
-Deployed on ADS protype on Microsoft Azure Web Services which is a PaaS provider.  Azure supports the broadest selection of operating systems, programming languages, frameworks, tools, databases and devices: runs apps with JavaScript, Python, .NET, PHP, Java, Node.js; provides build backends for iOS, Android, and Windows devices.
+Deployed on ADS protype on Microsoft Azure Web Services, a PaaS provider.  Azure supports aselection of operating systems, programming languages, frameworks, tools, databases and devices: runs apps with JavaScript, Python, .NET, PHP, Java, Node.js; provides build backends for iOS, Android, and Windows devices.
 
 ###e) Wrote unit tests for code
 
@@ -62,7 +60,7 @@ Deployed on ADS protype on Microsoft Azure Web Services which is a PaaS provider
 
 ###f) Continuous Integration System
 
-TBD
+The ADS protype deployment is fully automated using TeamCity. Commits pushed to Github trigger TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are commited to the Azure git repository which triggers an automated deployment on the Azure Staging Web App for QA / Integration tests. After success in QA, the automated deployment to Azure Production Web App is manually triggered in TeamCity.
 
 ###g) Configuration Management
 
@@ -70,8 +68,6 @@ Configuration management tools used include:
 * Github (Source Control)
 * TeamCity (Continuous Integration)
 * Azure Web Apps (PaaS)
-
-The ADS protype deployment is fully automated using TeamCity. Commits pushed to Github trigger TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are commited to the Azure git repository which triggers an automated deployment on the Azure Staging Web App for QA / Integration tests. After success in QA, the automated deployment to Azure Production Web App is manually triggered in TeamCity.
 
 ###h) Continuous Monitoring
 
@@ -101,7 +97,7 @@ The entire project was conducted with human-centered design and tools.  Changes 
 
 TBD - Provided instructions for Windows and Linux.
 
-###l) Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge
+###l) Prototype and underlying platforms used to create and run prototype are openly licensed and free of charge
 
 The following were used to create and run the ADS prototype:
 * Mono (http://www.mono-project.com)
@@ -114,5 +110,5 @@ The following were used to create and run the ADS prototype:
 * Postal (https://github.com/andrewdavey/postal)
 * PagedList.Mvc (https://www.nuget.org/packages/PagedList.Mvc)
 
-DSoft Technology hosted our prototype website on Azure web services, a PaaS.  The prototype was developed in Mono v1.0.5, an open source development platform based on the .NET framework that allows developers to build Linux and cross-platform applications. Websites built with Mono can be run on Apache using the mod_mono module. Mono, Apache and the mod_mono module are open source and free of charge.  
+DSoft Technology hosted our prototype website on Azure web services, a PaaS.  The prototype was developed in Mono v1.0.5, an open source development platform based on the .Net framework that allows developers to build Linux and cross-platform applications. Websites built with Mono can be run on Apache using the mod_mono module. Mono, Apache and the mod_mono module are open source and free of charge.  
 
