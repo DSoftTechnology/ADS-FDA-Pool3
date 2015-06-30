@@ -8,35 +8,39 @@ The DSoft Technology ADS Pool 3 prototype and submission meets all the evidence 
 
 ##Full Stack Approach
 
-DSoft Technology uses an Agile methodology (Scrum), an iterative, incremental framework for software project development. Every two week interval is planned by the team using a tracking tool, and projects are kept on track using frequent short meetings to communicate what has been accomplished and what roadblocks are preventing progress. A Scrum Master is assigned who is responsible for working with project managers to remove these roadblocks and to make sure that the project stays on track.  At the beginning of the project, after writing a brief requirements document we add use cases and user stories and tasks to the product backlog for design, testing, and release documentation, with an estimated complexity and priority for each. Both the backlog and the requirements document are continually updated to keep up with changing user requirements. Every two weeks, based on priority, we pull user stories from the product backlog and add them to the current sprint. DSoft employs our internally-developed AgileSprinter™ tool to manage/track our Scrum process (screenshots provided under /Design/Sprint 1 Documents).  
+DSoft Technology uses an Agile methodology (Scrum), an iterative, incremental framework for software project development. Every two week interval is planned by the team using a tracking tool, our internally-developed AgileSprinter™, and projects are kept on track using frequent short standup meetings to communicate what has been accomplished and what roadblocks are preventing progress. A Scrum Master is assigned who is responsible for working with project managers to remove these roadblocks and to make sure that the project stays on track.  At the beginning of the project, after writing a brief requirements document, we develop use cases and add user stories and tasks to the product backlog for design, testing, and release documentation, with an estimated complexity and priority for each. Both the backlog and the requirements document are continually updated to keep up with changing user requirements. Every two weeks, based on priority, we pull user stories from the product backlog and add them to the current sprint. 
+
+Screenshots provided under ...ADS-FDA-Pool3/Design/Sprint 1 Documents  
 
 ##U.S. Digital Services Playbook Evidence
 
 ###a) Assigned one leader and gave that person authority and responsibility
 
-On June 17, 2015, K. Reece, Category 1 Product Manager, was assigned as the team leader, responsible and accountable for the prototype delivery.  Ms. Reece has the skillset (long time IT project manager and certified Scrum Master) to perform this role.  Her bio is located in ...ADS-FDA-Pool3 / Design / Meetings / 2015-06-17 / ProductManagerAppointment.md
+On June 17, 2015, K. Reece, Category 1 Product Manager, was assigned as the team leader, responsible and accountable for the prototype delivery.  Ms. Reece has the skillset (long time IT project manager and certified Scrum Master) to perform this role.  
+
+Her bio is located in ...ADS-FDA-Pool3 / Design / Meetings / 2015-06-17 / ProductManagerAppointment.md
 
 ###b) Assembled a multidisciplinary and collaborative team
 
-On June 17, 2015, team members were assigned to team under the following ADS labor categories:
+On 17 June 2015, team members were assigned to ADS prototype team under the following ADS labor categories and given time charging guidance for Attach E.:
 
 | Name       | Category      |
 | ---------- | ------------- |
+| K. Reece   | Cat 1: Product Manager     |
 | M. Coon    | Cat 2: Technical Architect |
-| T. Weckx   | Cat 6: Frontend Web Developer      |
+| K. Lucas   | Cat 3: Interaction Designer/User Researcher/Usability Tester     |
 | A. Brunner | Cat 4: Writer/Content Designer/Content Strategist     |
 | M. Case    | Cat 5: Visual Designer     |
-| K. Lucas   | Cat 3: Interaction Designer/User Researcher/Usability Tester     |
+| T. Weckx   | Cat 6: Frontend Web Developer      |
 | D. Hollenbach | Cat 12: Business Analyst    |
-| K. Reece   | Cat 1: Product Manager     |
 
-This assignment was documented in ......ADS-FDA-Pool3/Design/Meetings/2014-06-17/MeetingNotes.md
+This assignment was documented in ...ADS-FDA-Pool3/Design/Meetings/2014-06-17/MeetingNotes.md
 
 ###c) Understand what people need
 
 The entire project was conducted with human-centered design and tools focused on user needs.  Changes were continuously integrated, deployed on a staging system and tested, and then provided back to users for their reactions and additional inputs.
 
-See ...ADS-FDA-Pool3 / Design / Sprint 1 Documents
+See ...ADS-FDA-Pool3/Design/Sprint 1 Documents
 
 ###d) Used at least 3 human-centered design techniques
 
@@ -50,17 +54,17 @@ The entire project was conducted with human-centered design and tools.  Changes 
 
 ###e) Created or used a design style guide or pattern library
 
-See StyleGuide.md under ...ADS-FDA-Pool3/Design. 
+See StyleGuide.md under ...ADS-FDA-Pool3/Design 
 
 ###f) Performed usability tests with people
 
 * To put the "needs of users first", we provided usability testing
 * Performed usability tests with non-IT volunteers
-* See Usability Test Plan under ...ADS-FDA-Pool3./Design
+* See Usability Test Plan under ...ADS-FDA-Pool3/Design
 
 ###g) Used an iterative approach
 
-Personas were involved in every iteration through general discussions, paper prototyping, demonstrations and testing.  See folders under ...ADS-FDA-Pool3/Design/Meetings. 
+Personas were involved in every iteration through general discussions, paper prototyping, demonstrations and testing.  See folders under ...ADS-FDA-Pool3/Design/Meetings
 
 An initial meeting with potential users uninvolved in the design and development process was held on June 18, 2015, and was documented in /Design/Meetings/2015-06-18/MeetingNotes.md. In this meeting, users were assigned personas of a Food Researcher, Financial Analyst and a small Business Owner. An initial idea of what functionality would be useful for these personas was documented, and use cases were created.
 
