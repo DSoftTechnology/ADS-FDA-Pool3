@@ -45,8 +45,6 @@ The following were used in the design and development of the ADS prototype:
 * Postal (https://github.com/andrewdavey/postal)
 * PagedList.Mvc (https://www.nuget.org/packages/PagedList.Mvc)
 
-Documented in .../Design/Meetings/
-
 ###d) Deployed prototype on an IaaS or PaaS provider
 
 Deployed on ADS protype on Microsoft Azure Web Services, a PaaS provider.  Azure supports aselection of operating systems, programming languages, frameworks, tools, databases and devices: runs apps with JavaScript, Python, .NET, PHP, Java, Node.js; provides build backends for iOS, Android, and Windows devices.
@@ -57,6 +55,8 @@ Deployed on ADS protype on Microsoft Azure Web Services, a PaaS provider.  Azure
 * Test Plan finalized on 25 June 2015
 * Testing team session planned for Friday, 26 June 2015 using multiple mobile devices and various operating systems with users unfamiliar with system and development
 * All web forms were tested for browser compatibility on major browsers
+
+Documented in ...ADS-FDA-Pool3/tree/master/Test
 
 ###f) Continuous Integration System
 
