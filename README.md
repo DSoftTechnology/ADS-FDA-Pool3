@@ -22,7 +22,7 @@ Her bio is located in ...ADS-FDA-Pool3 / Design / Meetings / 2015-06-17 / Produc
 
 ###b) Assembled a multidisciplinary and collaborative team
 
-On 17 June 2015, team members were assigned to ADS prototype team under the following ADS labor categories and given time charging guidance for Attach E.:
+On 17 June 2015, team members were assigned to ADS prototype team under the following ADS labor categories and given time charging guidance for Attach E submission:
 
 | Name       | Category      |
 | ---------- | ------------- |
@@ -70,7 +70,7 @@ An initial meeting with potential users uninvolved in the design and development
 
 The second paper prototype session was performed with customers on Monday, 22 June 2015, with DSoft’s Business Analyst and Visual Designer.  Customers/Personas identified changes and added requirements to the web forms and resultant reports (generated from open.FDA.gov).  Changes were made to the use cases to capture changes, separate variants of the use case. Some requirements were deferred until the next build.
 
-A 3rd paper prototyping session was held with the Financial Analyst becuase we determined the dataset was limited and may not be able to provide the exact report she requested.
+A 3rd paper prototyping session was held with the Financial Analyst because we determined the dataset was limited and may not be able to provide the exact report she requested.
 
 Live demonstrations of the prototypes were provided to users whose comments were reflected back into the design when possible.
 
@@ -111,13 +111,16 @@ Deployed on ADS protype on Microsoft Azure Web Services, a PaaS provider.  Azure
 
 ###m) Used Configuration Management
 
-* Github (Source Control)
-* TeamCity (Continuous Integration)
-* Azure Web Apps (PaaS)
+* Github (Source Control) - Used Github's built-in configuration management and control capabilities to ensure all documentation and artifacts were versioned, branched and commited with all changes; all software versions were commited and a TeamCity build process pulled the latest code from Github, installed / updated dependencies (NuGet packages), ran NUnit tests and performed code coverage assessment.
+
+* TeamCity (Continuous Integration) - TBD
+* Azure Web Apps (PaaS) - TBD
 
 ###n) Used Continuous Monitoring
 
 Using Azure Web Apps as a Platform as a Service (PaaS) comes with built-in continuous monitoring of CPU, Memory, Bandwith, HTTP errors, Response times, Page Requests. Alerts can be configured as well as automatic scaling of the underlying infrastructure based on the metrics.  Reference Web Apps Dashboard here: https://azure.microsoft.com/en-us/documentation/articles/web-sites-monitor/
+
+TBD - need to state what we set up in Azure (what settings?)
 
 ###o) Deploy software in a container
 
