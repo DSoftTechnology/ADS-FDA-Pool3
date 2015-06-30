@@ -9,9 +9,11 @@ A picture of the test setup is shown below (to protect participants identities, 
 
 ![](http://imgur.com/8vgsl4V.png)
 
+Below, a tester tests the ADS prototype on an iPad and a Chromebook and logs his findings.
+
 ![](http://imgur.com/1xAhEhl.jpg)
 
-A sample questionnaires filled in by participants can be found in the Test/ folder.  
+A sample questionnaire filled in by participants can be found in the Test/ folder.  
 
 All issues reported by users were entered into the Issue tracker.
 
