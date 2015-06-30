@@ -38,7 +38,7 @@ This assignment was documented in ...ADS-FDA-Pool3/Design/Meetings/2014-06-17/Me
 
 ###c) Understand what people need
 
-The entire project was conducted with human-centered design and tools focused on user needs.  Changes were continuously integrated, deployed on a staging system and tested, and then provided back to users for their reactions and additional inputs.
+The entire project was conducted with human-centered design and tools focused on 3 user's needs (i.e., Financial Analyst, Business Owner, Food Recall Researcher).  Group as well as individual meetings and prototype meetings with these users were conducted to ensure we understood what people needed.  Changes were continuously integrated, deployed on a staging system and tested, and then provided back to users for their reactions and additional inputs.
 
 See ...ADS-FDA-Pool3/Design/Sprint 1 Documents
 
@@ -77,7 +77,7 @@ Live demonstrations of the prototypes were provided to users whose comments were
 ###h) Created a prototype that works with multiple devices
 Developed prototype to be responsive and successfully tested on various mobile and traditional devices including iPad, Android phone, ChromeBook, and PCs
 
-Documented in ...ADS-FDA-Pool3/tree/master/Test
+Multiple devices documented in ...ADS-FDA-Pool3/tree/master/Test
 
 ###i) Used at least 5 modern and open source technologies
 
