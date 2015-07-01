@@ -1,10 +1,10 @@
 #DSoft Technology ADS Prototype Style Guide
 
 ##Colors
-![](http://i.imgur.com/KtazqDx.png)
+![](Images/Style_Colors.png?raw=true)
 
 ##Fonts
-![](http://i.imgur.com/tuBgUMK.png)
+![](Images/Style_Font.png?raw=true)
 
 ##Paper Prototypes
 [ADS FDA Paper Prototype Draft](Sprint 1 Documents/ADS FDA Paper Prototype Draft.pdf)
