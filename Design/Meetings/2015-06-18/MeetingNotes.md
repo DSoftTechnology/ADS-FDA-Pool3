@@ -1,24 +1,28 @@
 During Spiral 1, the DSoft Technology Business Analyst scheduled a meeting time and assembled a team of potential customers for the open.fda.gov website to initially discuss their needs for the system in a participatory design group setting.  A Food Researcher, Financial Analyst and a small Business Owner each have unique needs, motivations and ideas for the site and express the needs in a functional format, while the business analyst translates their discussion into a use case type format.
 
-![](http://i.imgur.com/pFne7IW.jpg)
+
+![](/Design/Images/Meeting_20150618_1.jpg?raw=true)
 
 Above, the Business Analyst explains the general capabilities of open.fda.gov to the customers and listens for feedback.
 
 ----------
 
 
-![](http://i.imgur.com/GR4t5HR.jpg)
+
+![](/Design/Images/Meeting_20150618_2.jpg?raw=true)
 The Financial Analyst explains that being able to both print and export data would be useful to her for the studies she has been asked to develop by the GAO.
 
 ----------
 
  
-![](http://i.imgur.com/GpW2Y14.jpg)
+
+![](/Design/Images/Meeting_20150618_3.jpg?raw=true)
 Above, the Spiral 1 use case starts to take shape showing the 3 personas + the FDA data provider/maintainer.	 
 
 ----------
 
-![](http://i.imgur.com/aNJOrRV.jpg)
+
+![](/Design/Images/Meeting_20150618_4.jpg?raw=true)
 Above, the Business Owner explains that developing a histogram format graphic from the FDA dataset is going to fulfill most of her initial requirements, but she needs to be able to drill down into the data as well to see details.
 
 ----------
@@ -43,10 +47,12 @@ Specifically,
 After the first meeting, we scheduled a second meeting with users to play back what we heard.  We then converted their initial requirements and white board session using umlet (a lightweight tool for rapidly drawing UML diagrams [Open Source, GPL]).  The design team was provided the white board product and created the following artifacts during Spiral 1.
 
 
-![](http://i.imgur.com/9vG9v5w.png)
+
+![](/Design/Images/Graphic_20150618_1.png?raw=true)![](http://i.imgur.com/9vG9v5w.png)
 **Updated use case diagram**
 
 ----------
 
-![](http://i.imgur.com/PghkIMu.png)
+
+![](/Design/Images/Graphic_20150618_2.png?raw=true)![](http://i.imgur.com/PghkIMu.png)
 **Classes derived from FDA API**
