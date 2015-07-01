@@ -48,11 +48,11 @@ After the first meeting, we scheduled a second meeting with users to play back w
 
 
 
-![](/Design/Images/Graphic_20150618_1.png?raw=true)![](http://i.imgur.com/9vG9v5w.png)
+![](/Design/Images/Graphic_20150618_1.png?raw=true)
 **Updated use case diagram**
 
 ----------
 
 
-![](/Design/Images/Graphic_20150618_2.png?raw=true)![](http://i.imgur.com/PghkIMu.png)
+![](/Design/Images/Graphic_20150618_2.png?raw=true)
 **Classes derived from FDA API**
