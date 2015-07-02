@@ -46,7 +46,7 @@ See ...ADS-FDA-Pool3/Design/Sprint 1 Documents
 
 The entire project was conducted with human-centered design and tools.  Changes were continuously integrated, deployed on a staging system and tested, and then provided back to users for their reactions and additional inputs.
 
-* 1) Brainstorming sessions - worked within the project team to brainstorm concepts and wireframes for development to meet user needs; developed a user navigation map
+* 1) Team brainstorming sessions - worked within the project team to brainstorm concepts and wireframes for development to meet user needs; developed a user navigation map
 * 2) Use Cases - 3 iterations centered on the identified 3 primary personas (not potential FDA data maintainer personas)
 * 3) Paper Prototyping - 3 iterations with 3 primary personas and using comments to affect design
 * 4) Participatory Design - multiple live demonstrations (using both test data for quick reviews and FDA data once that capability was integrated) showing prototypes to various users and incorporating their comments to inform/affect design
@@ -93,9 +93,9 @@ The following were used in the design and development of the ADS prototype:
 * Postal (https://github.com/andrewdavey/postal)
 * PagedList.Mvc (https://www.nuget.org/packages/PagedList.Mvc)
 
-###j) Continuous integration
+###j) Deployed the prototype on IaaS or Paas
 
-The ADS protype deployment is fully automated using TeamCity. Commits pushed to Github trigger a TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are commited to the Azure git repository which triggers an automated deployment on the Azure Staging Web App for QA / Integration tests. After success in QA, the automated deployment to Azure Production Web App is manually triggered in TeamCity.
+Deployed on ADS protype on Microsoft Azure Web Services, a PaaS provider
 
 ###k) Wrote unit tests for code
 
@@ -104,11 +104,13 @@ The ADS protype deployment is fully automated using TeamCity. Commits pushed to 
 * Testing team session planned for Friday, 26 June 2015 using multiple mobile devices and various operating systems with users unfamiliar with system and development
 * All web forms were tested for browser compatibility on major browsers
 
-Tests documented in ...ADS-FDA-Pool3/tree/master/Test
+Tests are documented in ...ADS-FDA-Pool3/tree/master/Test
 
 ###l) Used Continuous Integration System to automate tests and continuous deployed to PaaS provider
 
 Deployed on ADS protype on Microsoft Azure Web Services, a PaaS provider.  Azure supports aselection of operating systems, programming languages, frameworks, tools, databases and devices: runs apps with JavaScript, Python, .NET, PHP, Java, Node.js; provides build backends for iOS, Android, and Windows devices.  The ADS protype deployment is fully automated using TeamCity. Commits pushed to Github trigger a TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are commited to the Azure git repository which triggers an automated deployment on the Azure Staging Web App for QA / Integration tests. After success in QA, the automated deployment to Azure Production Web App is manually triggered in TeamCity.
+
+Documented in 
 
 ###m) Used Configuration Management
 
