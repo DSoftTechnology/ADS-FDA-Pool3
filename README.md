@@ -1,4 +1,4 @@
-# ADS-FDA-Pool3
+# ADS-FDA-Pool3 under GS-35F-0538W
 #README
 
 * Prototype URL: http://dsoft-ads.azurewebsites.net
