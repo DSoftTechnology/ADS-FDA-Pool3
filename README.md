@@ -70,7 +70,7 @@ An initial meeting with potential users uninvolved in the design and development
 
 The 2nd paper prototype session was performed with customers on Monday, 22 June 2015, with DSoft’s Business Analyst and Visual Designer.  Customers/Personas identified changes and added requirements to the web forms and resultant reports (generated from open.FDA.gov).  Changes were made to the use cases to capture changes, separate variants of the use case. Some requirements were deferred until the next build.
 
-A 3rd paper prototyping session was held with the Financial Analyst because we determined the dataset was limited and may not be able to provide the exact report she requested.
+A 3rd paper prototyping session was held with the Financial Analyst because we determined the FDA dataset was limited and may not be able to provide the exact report she originally requested.
 
 Live demonstrations of the prototypes were provided to users whose comments were reflected back into the design when possible.
 
@@ -96,6 +96,8 @@ The following were used in the design and development of the ADS prototype:
 ###j) Deployed the prototype on IaaS or Paas
 
 Deployed on ADS protype on Microsoft Azure Web Services, a PaaS provider
+
+Documented in ...ADS-FDA-Pool3 / Design / PaaS_Hosting.md 
 
 ###k) Wrote unit tests for code
 
