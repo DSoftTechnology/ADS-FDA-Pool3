@@ -124,7 +124,7 @@ TBD - need to state what we set up in Azure (what settings?)
 
 ###o) Deploy software in a container
 
-TBD
+Deployed solution in a container using Docker.  Docker is an open-source project that automates the deployment of applications inside software containers, by providing an additional layer of abstraction and automation of operating-system-level virtualization on Linux.
 
 ###p) Install and run prototype on another machine
 
