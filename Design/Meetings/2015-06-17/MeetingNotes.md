@@ -1,4 +1,4 @@
-#  #ADS I Project Kickoff Meeting on 17 June 2015 at 1530 hrs
+#  ADS I Project Kickoff Meeting on 17 June 2015 at 1530 hrs
 
 In attendance: Dave, Tim, Andrea, Michael
 
@@ -88,8 +88,15 @@ Review all evaluation criteria and discuss evidence criteria; how to accomplish
 - Assemble users/actors as credible actual users (Robyn, Jamie)
 - Assemble testing devices: iPhone, Android device, iPad, PC, Chromebook
 
+## Katia ##
+- Enter user stories and tasks into DSoft Technology's Agile Sprinter
+
 ## Questions for 18F PMO (Due June 22, 2015, 4:00 pm Eastern Time (ET) TO agilebpa@gsa.gov)
 
 1. In selecting a service platform for hosting, is the platform’s inherent continuous monitoring capability sufficient to satisfy the evaluation criteria (item #8 in Pool 2)?
 1. WRT the statement about “modern and open-source frontend or client-side web technologies”, does this also refer to the operating system used on the hosting environment?
 1. Can Attachment E (spreadsheet) cross reference README.md?
+
+
+
+
