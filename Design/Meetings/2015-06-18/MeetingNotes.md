@@ -1,3 +1,5 @@
+# ADS Sprint 1 - Customer Meeting 18 June 2015, 13:00 hours
+
 During Spiral 1, the DSoft Technology Business Analyst scheduled a meeting time and assembled a team of potential customers for the open.fda.gov website to initially discuss their needs for the system in a participatory design group setting.  A Food Researcher, Financial Analyst and a small Business Owner each have unique needs, motivations and ideas for the site and express the needs in a functional format, while the business analyst translates their discussion into a use case type format.
 
 
