@@ -4,11 +4,11 @@
 * Prototype URL: http://dsoft-ads.cloudapp.net
 * GitHub URL: https://github.com/DSoftTechnology/ADS-FDA-Pool3
 
-The DSoft Technology ADS Pool 3 prototype and submission meets all the evidence criteria listed in the Design Pool 3 and exercises/uses 7 (of 13) labor categories from the Full Stack Pool 3 categories.
+The DSoft Technology ADS Pool 3 prototype and submission meets all the evidence criteria listed in Design Pool 3 and exercises/uses 7 (of 13) labor categories from the Full Stack Pool 3 categories.
 
 ##Full Stack Approach
 
-DSoft Technology uses an Agile methodology (Scrum), an iterative, incremental framework for software project development. Every two week interval is planned and monitored by the team using a tracking tool, our internally-developed AgileSprinter™, and projects are kept on track using frequent short standup meetings to communicate what has been accomplished and what roadblocks are preventing progress. A Scrum Master is assigned who is responsible for working with project managers to remove these roadblocks and to make sure that the project stays on track.  At the beginning of the project, after writing a brief requirements document, we develop use cases and add user stories and tasks to the product backlog for design, testing, and release documentation, with an estimated complexity and priority for each. Both the backlog and the requirements document are continually updated to keep up with changing user requirements. Every two weeks, based on priority, we pull user stories from the product backlog and add them to the current sprint. 
+DSoft Technology uses an Agile methodology (Scrum), an iterative, incremental framework for software project development. The team plans and monitors every two week interval using a tracking tool, our internally-developed AgileSprinter™, and projects are kept on track using frequent short standup meetings to communicate what has been accomplished and what roadblocks are preventing progress. A Scrum Master is assigned who is responsible for working with project managers to remove these roadblocks and to ensure the project stays on track.  At the beginning of the project, after writing a brief requirements document, we develop use cases and add user stories and tasks to the product backlog for design, testing, and release documentation, with an estimated complexity and priority for each. Both backlog and requirements document are continually updated to keep up with changing user requirements. Every two weeks, based on priority, we pull user stories from the product backlog and add them to the current sprint. 
 
 Screenshots provided under ...ADS-FDA-Pool3/Design/Sprint 1 Documents  
 
@@ -16,11 +16,11 @@ Screenshots provided under ...ADS-FDA-Pool3/Design/Sprint 1 Documents
 
 ###a) Assigned one leader and gave that person authority and responsibility
 
-On June 17, 2015, K. Reece, Category 1 Product Manager, was assigned as the team leader, responsible and accountable for the prototype delivery.  Ms. Reece has the skillset (PE, long time IT project manager and certified Scrum Master) to perform this role.  
+On June 17, 2015, K. Reece, Category 1 Product Manager, was assigned team leader, responsible and accountable for prototype delivery.  Ms. Reece has the skillset (PE, long time IT project manager and certified Scrum Master) to perform this role.  
 
-Her bio is located in ...ADS-FDA-Pool3 / Design / Meetings / 2015-06-17 / ProductManagerAppointment.md
+Bio is located in ...ADS-FDA-Pool3 / Design / Meetings / 2015-06-17 / ProductManagerAppointment.md
 
-###b) Assembled a multidisciplinary and collaborative team
+###b) Assembled multidisciplinary and collaborative team
 
 On 17 June 2015, team members were assigned to ADS prototype team under the following ADS labor categories and given time charging guidance for Attach E submission:
 
@@ -38,56 +38,56 @@ This assignment was documented in ...ADS-FDA-Pool3/Design/Meetings/2014-06-17/Me
 
 ###c) Understand what people need
 
-The entire project was conducted with human-centered design and tools focused on 3 user's needs (i.e., Financial Analyst, Business Owner, Food Recall Researcher).  Group as well as individual meetings and prototype meetings with these users were conducted to ensure we understood what people needed.  Changes were continuously integrated, deployed on a staging system and tested, and then provided back to users for their reactions and additional inputs.
+Entire project was conducted with human-centered design and tools focused on 3 user's needs (i.e., Financial Analyst, Business Owner, Food Recall Researcher).  Group and individual needs and prototype meetings with users were conducted to ensure we understood what people needed.  Changes were continuously integrated, deployed on a staging system and tested, and then provided back to users for their reactions and additional inputs.
 
 See ...ADS-FDA-Pool3/Design/Sprint 1 Documents
 
 ###d) Used at least 3 human-centered design techniques
 
-The entire project was conducted with human-centered design and tools.  Changes were continuously integrated, deployed on a staging system and tested, and then provided back to users for their reactions and additional inputs.
+Entire project conducted with human-centered design and tools.  Changes continuously integrated, deployed on a staging system and tested, then provided back to users for their reactions and additional inputs.
 
-* 1) Team brainstorming sessions - worked within the project team to brainstorm concepts and wireframes for development to meet user needs; developed a user navigation map
-* 2) Use Cases - 3 iterations centered on the identified 3 primary personas (but not potential FDA data provider or maintainer personas)
+* 1) Team brainstorming sessions - Worked within project team to brainstorm concepts and wireframes for development to meet user needs; developed user navigation map
+* 2) Use Cases - 3 iterations centered on 3 identified primary personas (but not potential FDA data provider or maintainer personas)
 * 3) Paper Prototyping - 3 iterations with 3 primary personas and using their comments to affect design
-* 4) Participatory Design - multiple live demonstrations (using both test data for quick reviews and FDA data once that capability was integrated) showing prototypes to various users and incorporating their comments to inform/affect design
-* 5) Usability Testing - Performed 1 iteration with uninvolved, non-IT users; invited non-IT users to use the website and provide feedback to development team
+* 4) Participatory Design - Multiple live demonstrations (using both test data for quick reviews and FDA data once capability was integrated) showing prototypes to various users and incorporating their comments to inform/affect design
+* 5) Usability Testing - Performed 1 iteration with uninvolved, non-IT users; invited non-IT users to use website and provide feedback to development team
 
-###e) Created or used a design style guide or pattern library
+###e) Created/used a design style guide or pattern library
 
 See StyleGuide.md under ...ADS-FDA-Pool3/Design 
 
 ###f) Performed usability tests with people
 
-* To put the "needs of users first", we provided usability testing
+* Put "needs of users first"; provided end user usability testing
 * Performed usability tests with non-IT volunteers
 * See Usability Test Plan under ...ADS-FDA-Pool3/Design
 
-###g) Used an iterative approach
+###g) Used iterative approach
 
 Personas were involved in every iteration through general discussions, paper prototyping, demonstrations and testing.  
 
-See folders under:
+Reference:
 
 * ...ADS-FDA-Pool3/Design/Meetings
 * ...ADS-FDA-Pool3/Design/Sprint 1 Documents/Sprint1.md
 * ...ADS-FDA-Pool3/Design/Sprint 2 Documents/Sprint2.md
 
-An initial meeting with potential users uninvolved in the design and development process was held on June 18, 2015, and was documented in /Design/Meetings/2015-06-18/MeetingNotes.md. In this meeting, users were assigned personas of a Food Researcher, Financial Analyst and a Business Owner. Initial ideas of what functionality would be useful for these personas was documented, and 3 use cases were created.
+An initial meeting with potential users uninvolved in design and development was held on June 18, 2015, and documented in /Design/Meetings/2015-06-18/MeetingNotes.md. In this meeting, users were assigned personas of: Food Researcher, Financial Analyst and Business Owner. Initial ideas of what functionality would be useful for these personas was documented, and 3 use cases created.
 
-The 2nd paper prototype session was performed with customers on Monday, 22 June 2015, with DSoft’s Business Analyst and Visual Designer.  Customers/Personas identified changes and added requirements to the web forms and resultant reports (generated from open.FDA.gov).  Changes were made to the use cases to capture changes, separate variants of the use case. Some requirements were deferred until the next build.
+2nd paper prototype session was performed with customers on Monday, 22 June 2015, with DSoft’s Business Analyst and Visual Designer.  Customers/Personas identified changes and added requirements to the web forms and resultant reports (generated from open.FDA.gov).  Changes were made to use cases to capture changes, separate variants of use case. Some requirements were deferred until next build.
 
-A 3rd paper prototyping session was held with the Financial Analyst because we determined the FDA dataset was limited and may not be able to provide the exact report she originally requested.
+3rd paper prototyping session was held with the Financial Analyst because we determined FDA dataset was limited and may not be able to provide exact report originally requested.
 
-Live demonstrations of the prototypes were provided to users whose comments were reflected back into the design when possible.
+Live demonstrations of prototypes were provided to users whose comments were reflected into design when possible.
 
 ###h) Created a prototype that works with multiple devices
-Developed prototype to be responsive and successfully tested on various mobile and traditional devices including iPad, Android phone, ChromeBook, and PCs
+Developed prototype to be responsive and successfully tested on various mobile and traditional devices including iPad, Android phone, ChromeBook, PCs
 
 Multiple devices documented in ...ADS-FDA-Pool3/tree/master/Test
 
 ###i) Used at least 5 modern and open source technologies
 
-The following were used in the design and development of the ADS prototype:
+The following were used in design and development of ADS prototype:
 * Docker (http://docker.com)
 * Mono (http://www.mono-project.com)
 * D3.js (BSD license) (http://d3js.org)
@@ -110,35 +110,35 @@ Documented in ...ADS-FDA-Pool3 / Design / PaaS_Hosting.md
 * Created automated tests to verify all user-facing functionality
 * Test Plan finalized on 25 June 2015
 * Testing team session planned for Friday, 26 June 2015 using multiple mobile devices and various operating systems with users unfamiliar with system and development
-* All web forms were tested for browser compatibility on major browsers
+* All web forms tested for compatibility on major browsers
 
-Tests are documented in ...ADS-FDA-Pool3/tree/master/Test
+Tests documented in ...ADS-FDA-Pool3/tree/master/Test
 
 ###l) Used Continuous Integration System to automate tests and continuous deployed to IaaS / PaaS provider
 
-Deployed on ADS protype on Microsoft Azure, an Iaas / PaaS provider.  Azure supports a selection of operating systems, programming languages, frameworks, tools, databases and devices: runs apps with JavaScript, Python, .NET, PHP, Java, Node.js. The ADS protype deployment is fully automated using TeamCity. Commits pushed to Github trigger a TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are then packaged as a docker image and deployed onto the staging Linux host for QA / Integration tests. After success in QA, the automated deployment to Azure Production Linux host is manually triggered in TeamCity.
+Deployed on ADS protype on Microsoft Azure, an Iaas / PaaS provider.  Azure supports a selection of operating systems, programming languages, frameworks, tools, databases and devices: runs apps with JavaScript, Python, .NET, PHP, Java, Node.js. ADS protype deployment is fully automated using TeamCity. Commits pushed to Github trigger a TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, build artifacts are packaged as a docker image and deployed onto staging Linux host for QA / Integration tests. After success in QA, the automated deployment to Azure Production Linux host is triggered in TeamCity.
 
 Documented in ADS-FDA-Pool3 / Deployment.md 
 
 ###m) Used Configuration Management
 
-* Github (Source Control) - Used Github's built-in configuration management and control capabilities to ensure all documentation and artifacts were versioned, branched and commited with all changes; all software versions were commited and a TeamCity build process pulled the latest code from Github, installed / updated dependencies (NuGet packages), ran NUnit tests and performed code coverage assessment.
+* Github (Source Control) - Used Github's built-in configuration management and control capabilities to ensure all documentation and artifacts were versioned, branched and commited with all changes; all software versions were commited and  TeamCity build process pulled latest code from Github, installed / updated dependencies (NuGet packages), ran NUnit tests and performed code coverage assessment.
 
-* TeamCity (Continuous Integration) - all builds can be tagged
+* TeamCity (Continuous Integration) - all builds versioned and tagged
 
 ###n) Used Continuous Monitoring
 
-Using Azure Web Apps as a Platform as a Service (PaaS) comes with built-in continuous monitoring of CPU, Memory, Bandwith, HTTP errors, Response times, Page Requests. Alerts can be configured as well as automatic scaling of the underlying infrastructure based on the metrics.  Reference Web Apps Dashboard here: https://azure.microsoft.com/en-us/documentation/articles/web-sites-monitor/
+Using Azure Web Apps as a PaaS comes with built-in continuous monitoring of CPU, Memory, Bandwith, HTTP errors, Response times, Page Requests. Alerts can be configured as well as automatic scaling of underlying infrastructure based on metrics.  Reference Web Apps Dashboard here: https://azure.microsoft.com/en-us/documentation/articles/web-sites-monitor/
 
 TBD - need to state what we set up in Azure (what settings?)
 
 ###o) Deploy software in a container
 
-Deployed solution in a container using Docker.  Docker is an open-source project that automates the deployment of applications inside software containers, by providing an additional layer of abstraction and automation of operating-system-level virtualization on Linux.
+Deployed solution in container using Docker.  Docker is an open-source project that automates the deployment of applications inside software containers, by providing an additional layer of abstraction and automation of operating-system-level virtualization on Linux.
 
 ###p) Install and run prototype on another machine
 
-The included docker file can be used to recreate the docker image from the source code and deploy to any Linux OS that supports docker hosting. For development purposes, the source code can simply be opened with MonoDevelop and run using the built-in XSP webserver. See http://www.monodevelop.com for details on setting up a development environment
+The included docker file can be used to recreate docker image from source code and deploy to any Linux OS that supports docker hosting. For development purposes, source code can simply be opened with MonoDevelop and run using the built-in XSP webserver. See http://www.monodevelop.com for details on setting up a development environment
 
 ###q) Prototype and underlying platforms used to create and run prototype are openly licensed and free of charge
 
@@ -155,4 +155,4 @@ The following were used to create and run the ADS prototype:
 * Docker (http://docker.com)
 * Nginx (http://nginx.org)
 
-DSoft Technology hosted our prototype website on Azure, a IaaS / PaaS.  The prototype was developed in Mono v4.0.3, an open source development platform based on the .Net framework that allows developers to build Linux and cross-platform applications. Websites built with Mono can be run with a variety of webservers, but for this prototyp, Nginx and FastCGI Mono Server where used.
+DSoft Technology hosted our prototype website on Azure, a IaaS / PaaS.  Prototype was developed in Mono v4.0.3, an open source development platform based on the .Net framework that allows developers to build Linux and cross-platform applications. Websites built with Mono can be run with a variety of webservers, but for this prototype, Nginx and FastCGI Mono Server where used.
