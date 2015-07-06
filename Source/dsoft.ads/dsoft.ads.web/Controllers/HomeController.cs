@@ -41,19 +41,26 @@ namespace dsoft.ads.web.Controllers
             return View (new BaseViewModel());
 		}
 
-        public async Task<ActionResult> ReportList (string sortOrder, int? page, int? pageSize, string keyword = null, string state = null, DateTime? startDate = null, DateTime? endDate = null)
+        //public async Task<ActionResult> ReportList (string sortOrder, int? page, int? pageSize, string keyword = null, string state = null, DateTime? startDate = null, DateTime? endDate = null)
+        public ActionResult ReportList (string sortOrder, int? page, int? pageSize, string keyword = null, string state = null, DateTime? startDate = null, DateTime? endDate = null)
 		{
-            string referrer = Request.UrlReferrer.AbsoluteUri;
+            string referrer = string.Empty;
+            if (Request.UrlReferrer != null)
+                referrer = Request.UrlReferrer.AbsoluteUri;
 
             ReportListViewModel report = new ReportListViewModel();
-            await report.GetReportList(sortOrder, page, pageSize, keyword, state, startDate, endDate, referrer);
+            var t = report.GetReportList(sortOrder, page, pageSize, keyword, state, startDate, endDate, referrer);
+            t.Wait();
+
             return View(report);
 		}
 
-        public async Task<ActionResult> ReportDetails (string id, string eventid)
+        public ActionResult ReportDetails (string id, string eventid)
 		{
             ReportDetailsViewModel report = new ReportDetailsViewModel();
-            await report.GetReportDetails(id, eventid);
+            var t = report.GetReportDetails(id, eventid);
+            t.Wait();
+
             return View (report);
 		}
 	}

@@ -83,6 +83,7 @@ namespace dsoft.ads.web.Models
 
                     Console.WriteLine(url);
                     WebRequest request = WebRequest.Create(url) as WebRequest;
+
                     using (WebResponse response = await request.GetResponseAsync() as WebResponse)
                     {
                         if (response is HttpWebResponse)
