@@ -1,7 +1,7 @@
 ﻿# ADS-FDA-Pool3 under GS-35F-0538W
 #README
 
-* Prototype URL: http://dsoft-ads.azurewebsites.net
+* Prototype URL: http://dsoft-ads.cloudapp.net
 * GitHub URL: https://github.com/DSoftTechnology/ADS-FDA-Pool3
 
 The DSoft Technology ADS Pool 3 prototype and submission meets all the evidence criteria listed in the Design Pool 3 and exercises/uses 7 (of 13) labor categories from the Full Stack Pool 3 categories.
@@ -68,9 +68,9 @@ Personas were involved in every iteration through general discussions, paper pro
 
 See folders under:
 
-*...ADS-FDA-Pool3/Design/Meetings
-*...ADS-FDA-Pool3/Design/Sprint 1 Documents/Sprint1.md
-*...ADS-FDA-Pool3/Design/Sprint 2 Documents/Sprint2.md
+* ...ADS-FDA-Pool3/Design/Meetings
+* ...ADS-FDA-Pool3/Design/Sprint 1 Documents/Sprint1.md
+* ...ADS-FDA-Pool3/Design/Sprint 2 Documents/Sprint2.md
 
 An initial meeting with potential users uninvolved in the design and development process was held on June 18, 2015, and was documented in /Design/Meetings/2015-06-18/MeetingNotes.md. In this meeting, users were assigned personas of a Food Researcher, Financial Analyst and a Business Owner. Initial ideas of what functionality would be useful for these personas was documented, and 3 use cases were created.
 
@@ -124,8 +124,7 @@ Documented in ADS-FDA-Pool3 / Deployment.md
 
 * Github (Source Control) - Used Github's built-in configuration management and control capabilities to ensure all documentation and artifacts were versioned, branched and commited with all changes; all software versions were commited and a TeamCity build process pulled the latest code from Github, installed / updated dependencies (NuGet packages), ran NUnit tests and performed code coverage assessment.
 
-* TeamCity (Continuous Integration)
-* Azure (IaaS)
+* TeamCity (Continuous Integration) - all builds can be tagged
 
 ###n) Used Continuous Monitoring
 
