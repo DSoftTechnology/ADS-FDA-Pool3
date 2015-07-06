@@ -47,10 +47,10 @@ See ...ADS-FDA-Pool3/Design/Sprint 1 Documents
 The entire project was conducted with human-centered design and tools.  Changes were continuously integrated, deployed on a staging system and tested, and then provided back to users for their reactions and additional inputs.
 
 * 1) Team brainstorming sessions - worked within the project team to brainstorm concepts and wireframes for development to meet user needs; developed a user navigation map
-* 2) Use Cases - 3 iterations centered on the identified 3 primary personas (not potential FDA data maintainer personas)
-* 3) Paper Prototyping - 3 iterations with 3 primary personas and using comments to affect design
+* 2) Use Cases - 3 iterations centered on the identified 3 primary personas (but not potential FDA data provider or maintainer personas)
+* 3) Paper Prototyping - 3 iterations with 3 primary personas and using their comments to affect design
 * 4) Participatory Design - multiple live demonstrations (using both test data for quick reviews and FDA data once that capability was integrated) showing prototypes to various users and incorporating their comments to inform/affect design
-* 5) Usability Testing - Performed 1 iteration with uninvolved, non-IT users; invited non-IT users to use the website and provide feedback
+* 5) Usability Testing - Performed 1 iteration with uninvolved, non-IT users; invited non-IT users to use the website and provide feedback to development team
 
 ###e) Created or used a design style guide or pattern library
 
@@ -72,7 +72,7 @@ See folders under:
 *...ADS-FDA-Pool3/Design/Sprint 1 Documents/Sprint1.md
 *...ADS-FDA-Pool3/Design/Sprint 2 Documents/Sprint2.md
 
-An initial meeting with potential users uninvolved in the design and development process was held on June 18, 2015, and was documented in /Design/Meetings/2015-06-18/MeetingNotes.md. In this meeting, users were assigned personas of a Food Researcher, Financial Analyst and a small Business Owner. An initial idea of what functionality would be useful for these personas was documented, and use cases were created.
+An initial meeting with potential users uninvolved in the design and development process was held on June 18, 2015, and was documented in /Design/Meetings/2015-06-18/MeetingNotes.md. In this meeting, users were assigned personas of a Food Researcher, Financial Analyst and a Business Owner. Initial ideas of what functionality would be useful for these personas was documented, and 3 use cases were created.
 
 The 2nd paper prototype session was performed with customers on Monday, 22 June 2015, with DSoft’s Business Analyst and Visual Designer.  Customers/Personas identified changes and added requirements to the web forms and resultant reports (generated from open.FDA.gov).  Changes were made to the use cases to capture changes, separate variants of the use case. Some requirements were deferred until the next build.
 
