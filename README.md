@@ -1,4 +1,4 @@
-# ADS-FDA-Pool3 under GS-35F-0538W
+﻿# ADS-FDA-Pool3 under GS-35F-0538W
 #README
 
 * Prototype URL: http://dsoft-ads.azurewebsites.net
@@ -95,7 +95,7 @@ The following were used in the design and development of the ADS prototype:
 
 ###j) Deployed the prototype on IaaS or Paas
 
-Deployed on ADS protype on Microsoft Azure Web Services, a PaaS provider
+Deployed on ADS protype on Microsoft Azure, an IaaS / PaaS provider
 
 Documented in ...ADS-FDA-Pool3 / Design / PaaS_Hosting.md 
 
@@ -108,9 +108,9 @@ Documented in ...ADS-FDA-Pool3 / Design / PaaS_Hosting.md
 
 Tests are documented in ...ADS-FDA-Pool3/tree/master/Test
 
-###l) Used Continuous Integration System to automate tests and continuous deployed to PaaS provider
+###l) Used Continuous Integration System to automate tests and continuous deployed to IaaS / PaaS provider
 
-Deployed on ADS protype on Microsoft Azure Web Services, a PaaS provider.  Azure supports aselection of operating systems, programming languages, frameworks, tools, databases and devices: runs apps with JavaScript, Python, .NET, PHP, Java, Node.js; provides build backends for iOS, Android, and Windows devices.  The ADS protype deployment is fully automated using TeamCity. Commits pushed to Github trigger a TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are commited to the Azure git repository which triggers an automated deployment on the Azure Staging Web App for QA / Integration tests. After success in QA, the automated deployment to Azure Production Web App is manually triggered in TeamCity.
+Deployed on ADS protype on Microsoft Azure, an Iaas / PaaS provider.  Azure supports a selection of operating systems, programming languages, frameworks, tools, databases and devices: runs apps with JavaScript, Python, .NET, PHP, Java, Node.js. The ADS protype deployment is fully automated using TeamCity. Commits pushed to Github trigger a TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, the build artifacts are then packaged as a docker image and deployed onto the staging Linux host for QA / Integration tests. After success in QA, the automated deployment to Azure Production Linux host is manually triggered in TeamCity.
 
 Documented in ADS-FDA-Pool3 / Deployment.md 
 
@@ -118,8 +118,8 @@ Documented in ADS-FDA-Pool3 / Deployment.md
 
 * Github (Source Control) - Used Github's built-in configuration management and control capabilities to ensure all documentation and artifacts were versioned, branched and commited with all changes; all software versions were commited and a TeamCity build process pulled the latest code from Github, installed / updated dependencies (NuGet packages), ran NUnit tests and performed code coverage assessment.
 
-* TeamCity (Continuous Integration) - TBD
-* Azure Web Apps (PaaS) - TBD
+* TeamCity (Continuous Integration)
+* Azure (IaaS)
 
 ###n) Used Continuous Monitoring
 
@@ -133,7 +133,7 @@ Deployed solution in a container using Docker.  Docker is an open-source project
 
 ###p) Install and run prototype on another machine
 
-TBD
+The included docker file can be used to recreate the docker image from the source code and deploy to any Linux OS that supports docker hosting. For development purposes, the source code can simply be opened with MonoDevelop and run using the built-in XSP webserver. See http://www.monodevelop.com for details on setting up a development environment
 
 ###q) Prototype and underlying platforms used to create and run prototype are openly licensed and free of charge
 
@@ -148,5 +148,6 @@ The following were used to create and run the ADS prototype:
 * Postal (https://github.com/andrewdavey/postal)
 * PagedList.Mvc (https://www.nuget.org/packages/PagedList.Mvc)
 * Docker (http://docker.com)
+* Nginx (http://nginx.org)
 
-DSoft Technology hosted our prototype website on Azure web services, a PaaS.  The prototype was developed in Mono v1.0.5, an open source development platform based on the .Net framework that allows developers to build Linux and cross-platform applications. Websites built with Mono can be run on Apache using the mod_mono module. Mono, Apache and the mod_mono module are open source and free of charge.  
+DSoft Technology hosted our prototype website on Azure, a IaaS / PaaS.  The prototype was developed in Mono v4.0.3, an open source development platform based on the .Net framework that allows developers to build Linux and cross-platform applications. Websites built with Mono can be run with a variety of webservers, but for this prototyp, Nginx and FastCGI Mono Server where used.
