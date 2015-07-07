@@ -59,7 +59,7 @@ See StyleGuide.md under ...ADS-FDA-Pool3/Design
 ###f) Performed usability tests with people
 
 * Put "needs of users first"
-* Performed usability tests with non-technical users
+* Performed usability tests with non-technical and technical users
 * See Usability Test Plan under ...ADS-FDA-Pool3/Design
 
 ###g) Used iterative approach
