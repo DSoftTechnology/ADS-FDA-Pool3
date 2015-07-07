@@ -92,12 +92,14 @@ The following were used in design and development of ADS prototype:
 * D3.js (BSD license) (http://d3js.org)
 * JSON.Net (MIT license) (http://www.newtonsoft.com/json)
 * Bootstrap (MIT license) (http://getbootstrap.com)
-* ASP.NET MVC5 (Apache 2.0 license) (http://www.asp.net/open-source)
+* ASP.Net MVC5 (Apache 2.0 license) (http://www.asp.net/open-source)
 * TopoJSON (https://github.com/mbostock/topojson)
 * NUnit (http://www.nunit.org/)
 * Postal (https://github.com/andrewdavey/postal)
 * PagedList.Mvc (https://www.nuget.org/packages/PagedList.Mvc)
 * nginx (http://nginx.org)
+* Debian Linux (https://www.debian.org/)
+* Docker (https://www.docker.com)
 
 ###j) Deployed the prototype on IaaS or Paas
 
