@@ -143,6 +143,8 @@ Deployed solution in container using Docker.  Docker is an open-source project t
 
 The included Docker file can be used to recreate Docker image from source code and deploy to any Linux OS that supports Docker hosting. For development purposes, source code can simply be opened with MonoDevelop or Xamarin Studio and run using the built-in XSP webserver.
 
+Reference: ...ADS-FDA-Pool3 / docker / 
+
 ###q) Prototype and underlying platforms used to create and run prototype are openly licensed and free of charge
 
 DSoft Technology developed the prototype in Mono v4.0.3 (an open source development platform based on the .Net framework) using Xamarin Studio (free open-source IDE) and the open-source tools listed in Section (i) above. Nginx and FastCGI Mono Server where used inside a Docker container using a Debian Linux VM on Azure PaaS for hosting.
