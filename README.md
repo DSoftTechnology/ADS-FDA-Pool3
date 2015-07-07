@@ -8,7 +8,7 @@ The DSoft Technology ADS Pool 3 prototype and submission meets all the evidence 
 
 ##Full Stack Approach
 
-DSoft Technology uses an Agile methodology (Scrum), an iterative, incremental framework for software project development. The team plans and monitors every two week interval using a tracking tool, our internally-developed AgileSprinter™, and projects are kept on track using frequent short standup meetings to communicate what has been accomplished and what roadblocks are preventing progress. A Scrum Master is assigned who is responsible for working with project managers to remove these roadblocks and to ensure the project stays on track.  At the beginning of the project, after writing a brief requirements document, we develop use cases and add user stories and tasks to the product backlog for design, testing, and release documentation, with an estimated complexity and priority for each. Both backlog and requirements document are continually updated to keep up with changing user requirements. Every two weeks, based on priority, we pull user stories from the product backlog and add them to the current sprint. 
+DSoft Technology uses an Agile methodology (Scrum), an iterative, incremental framework for software project development. The team plans and monitors every two week interval using a tracking tool, our internally-developed AgileSprinter™, and projects are kept on track using frequent short standup meetings to communicate what has been accomplished and what roadblocks are preventing progress. A Scrum Master is assigned who is responsible for working with project managers to remove these roadblocks and to ensure the project stays on track.  At the beginning of the project, after writing a brief charter and requirements document, we develop use cases and add user stories and tasks to the product backlog for design, testing, and release documentation, with an estimated complexity and priority for each. Both backlog and requirements document are continually updated to keep up with evolving user requirements. Every two weeks, based on user priority, we pull user stories from the product backlog and add them to the current sprint. 
 
 Screenshots provided under ...ADS-FDA-Pool3/Design/Sprint 1 Documents  
 
@@ -44,7 +44,7 @@ See ...ADS-FDA-Pool3/Design/Sprint 1 Documents
 
 ###d) Used at least 3 human-centered design techniques
 
-Entire project conducted with human-centered design and tools.  Changes continuously integrated, deployed on a staging system and tested, then provided back to users for their reactions and additional inputs.
+Entire project conducted with human-centered design and tools.  Changes continuously integrated, deployed on a staging system and tested, then provided back to users for their reactions, criticisms and additional inputs.
 
 * 1) Team brainstorming sessions - Worked within project team to brainstorm concepts and wireframes for development to meet user needs; developed user navigation map
 * 2) Use Cases - 3 iterations centered on 3 identified primary personas (but not potential FDA data provider or maintainer personas)
@@ -64,7 +64,7 @@ See StyleGuide.md under ...ADS-FDA-Pool3/Design
 
 ###g) Used iterative approach
 
-Personas were involved in every iteration through general discussions, paper prototyping, demonstrations and testing.  
+Personas were involved in every iteration through general discussions, paper prototyping, app demonstrations and testing.  
 
 Reference:
 
