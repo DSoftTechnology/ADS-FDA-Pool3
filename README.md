@@ -38,7 +38,7 @@ This assignment was documented in ...ADS-FDA-Pool3/Design/Meetings/2014-06-17/Me
 
 ###c) Understand what people need
 
-Entire project was conducted with human-centered design and tools focused on 3 user's needs (i.e., Financial Analyst, Business Owner, Food Recall Researcher).  Group and individual needs and prototype meetings with users were conducted to ensure we understood what people needed.  Changes were continuously integrated, deployed on a staging system and tested, and then provided back to users for their reactions and additional inputs.
+Entire project was conducted with human-centered design and tools focused on 3 users' needs (i.e., Financial Analyst, Business Owner, Food Recall Researcher).  Prototype meetings with users were conducted to ensure we understood what people needed.  Changes were continuously integrated, deployed on a staging system and tested, and then provided back to users for their reactions and additional inputs.
 
 See ...ADS-FDA-Pool3/Design/Sprint 1 Documents
 
@@ -50,7 +50,7 @@ Entire project conducted with human-centered design and tools.  Changes continuo
 * 2) Use Cases - 3 iterations centered on 3 identified primary personas (but not potential FDA data provider or maintainer personas)
 * 3) Paper Prototyping - 3 iterations with 3 primary personas and using their comments to affect design
 * 4) Participatory Design - Multiple live demonstrations (using both test data for quick reviews and FDA data once capability was integrated) showing prototypes to various users and incorporating their comments to inform/affect design
-* 5) Usability Testing - Performed 1 iteration with uninvolved, non-IT users; invited non-IT users to use website and provide feedback to development team
+* 5) Usability Testing - Performed 1 iteration with uninvolved, non-technical users; invited non-IT users to use website and provide feedback to development team
 
 ###e) Created/used a design style guide or pattern library
 
@@ -58,8 +58,8 @@ See StyleGuide.md under ...ADS-FDA-Pool3/Design
 
 ###f) Performed usability tests with people
 
-* Put "needs of users first"; provided end user usability testing
-* Performed usability tests with non-IT volunteers
+* Put "needs of users first"
+* Performed usability tests with non-technical users
 * See Usability Test Plan under ...ADS-FDA-Pool3/Design
 
 ###g) Used iterative approach
@@ -74,9 +74,9 @@ References:
 
 An initial meeting with potential users uninvolved in design and development was held on June 18, 2015, and documented in /Design/Meetings/2015-06-18/MeetingNotes.md. In this meeting, users were assigned personas of: Food Recall Researcher, Financial Analyst and Business Owner. Initial ideas of what functionality would be useful for these personas was documented, and 3 use cases created.
 
-2nd paper prototype session was performed with customers on Monday, 22 June 2015, with DSoft’s Business Analyst and Visual Designer.  Customers/Personas identified changes and added requirements to the web forms and resultant reports (generated from open.FDA.gov).  Changes were made to use cases to capture changes, separate variants of use case. Some requirements were deferred until next build.
+Second paper prototype session was performed with customers on Monday, 22 June 2015, with DSoft’s Business Analyst and Visual Designer.  Customers/Personas identified changes and added requirements to the web forms and resultant reports (generated from open.FDA.gov).  Changes were made to use cases to capture changes, separate variants of use case. Some requirements were deferred until next build.
 
-3rd paper prototyping session was held with the Financial Analyst because we determined FDA dataset was limited and may not be able to provide exact report originally requested.
+Third paper prototyping session was held with the Financial Analyst because we determined FDA dataset was limited and may not be able to provide exact report originally requested.
 
 Live demonstrations of prototypes were provided to users whose comments/criticisms were reflected into design when possible.
 
