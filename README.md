@@ -88,7 +88,6 @@ Multiple devices documented in ...ADS-FDA-Pool3/tree/master/Test
 ###i) Used at least 5 modern and open source technologies
 
 The following were used in design and development of ADS prototype:
-* Docker (http://docker.com)
 * Mono (http://www.mono-project.com)
 * D3.js (BSD license) (http://d3js.org)
 * JSON.Net (MIT license) (http://www.newtonsoft.com/json)
@@ -101,7 +100,7 @@ The following were used in design and development of ADS prototype:
 
 ###j) Deployed the prototype on IaaS or Paas
 
-Deployed on ADS protype on Microsoft Azure, an IaaS / PaaS provider
+Deployed ADS protype on Microsoft Azure, an IaaS / PaaS provider
 
 Documented in ...ADS-FDA-Pool3 / Design / PaaS_Hosting.md 
 
@@ -116,21 +115,22 @@ Tests documented in ...ADS-FDA-Pool3/tree/master/Test
 
 ###l) Used Continuous Integration System to automate tests and continuous deployed to IaaS / PaaS provider
 
-Deployed on ADS protype on Microsoft Azure, an Iaas / PaaS provider.  Azure supports a selection of operating systems, programming languages, frameworks, tools, databases and devices: runs apps with JavaScript, Python, .NET, PHP, Java, Node.js. ADS protype deployment is fully automated using TeamCity. Commits pushed to Github trigger a TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are succesful, build artifacts are packaged as a docker image and deployed onto staging Linux host for QA / Integration tests. After success in QA, the automated deployment to Azure Production Linux host is triggered in TeamCity.
+Deployed ADS protype to Debian VM on Microsoft Azure, an Iaas / PaaS provider.  ADS prototype deployment is fully automated using TeamCity. Commits pushed to Github trigger a TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are successful, build artifacts are packaged as a docker image and deployed onto staging Linux host for QA / Integration tests. After success in QA, the automated deployment to Azure Production Linux host is triggered in TeamCity.
 
 Documented in ADS-FDA-Pool3 / Deployment.md 
 
 ###m) Used Configuration Management
 
-* Github (Source Control) - Used Github's built-in configuration management and control capabilities to ensure all documentation and artifacts were versioned, branched and commited with all changes; all software versions were commited and  TeamCity build process pulled latest code from Github, installed / updated dependencies (NuGet packages), ran NUnit tests and performed code coverage assessment.
+* Github (Source Control) - Used Github's built-in configuration management and control capabilities to ensure all documentation and artifacts were versioned, branched and committed with all changes; all software versions were committed and  TeamCity build process pulled latest code from Github, installed / updated dependencies (NuGet packages), ran NUnit tests and performed code coverage assessment.
 
-* TeamCity (Continuous Integration) - all builds versioned and tagged
+* TeamCity (Continuous Integration) - all builds versioned and tagged.
 
 ###n) Used Continuous Monitoring
 
-Using Azure Web Apps as a PaaS comes with built-in continuous monitoring of CPU, Memory, Bandwith, HTTP errors, Response times, Page Requests. Alerts can be configured as well as automatic scaling of underlying infrastructure based on metrics.  Reference Web Apps Dashboard here: https://azure.microsoft.com/en-us/documentation/articles/web-sites-monitor/
+Azure VM PaaS comes with built-in continuous monitoring of CPU, Memory, Bandwidth, HTTP errors, Response times, Page Requests. Alerts can be configured as well as automatic scaling of underlying infrastructure based on metrics.  Reference Web Apps Dashboard here: 
+https://azure.microsoft.com/en-us/documentation/articles/web-sites-monitor/
 
-TBD - need to state what we set up in Azure (what settings?)
+In addition, used New Relic (http://newrelic.com) to monitor utilization and performance on both Linux VM and Docker containers.  Both Azure and New Relic provide customizable reports and alerts which provide continuous data to the Ops team.  The Ops team has procedures in place for responding to any event which is outside normal operating parameters.
 
 ###o) Deploy software in a container
 
@@ -138,21 +138,8 @@ Deployed solution in container using Docker.  Docker is an open-source project t
 
 ###p) Install and run prototype on another machine
 
-The included docker file can be used to recreate docker image from source code and deploy to any Linux OS that supports docker hosting. For development purposes, source code can simply be opened with MonoDevelop and run using the built-in XSP webserver. See http://www.monodevelop.com for details on setting up a development environment
+The included docker file can be used to recreate Docker image from source code and deploy to any Linux OS that supports Docker hosting. For development purposes, source code can simply be opened with MonoDevelop or Xamarin Studio and run using the built-in XSP webserver.
 
 ###q) Prototype and underlying platforms used to create and run prototype are openly licensed and free of charge
 
-The following were used to create and run the ADS prototype:
-* Mono (http://www.mono-project.com)
-* D3.js (BSD license) (http://d3js.org)
-* JSON.Net (MIT license) (http://www.newtonsoft.com/json)
-* Bootstrap (MIT license) (http://getbootstrap.com)
-* ASP.NET MVC5 (Apache 2.0 license) (http://www.asp.net/open-source)
-* TopoJSON (https://github.com/mbostock/topojson)
-* NUnit (http://www.nunit.org/)
-* Postal (https://github.com/andrewdavey/postal)
-* PagedList.Mvc (https://www.nuget.org/packages/PagedList.Mvc)
-* Docker (http://docker.com)
-* Nginx (http://nginx.org)
-
-DSoft Technology hosted our prototype website on Azure, a IaaS / PaaS.  Prototype was developed in Mono v4.0.3, an open source development platform based on the .Net framework that allows developers to build Linux and cross-platform applications. Websites built with Mono can be run with a variety of webservers, but for this prototype, Nginx and FastCGI Mono Server where used.
+DSoft Technology developed the prototype in Mono v4.0.3 (an open source development platform based on the .Net framework) using Xamarin Studio (free open-source IDE) and the open-source tools listed in Section (i) above. Nginx and FastCGI Mono Server where used inside a Docker container using a Debian Linux VM on Azure PaaS for hosting.
