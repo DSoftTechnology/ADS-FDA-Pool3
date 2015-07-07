@@ -115,7 +115,7 @@ Tests documented in ...ADS-FDA-Pool3/tree/master/Test
 
 ###l) Used Continuous Integration System to automate tests and continuous deployed to IaaS / PaaS provider
 
-Deployed ADS protype to Debian VM on Microsoft Azure, an Iaas / PaaS provider.  ADS prototype deployment is fully automated using TeamCity. Commits pushed to Github trigger a TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are successful, build artifacts are packaged as a docker image and deployed onto staging Linux host for QA / Integration tests. After success in QA, the automated deployment to Azure Production Linux host is triggered in TeamCity.
+Deployed ADS protype to Debian VM on Microsoft Azure, an Iaas / PaaS provider.  ADS prototype deployment is fully automated using TeamCity. Commits pushed to Github trigger a TeamCity build process which will pull the latest code, install / update dependencies (NuGet packages), run NUnit and code coverage. If all build steps are successful, build artifacts are packaged as a Docker image and deployed onto staging Linux host for QA / Integration tests. After success in QA, the automated deployment to Azure Production Linux host is triggered in TeamCity.
 
 Documented in ADS-FDA-Pool3 / Deployment.md 
 
