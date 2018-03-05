@@ -16,10 +16,6 @@ RUN apt-get update && apt-get install -my wget gnupg \
 
 # install runit and nginx mono-fastcgi-server4
 ADD docker/service/ /etc/service/ 
-ADD docker/config/runit/1 /etc/runit/1 
-ADD docker/config/runit/1.d/cleanup-pids /etc/runit/1.d/cleanup-pids 
-ADD docker/config/runit/2 /etc/runit/2 
-ADD docker/runit_bootstrap /usr/sbin/runit_bootstrap 
  
 RUN echo "deb http://download.mono-project.com/repo/debian wheezy-libjpeg62-compat main" | tee -a /etc/apt/sources.list.d/mono-xamarin.list \ 
      && apt-get update \ 
@@ -29,11 +25,14 @@ RUN echo "deb http://download.mono-project.com/repo/debian wheezy-libjpeg62-comp
      && mkdir -p /etc/mono/registry /etc/mono/registry/LocalMachine \ 
      && find /etc/service/ -name run -exec chmod u+x {} \; \ 
      && chmod u+x /usr/sbin/runit_bootstrap; 
- 
- 
+	 
+ADD docker/config/runit/1 /etc/runit/1 
+ADD docker/config/runit/1.d/cleanup-pids /etc/runit/1.d/cleanup-pids 
+ADD docker/config/runit/2 /etc/runit/2 
+ADD docker/runit_bootstrap /usr/sbin/runit_bootstrap 
+  
 ADD docker/config/default /etc/nginx/sites-available/ 
 ADD docker/config/fastcgi_params /etc/nginx/ 
-ADD docker/runit_bootstrap /usr/sbin/runit_bootstrap 
 EXPOSE 80 
 
 # deploy webcode and start nginx
