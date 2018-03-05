@@ -3,7 +3,7 @@ FROM debian
 MAINTAINER Tim Weckx <timw@dsoft-tech.com>
 
 # install mono
-RUN apt-get update \
+RUN apt-get update && apt-get install -my wget gnupg \
         && apt-get install wget  -y --no-install-recommends \
         && echo "deb http://download.mono-project.com/repo/debian nightly main" > /etc/apt/sources.list.d/mono-xamarin.list \
         && wget -qO - http://download.mono-project.com/repo/xamarin.gpg | apt-key add - \
