@@ -23,13 +23,14 @@ RUN echo "deb http://download.mono-project.com/repo/debian wheezy-libjpeg62-comp
      && apt-get clean \ 
      && rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/* \ 
      && mkdir -p /etc/mono/registry /etc/mono/registry/LocalMachine \ 
-     && find /etc/service/ -name run -exec chmod u+x {} \; \ 
-     && chmod u+x /usr/sbin/runit_bootstrap; 
+     && find /etc/service/ -name run -exec chmod u+x {} \
 	 
 ADD docker/config/runit/1 /etc/runit/1 
 ADD docker/config/runit/1.d/cleanup-pids /etc/runit/1.d/cleanup-pids 
 ADD docker/config/runit/2 /etc/runit/2 
 ADD docker/runit_bootstrap /usr/sbin/runit_bootstrap 
+
+RUN chmod u+x /usr/sbin/runit_bootstrap
   
 ADD docker/config/default /etc/nginx/sites-available/ 
 ADD docker/config/fastcgi_params /etc/nginx/ 
